@@ -24,9 +24,13 @@ Install `llama-server` in one easy step:
 
 Then run the server, for example, with the [new awesome WebGUI](https://github.com/ggml-org/llama.cpp/discussions/16938):
 
-    ~/.installama/llama-server -hf ggml-org/gpt-oss-20b-GGUF --jinja -c 0 --port 8033
+    ~/.installama/llama-server -hf ggml-org/gpt-oss-20b-GGUF --jinja
 
-And open your favorite browser to http://127.0.0.1:8033/
+And open your favorite browser to http://127.0.0.1:8080/.
+
+You can also run everything in a single command:
+
+    curl https://angt.github.io/installama.sh | sh -s -- -hf ggml-org/gpt-oss-20b-GGUF --jinja
 
 
 ---
