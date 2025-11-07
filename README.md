@@ -30,5 +30,5 @@ And open your favorite browser to http://127.0.0.1:8033/
 
 
 ---
-If it doesn't work on your system, please [create an issue](https://github.com/angt/installama.sh/issues/new). 
+⚠️ This is still a PoC. If it doesn't work on your system, please [create an issue](https://github.com/angt/installama.sh/issues/new).
 
