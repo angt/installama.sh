@@ -1,9 +1,6 @@
 TARGET_FEATURES="https://github.com/angt/target-features/releases/latest/download"
 UNZSTD="https://github.com/angt/unzstd/releases/latest/download"
-REPO="https://huggingface.co/datasets/angt/installamacpp/resolve/main"
-REPO_CUDA="https://huggingface.co/datasets/angt/installamacpp-cuda/resolve/main"
-REPO_ROCM="https://huggingface.co/datasets/angt/installamacpp-rocm/resolve/main"
-REPO_METAL="https://huggingface.co/datasets/angt/installamacpp-metal/resolve/main"
+REPO="https://huggingface.co/datasets/angt"
 
 die() {
 	for msg; do echo "$msg"; done >&2
@@ -12,6 +9,10 @@ die() {
 
 check_bin() {
 	command -v "$1" >/dev/null 2>/dev/null
+}
+
+datasets() {
+	printf "%s/installamacpp-%s/resolve/main/%s" "$REPO" "$1" "$2"
 }
 
 dl_bin() {
@@ -33,27 +34,27 @@ unzstd() (
 )
 
 llama_server_cuda() {
-	dl_bin cuda-probe "$REPO_CUDA/cuda-probe.zst" &&
+	dl_bin cuda-probe "$(datasets cuda "cuda-probe.zst")" &&
 	CUDA_ARCH=$(./cuda-probe 2>/dev/null) &&
-	dl_bin llama-server "$REPO_CUDA/llama-server-cuda-$CUDA_ARCH.zst"
+	dl_bin llama-server "$(datasets cuda "llama-server-cuda-$CUDA_ARCH.zst")"
 }
 
 llama_server_rocm() {
-	dl_bin rocm-probe "$REPO_ROCM/rocm-probe.zst" &&
+	dl_bin rocm-probe "$(datasets rocm "rocm-probe.zst")" &&
 	ROCM_ARCH=$(./rocm-probe 2>/dev/null) &&
-	dl_bin llama-server "$REPO_ROCM/llama-server-$ROCM_ARCH.zst"
+	dl_bin llama-server "$(datasets rocm "llama-server-$ROCM_ARCH.zst")"
 }
 
 llama_server_cpu() {
 	dl_bin target-features "$TARGET_FEATURES/$ARCH-$OS-target-features" &&
-	TARGET=$(./target-features) &&
-	dl_bin llama-server "$REPO/$ARCH$TARGET/llama-server.zst"
+	TARGET=$(./target-features 2>/dev/null) &&
+	dl_bin llama-server "$(datasets cpu "llama-server-$ARCH$TARGET.zst")"
 }
 
 llama_server_metal() {
 	MODEL=$(sysctl -n machdep.cpu.brand_string 2>/dev/null) &&
-	case "$MODEL" in ("Apple M"[1234]) ;; (*) false ;; esac &&
-	dl_bin llama-server "$REPO_METAL/llama-server-m1.zst"
+	case "$MODEL" in ("Apple M"[1234]) MODEL=${MODEL#"Apple M"} ;; (*) false ;; esac &&
+	dl_bin llama-server "$(datasets metal "llama-server-m$MODEL.zst")"
 }
 
 main() {
