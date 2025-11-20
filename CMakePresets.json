@@ -1,0 +1,2835 @@
+{
+  "version": 7,
+  "configurePresets": [
+    {
+      "name": "aarch64-linux-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/yk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/uk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/sk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/lk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/nk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/rk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ql",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ml",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qn",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ym",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/mk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/kk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qrkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qnkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/ylkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/mkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/lkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrn",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrn",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/kkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx803",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx803",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx803"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx900",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx900",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx900"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx906",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx906",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx906"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx908",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx908",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx908"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx90a",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx90a",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx90a"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx942",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx942",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx942"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1010",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1010",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1010"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1011",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1011",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1011"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1030",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1030",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1030"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1032",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1032",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "OFF",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1032"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1100",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1100",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1100"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1101",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1101",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1101"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1102",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1102",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1102"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1151",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1151",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1151"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1200",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1200",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1200"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1201",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1201",
+        "GGML_HIP": "ON",
+        "GGML_HIP_ROCWMMA_FATTN": "ON",
+        "CMAKE_HIP_ARCHITECTURES": "gfx1201"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-rocm-probe",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/probe",
+        "INSTALLAMA_PROBE": "rocm"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/rocm.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-50",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/50",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "50"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-61",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/61",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "61"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-70",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/70",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "70"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-75",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/75",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "75"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-80",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/80",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "80"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-86",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/86",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "86"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-89",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/89",
+        "GGML_CUDA": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "89"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cuda-probe",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/probe",
+        "INSTALLAMA_PROBE": "cuda",
+        "INSTALLAMA_PROBE_ARCHS": "50,61,70,75,80,86,89",
+        "CMAKE_CUDA_ARCHITECTURES": "50;61;70;75;80;86;89"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cuda.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-macos-metal-m1",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m1",
+        "GGML_METAL": "ON",
+        "GGML_METAL_EMBED_LIBRARY": "ON",
+        "GGML_METAL_USE_BF16": "OFF",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "13.0",
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m1"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Darwin",
+        "CMAKE_SYSTEM_PROCESSOR": "arm64"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-macos-metal-m2",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m2",
+        "GGML_METAL": "ON",
+        "GGML_METAL_EMBED_LIBRARY": "ON",
+        "GGML_METAL_USE_BF16": "OFF",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "13.0",
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Darwin",
+        "CMAKE_SYSTEM_PROCESSOR": "arm64"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-macos-metal-m3",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m3",
+        "GGML_METAL": "ON",
+        "GGML_METAL_EMBED_LIBRARY": "ON",
+        "GGML_METAL_USE_BF16": "ON",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "14.0",
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m3"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Darwin",
+        "CMAKE_SYSTEM_PROCESSOR": "arm64"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-macos-metal-m4",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m4",
+        "GGML_METAL": "ON",
+        "GGML_METAL_EMBED_LIBRARY": "ON",
+        "GGML_METAL_USE_BF16": "ON",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "15.0",
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m4"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Darwin",
+        "CMAKE_SYSTEM_PROCESSOR": "arm64"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "aarch64-linux-cpu-yk",
+      "configurePreset": "aarch64-linux-cpu-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-uk",
+      "configurePreset": "aarch64-linux-cpu-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-sk",
+      "configurePreset": "aarch64-linux-cpu-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-lk",
+      "configurePreset": "aarch64-linux-cpu-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-nk",
+      "configurePreset": "aarch64-linux-cpu-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-rk",
+      "configurePreset": "aarch64-linux-cpu-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ql",
+      "configurePreset": "aarch64-linux-cpu-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ml",
+      "configurePreset": "aarch64-linux-cpu-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qn",
+      "configurePreset": "aarch64-linux-cpu-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ym",
+      "configurePreset": "aarch64-linux-cpu-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qm",
+      "configurePreset": "aarch64-linux-cpu-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qk",
+      "configurePreset": "aarch64-linux-cpu-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-mk",
+      "configurePreset": "aarch64-linux-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-kk",
+      "configurePreset": "aarch64-linux-cpu-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "configurePreset": "x86_64-linux-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "configurePreset": "x86_64-linux-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "configurePreset": "x86_64-linux-cpu-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "configurePreset": "x86_64-linux-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "configurePreset": "x86_64-linux-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "configurePreset": "x86_64-linux-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "configurePreset": "x86_64-linux-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "configurePreset": "x86_64-linux-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "configurePreset": "x86_64-linux-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "configurePreset": "x86_64-linux-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "configurePreset": "x86_64-linux-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "configurePreset": "x86_64-linux-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klzlk",
+      "configurePreset": "x86_64-linux-cpu-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knzlk",
+      "configurePreset": "x86_64-linux-cpu-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krzlk",
+      "configurePreset": "x86_64-linux-cpu-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krzkk",
+      "configurePreset": "x86_64-linux-cpu-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knzkk",
+      "configurePreset": "x86_64-linux-cpu-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klzkk",
+      "configurePreset": "x86_64-linux-cpu-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klokk",
+      "configurePreset": "x86_64-linux-cpu-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knokk",
+      "configurePreset": "x86_64-linux-cpu-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krokk",
+      "configurePreset": "x86_64-linux-cpu-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qrkkk",
+      "configurePreset": "x86_64-linux-cpu-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qnkkk",
+      "configurePreset": "x86_64-linux-cpu-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-ylkkk",
+      "configurePreset": "x86_64-linux-cpu-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qkkkk",
+      "configurePreset": "x86_64-linux-cpu-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-mkkkk",
+      "configurePreset": "x86_64-linux-cpu-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-lkkkk",
+      "configurePreset": "x86_64-linux-cpu-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxmk",
+      "configurePreset": "x86_64-linux-cpu-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxmk",
+      "configurePreset": "x86_64-linux-cpu-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxmk",
+      "configurePreset": "x86_64-linux-cpu-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxnk",
+      "configurePreset": "x86_64-linux-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxnk",
+      "configurePreset": "x86_64-linux-cpu-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxnk",
+      "configurePreset": "x86_64-linux-cpu-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrn",
+      "configurePreset": "x86_64-linux-cpu-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrn",
+      "configurePreset": "x86_64-linux-cpu-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-kkkkk",
+      "configurePreset": "x86_64-linux-cpu-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx803",
+      "configurePreset": "x86_64-linux-rocm-gfx803",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx900",
+      "configurePreset": "x86_64-linux-rocm-gfx900",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx906",
+      "configurePreset": "x86_64-linux-rocm-gfx906",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx908",
+      "configurePreset": "x86_64-linux-rocm-gfx908",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx90a",
+      "configurePreset": "x86_64-linux-rocm-gfx90a",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx942",
+      "configurePreset": "x86_64-linux-rocm-gfx942",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1010",
+      "configurePreset": "x86_64-linux-rocm-gfx1010",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1011",
+      "configurePreset": "x86_64-linux-rocm-gfx1011",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1030",
+      "configurePreset": "x86_64-linux-rocm-gfx1030",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1032",
+      "configurePreset": "x86_64-linux-rocm-gfx1032",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1100",
+      "configurePreset": "x86_64-linux-rocm-gfx1100",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1101",
+      "configurePreset": "x86_64-linux-rocm-gfx1101",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1102",
+      "configurePreset": "x86_64-linux-rocm-gfx1102",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1151",
+      "configurePreset": "x86_64-linux-rocm-gfx1151",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1200",
+      "configurePreset": "x86_64-linux-rocm-gfx1200",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1201",
+      "configurePreset": "x86_64-linux-rocm-gfx1201",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-probe",
+      "configurePreset": "x86_64-linux-rocm-probe",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-50",
+      "configurePreset": "x86_64-linux-cuda-50",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-61",
+      "configurePreset": "x86_64-linux-cuda-61",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-70",
+      "configurePreset": "x86_64-linux-cuda-70",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-75",
+      "configurePreset": "x86_64-linux-cuda-75",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-80",
+      "configurePreset": "x86_64-linux-cuda-80",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-86",
+      "configurePreset": "x86_64-linux-cuda-86",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-89",
+      "configurePreset": "x86_64-linux-cuda-89",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-probe",
+      "configurePreset": "x86_64-linux-cuda-probe",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m1",
+      "configurePreset": "aarch64-macos-metal-m1",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m2",
+      "configurePreset": "aarch64-macos-metal-m2",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m3",
+      "configurePreset": "aarch64-macos-metal-m3",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m4",
+      "configurePreset": "aarch64-macos-metal-m4",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "aarch64-linux-cpu-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-qn"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cpu-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-kk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx803",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx803"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx803"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx900",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx900"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx900"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx906",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx906"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx906"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx908",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx908"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx908"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx90a",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx90a"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx90a"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx942",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx942"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx942"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1010",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1010"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1010"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1011",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1011"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1011"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1030",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1030"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1030"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1032",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1032"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1032"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1100",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1100"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1100"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1101",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1101"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1101"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1102",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1102"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1102"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1151",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1151"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1151"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1200",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1200"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1200"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-gfx1201",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-gfx1201"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-gfx1201"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-rocm-probe",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-rocm-probe"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-rocm-probe"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-50",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-50"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-50"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-61",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-61"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-61"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-70",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-70"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-70"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-75",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-75"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-75"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-80",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-80"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-80"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-86",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-86"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-86"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-89",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-89"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-89"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cuda-probe",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cuda-probe"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cuda-probe"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m1",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-macos-metal-m1"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-macos-metal-m1"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m2",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-macos-metal-m2"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-macos-metal-m2"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m3",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-macos-metal-m3"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-macos-metal-m3"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m4",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-macos-metal-m4"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-macos-metal-m4"
+        }
+      ]
+    }
+  ]
+}

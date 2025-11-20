@@ -32,7 +32,13 @@ You can also run everything in a single command:
 
     curl angt.github.io/installama.sh | sh -s -- -hf ggml-org/gpt-oss-20b-GGUF --jinja
 
+In some scenarios, you may want to skip the CUDA backend.
+You can do this with the following command:
+
+    curl angt.github.io/installama.sh | SKIP_CUDA=1 sh
+
+Skipping ROCm is also possible by setting `SKIP_ROCM=1`.
+
 
 ---
 ⚠️ This is still a PoC. If it doesn't work on your system, please [create an issue](https://github.com/angt/installama.sh/issues/new).
-

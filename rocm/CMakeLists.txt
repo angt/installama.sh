@@ -1,0 +1,6 @@
+#list(APPEND CMAKE_PREFIX_PATH "/opt/rocm")
+list(APPEND CMAKE_PREFIX_PATH "/opt/rocm/lib/cmake")
+find_package(hip REQUIRED)
+add_executable(probe probe.cc)
+target_link_libraries(probe PRIVATE hip::host)
+set_target_properties(probe PROPERTIES CXX_STANDARD 17 OUTPUT_NAME "probe")

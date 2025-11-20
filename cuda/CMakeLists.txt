@@ -1,0 +1,6 @@
+enable_language(CUDA)
+find_package(CUDAToolkit REQUIRED)
+add_executable(probe probe.c)
+target_compile_definitions(probe PRIVATE "PROBE_ARCH=${INSTALLAMA_PROBE_ARCHS}")
+target_link_libraries(probe PRIVATE CUDA::cudart_static)
+set_target_properties(probe PROPERTIES OUTPUT_NAME "probe")
