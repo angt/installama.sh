@@ -30,7 +30,7 @@ And open your favorite browser to http://127.0.0.1:8080/.
 
 You can also run everything in a single command:
 
-    curl angt.github.io/installama.sh | sh -s -- -hf ggml-org/gpt-oss-20b-GGUF --jinja
+    curl angt.github.io/installama.sh | MODEL=ggml-org/gpt-oss-20b-GGUF sh
 
 In some scenarios, you may want to skip the CUDA backend.
 You can do this with the following command:
