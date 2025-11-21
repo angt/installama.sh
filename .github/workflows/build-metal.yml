@@ -11,3 +11,11 @@ jobs:
 
     - name: Build
       run: cmake -DFILTER=metal -P build.cmake
+
+    - name: Deploy
+      env:
+        HF_XET_HIGH_PERFORMANCE: 1
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        pip install -U "huggingface_hub[cli,hf_xet]"
+        hf upload angt/installama.sh output --repo-type=dataset --include "*.zst"
