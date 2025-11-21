@@ -1,0 +1,13 @@
+name: Build metal
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build
+      run: cmake -DFILTER=metal -P build.cmake
