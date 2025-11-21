@@ -10,6 +10,7 @@ ROCM_ARCHS = [
     "1102", "1151", "1200", "1201"
 ]
 CUDA_ARCHS = ["50", "61", "70", "75", "80", "86", "89"]
+METAL_ARCHS = {1: "13.3", 2: "13.3", 3: "14.0", 4: "15.0"}
 
 def generate_features(features, implications):
     m = cp_model.CpModel()
@@ -336,15 +337,15 @@ def generate_x86_64_linux_cuda_probe_preset():
 
 def generate_metal_presets():
     configs = []
-    for i in range(1, 5):
-        name = f"m{i}"
+    for cpu, osx in METAL_ARCHS.items():
+        name = f"m{cpu}"
         cache = {
             "GGML_METAL": "ON",
             "GGML_METAL_EMBED_LIBRARY": "ON",
-            "GGML_METAL_USE_BF16": "ON" if i >= 3 else "OFF",
+            "GGML_METAL_USE_BF16": "ON" if cpu >= 3 else "OFF",
             "CMAKE_OSX_ARCHITECTURES": "arm64",
-            "CMAKE_OSX_DEPLOYMENT_TARGET": f"{min(15, max(13, 11 + i))}.0",
-            "INSTALLAMA_FLAGS": f"-mcpu=apple-m{i}"
+            "CMAKE_OSX_DEPLOYMENT_TARGET": osx,
+            "INSTALLAMA_FLAGS": f"-mcpu=apple-m{cpu}"
         }
         configs.append((name, cache))
 
