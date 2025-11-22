@@ -87,9 +87,10 @@ endif()
 set(INSTALLAMA_FILE "${INSTALLAMA_DIR}/${INSTALLAMA_TARGET}.zst")
 
 add_custom_command(
-    OUTPUT  ${INSTALLAMA_FILE}
+    OUTPUT  ${INSTALLAMA_FILE}.done
     COMMAND ${CMAKE_COMMAND} -E make_directory ${INSTALLAMA_DIR}
     COMMAND ${ZSTD} -f --rm -19 $<TARGET_FILE:${INSTALLAMA_TARGET}> -o ${INSTALLAMA_FILE}
+    COMMAND ${CMAKE_COMMAND} -E touch ${INSTALLAMA_FILE}.done
     DEPENDS ${INSTALLAMA_TARGET}
 )
-add_custom_target(installama DEPENDS ${INSTALLAMA_FILE})
+add_custom_target(installama DEPENDS ${INSTALLAMA_FILE}.done)
