@@ -977,6 +977,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/50",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "50"
       },
       "environment": {
@@ -992,6 +993,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/61",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "61"
       },
       "environment": {
@@ -1007,6 +1009,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/70",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "70"
       },
       "environment": {
@@ -1022,6 +1025,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/75",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "75"
       },
       "environment": {
@@ -1037,6 +1041,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/80",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "80"
       },
       "environment": {
@@ -1052,6 +1057,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/86",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "86"
       },
       "environment": {
@@ -1067,6 +1073,7 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/89",
         "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "89"
       },
       "environment": {

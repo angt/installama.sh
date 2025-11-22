@@ -304,6 +304,7 @@ def generate_x86_64_linux_cuda_presets():
         name = arch
         cache = {
             "GGML_CUDA": "ON",
+            "GGML_STATIC": "ON",
             "CMAKE_CUDA_ARCHITECTURES": arch,
         }
         configs.append((name, cache))
