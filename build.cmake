@@ -5,15 +5,13 @@ string(JSON LEN LENGTH "${CONTENTS}" workflowPresets)
 math(EXPR STOP "${LEN} - 1")
 
 if(NOT DEFINED FILTER)
-    set(FILTER ".*")
+    set(FILTER "cpu")
 endif()
 
 foreach(i RANGE 0 ${STOP})
     string(JSON PRESET_NAME GET "${CONTENTS}" workflowPresets ${i} name)
     if(PRESET_NAME MATCHES "${FILTER}")
-        execute_process(
-            COMMAND ${CMAKE_COMMAND} --workflow --preset ${PRESET_NAME}
-            RESULT_VARIABLE RET_CODE
-        )
+        execute_process(COMMAND ${CMAKE_COMMAND} --workflow --preset ${PRESET_NAME})
+        execute_process(COMMAND ${CMAKE_COMMAND} --build --preset ${PRESET_NAME} --target clean)
     endif()
 endforeach()
