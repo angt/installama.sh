@@ -4,14 +4,16 @@ case "$1" in
 (*) exit ;;
 esac
 
-mkdir -p output deps
+mkdir -p output
 
-docker build --platform linux/amd64 -t "installama" . &&
+docker build --platform linux/amd64 -t installama . &&
 docker build --platform linux/amd64 -f "$1/Dockerfile" -t "installama-$1" . &&
 
 docker run --rm --platform linux/amd64 \
 	-v "$(pwd):/work" \
+	--tmpfs /work/deps \
+	--tmpfs /work/build \
 	--workdir /work \
-	--user "$(id -u):$(id -g)" \
 	"installama-$1" \
 	cmake -DFILTER="$1" -P build.cmake
+
