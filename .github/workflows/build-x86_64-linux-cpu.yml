@@ -10,7 +10,10 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Setup Zig
-      run: sudo snap install zig --classic --beta
+      run: |
+        V="0.15.2" ZIG="zig-$(uname -m)-linux-$V"
+        curl -sSf "https://ziglang.org/download/$V/$ZIG.tar.xz" | tar -Jxf- -C ~
+        sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
     - name: Build
       run: cmake -DFILTER=x86_64-linux-cpu -P build.cmake
