@@ -226,7 +226,7 @@ def generate_presets(name, processor, backend, toolchain, configs):
 
     return configure, build, workflow
 
-def generate_aarch64_linux_cpu_presets():
+def generate_aarch64_cpu_presets(system_name):
     configs = []
     for features in generate_aarch64_features():
         name = featcode("aarch64", features)
@@ -236,14 +236,14 @@ def generate_aarch64_linux_cpu_presets():
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
+        name      = system_name,
         processor = 'aarch64',
         backend   = 'cpu',
         toolchain = 'toolchains/cross.cmake',
         configs   = configs,
     )
 
-def generate_x86_64_linux_cpu_presets():
+def generate_x86_64_cpu_presets(system_name):
     configs = []
     for features in generate_x86_64_features():
         name = featcode("x86_64", features)
@@ -253,12 +253,18 @@ def generate_x86_64_linux_cpu_presets():
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
+        name      = system_name,
         processor = 'x86_64',
         backend   = 'cpu',
         toolchain = 'toolchains/cross.cmake',
         configs   = configs,
     )
+
+def generate_aarch64_linux_cpu_presets():
+    return generate_aarch64_cpu_presets('Linux')
+
+def generate_x86_64_linux_cpu_presets():
+    return generate_x86_64_cpu_presets('Linux')
 
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
@@ -305,7 +311,7 @@ def generate_x86_64_linux_cuda_presets():
         cache = {
             "GGML_CUDA": "ON",
             "GGML_STATIC": "ON",
-            "CMAKE_CUDA_ARCHITECTURES": arch,
+            "CMAKE_CUDA_ARCHITECTURES": f"{arch}-real",
         }
         configs.append((name, cache))
 
