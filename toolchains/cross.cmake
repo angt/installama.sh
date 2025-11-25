@@ -5,6 +5,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     set(CROSS_TARGET "linux-musl")
 endif()
 
+if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+    set(CROSS_TARGET "freebsd-none")
+endif()
+
 if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
     set(CROSS_TARGET "windows-gnu")
 endif()

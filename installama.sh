@@ -70,8 +70,9 @@ main() {
 	esac
 
 	case "$(uname -s)" in
-	(Linux)  OS=linux ;;
-	(Darwin) OS=macos ;;
+	(Linux)   OS=linux ;;
+	(FreeBSD) OS=freebsd ;;
+	(Darwin)  OS=macos ;;
 	(*) die "OS not supported"
 	esac
 
@@ -81,13 +82,13 @@ main() {
 	mkdir -p ~/.installama
 	cd ~/.installama || exit 1
 
-	if [ "$OS" = macos ]; then
-		[ -x llama-server ] || llama_server_metal
-	else
-		[ -x llama-server ] || llama_server_cuda
-		[ -x llama-server ] || llama_server_rocm
-		[ -x llama-server ] || llama_server_cpu
-	fi
+	case "$OS" in
+	(macos)   [ -x llama-server ] || llama_server_metal ;;
+	(linux)   [ -x llama-server ] || llama_server_cuda
+	          [ -x llama-server ] || llama_server_rocm
+	          [ -x llama-server ] || llama_server_cpu ;;
+	(freebsd) [ -x llama-server ] || llama_server_cpu ;;
+	esac
 
 	[ -x llama-server ] || die \
 		"No prebuilt llama-server binary is available for your system." \

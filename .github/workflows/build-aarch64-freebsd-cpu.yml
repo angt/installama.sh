@@ -1,0 +1,26 @@
+name: Build aarch64-freebsd-cpu
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Zig
+      run: sudo snap install zig --classic --beta
+
+    - name: Build
+      run: cmake -DFILTER=aarch64-freebsd-cpu -P build.cmake
+
+    - name: Deploy
+      if: ${{ vars.HF_REPO != '' }}
+      env:
+        HF_XET_HIGH_PERFORMANCE: 1
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        HF_REPO: ${{ vars.HF_REPO }}
+      run: |
+        pip install -U "huggingface_hub[cli,hf_xet]"
+        hf upload "$HF_REPO" output --repo-type=dataset --include "*.zst"

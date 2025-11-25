@@ -176,8 +176,9 @@ def generate_x86_64_flags(features):
 
 def generate_presets(name, processor, backend, toolchain, configs):
     name_map = {
-        "Linux":  "linux",
-        "Darwin": "macos",
+        "Linux":   "linux",
+        "FreeBSD": "freebsd",
+        "Darwin":  "macos",
     }
     processor_map = {
         "x86_64":  "x86_64",
@@ -265,6 +266,12 @@ def generate_aarch64_linux_cpu_presets():
 
 def generate_x86_64_linux_cpu_presets():
     return generate_x86_64_cpu_presets('Linux')
+
+def generate_aarch64_freebsd_cpu_presets():
+    return generate_aarch64_cpu_presets('FreeBSD')
+
+def generate_x86_64_freebsd_cpu_presets():
+    return generate_x86_64_cpu_presets('FreeBSD')
 
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
@@ -366,6 +373,8 @@ def generate_metal_presets():
 
 def main():
     generators = [
+        generate_aarch64_freebsd_cpu_presets,
+        generate_x86_64_freebsd_cpu_presets,
         generate_aarch64_linux_cpu_presets,
         generate_x86_64_linux_cpu_presets,
         generate_x86_64_linux_rocm_presets,
