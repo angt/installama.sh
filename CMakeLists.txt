@@ -70,7 +70,6 @@ if(CMAKE_C_COMPILER_ID STREQUAL "Clang" OR CMAKE_C_COMPILER_ID STREQUAL "GNU")
     add_link_options(-static-libgcc -static-libstdc++)
     add_link_options(-Wl,--gc-sections -Wl,--strip-all)
 elseif(CMAKE_C_COMPILER_ID STREQUAL "AppleClang")
-    message(STATUS "MACOS DETECTED")
     add_link_options(-Wl,-dead_strip -Wl,-S)
 else()
     message(WARNING "Unknown compiler: ${CMAKE_C_COMPILER_ID}")
@@ -83,6 +82,9 @@ else()
     FetchContent_MakeAvailable(llamacpp)
     set(INSTALLAMA_TARGET "llama-server")
 endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/cuda/prune.cmake")
+installama_prune_cuda(${INSTALLAMA_TARGET})
 
 set(INSTALLAMA_FILE "${INSTALLAMA_DIR}/${INSTALLAMA_TARGET}.zst")
 
