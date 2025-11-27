@@ -1,0 +1,37 @@
+name: Build x86_64-linux-vulkan
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Zig
+      run: |
+        V="0.15.2" ZIG="zig-$(uname -m)-linux-$V"
+        curl -sSf "https://ziglang.org/download/$V/$ZIG.tar.xz" | tar -Jxf- -C ~
+        sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
+
+    - name: Setup Vulkan
+      run: |
+        V="1.4.304.0" VULKAN="vulkansdk-linux-$(uname -m)-$V"
+        curl -sSf "https://sdk.lunarg.com/sdk/download/$V/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt
+        sudo mv /opt/"$V/$(uname -m)" /opt/vulkan-sdk
+        echo "EXTRA_SYSROOT=/opt/vulkan-sdk" >> $GITHUB_ENV
+        echo "/opt/vulkan-sdk/bin" >> $GITHUB_PATH
+
+    - name: Build
+      run: cmake -DFILTER=x86_64-linux-vulkan -P build.cmake
+
+    - name: Deploy
+      if: ${{ vars.HF_REPO != '' }}
+      env:
+        HF_XET_HIGH_PERFORMANCE: 1
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        HF_REPO: ${{ vars.HF_REPO }}
+      run: |
+        pip install -U "huggingface_hub[cli,hf_xet]"
+        hf upload "$HF_REPO" output --repo-type=dataset --include "*.zst"
