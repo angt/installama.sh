@@ -1800,6 +1800,560 @@
       "generator": "Ninja"
     },
     {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krokk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qrkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qnkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/ylkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/mkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/lkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxmk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrn",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrn",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/kkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-probe",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/probe",
+        "INSTALLAMA_PROBE": "vulkan"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-macos-metal-m1",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -2872,6 +3426,302 @@
     {
       "name": "x86_64-linux-cuda-probe",
       "configurePreset": "x86_64-linux-cuda-probe",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "configurePreset": "x86_64-linux-vulkan-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "configurePreset": "x86_64-linux-vulkan-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "configurePreset": "x86_64-linux-vulkan-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "configurePreset": "x86_64-linux-vulkan-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "configurePreset": "x86_64-linux-vulkan-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "configurePreset": "x86_64-linux-vulkan-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "configurePreset": "x86_64-linux-vulkan-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "configurePreset": "x86_64-linux-vulkan-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "configurePreset": "x86_64-linux-vulkan-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "configurePreset": "x86_64-linux-vulkan-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "configurePreset": "x86_64-linux-vulkan-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "configurePreset": "x86_64-linux-vulkan-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzlk",
+      "configurePreset": "x86_64-linux-vulkan-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzlk",
+      "configurePreset": "x86_64-linux-vulkan-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzlk",
+      "configurePreset": "x86_64-linux-vulkan-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzkk",
+      "configurePreset": "x86_64-linux-vulkan-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzkk",
+      "configurePreset": "x86_64-linux-vulkan-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzkk",
+      "configurePreset": "x86_64-linux-vulkan-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klokk",
+      "configurePreset": "x86_64-linux-vulkan-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knokk",
+      "configurePreset": "x86_64-linux-vulkan-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krokk",
+      "configurePreset": "x86_64-linux-vulkan-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qrkkk",
+      "configurePreset": "x86_64-linux-vulkan-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qnkkk",
+      "configurePreset": "x86_64-linux-vulkan-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-ylkkk",
+      "configurePreset": "x86_64-linux-vulkan-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qkkkk",
+      "configurePreset": "x86_64-linux-vulkan-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-mkkkk",
+      "configurePreset": "x86_64-linux-vulkan-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-lkkkk",
+      "configurePreset": "x86_64-linux-vulkan-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxmk",
+      "configurePreset": "x86_64-linux-vulkan-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxmk",
+      "configurePreset": "x86_64-linux-vulkan-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxmk",
+      "configurePreset": "x86_64-linux-vulkan-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxnk",
+      "configurePreset": "x86_64-linux-vulkan-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxnk",
+      "configurePreset": "x86_64-linux-vulkan-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxnk",
+      "configurePreset": "x86_64-linux-vulkan-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrn",
+      "configurePreset": "x86_64-linux-vulkan-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrn",
+      "configurePreset": "x86_64-linux-vulkan-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-kkkkk",
+      "configurePreset": "x86_64-linux-vulkan-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-probe",
+      "configurePreset": "x86_64-linux-vulkan-probe",
       "jobs": 0,
       "targets": [
         "installama"
@@ -4533,6 +5383,487 @@
         {
           "type": "build",
           "name": "x86_64-linux-cuda-probe"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-probe",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-probe"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-probe"
         }
       ]
     },

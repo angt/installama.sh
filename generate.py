@@ -348,6 +348,39 @@ def generate_x86_64_linux_cuda_probe_preset():
         configs   = configs,
     )
 
+def generate_x86_64_linux_vulkan_presets():
+    configs = []
+    for features in generate_x86_64_features():
+        name = featcode("x86_64", features)
+        cache = {
+            "INSTALLAMA_FLAGS": generate_x86_64_flags(features),
+            "GGML_VULKAN": "ON",
+        }
+        configs.append((name, cache))
+
+    return generate_presets(
+        name      = 'Linux',
+        processor = 'x86_64',
+        backend   = 'vulkan',
+        toolchain = 'toolchains/vulkan.cmake',
+        configs   = configs,
+    )
+
+def generate_x86_64_linux_vulkan_probe_preset():
+    configs = []
+    name = "probe"
+    cache = {
+        "INSTALLAMA_PROBE": "vulkan",
+    }
+    configs.append((name, cache))
+
+    return generate_presets(
+        name      = 'Linux',
+        processor = 'x86_64',
+        backend   = 'vulkan',
+        toolchain = 'toolchains/vulkan.cmake',
+        configs   = configs,
+    )
 
 def generate_metal_presets():
     configs = []
@@ -381,6 +414,8 @@ def main():
         generate_x86_64_linux_rocm_probe_preset,
         generate_x86_64_linux_cuda_presets,
         generate_x86_64_linux_cuda_probe_preset,
+        generate_x86_64_linux_vulkan_presets,
+        generate_x86_64_linux_vulkan_probe_preset,
         generate_metal_presets,
     ]
     data = {

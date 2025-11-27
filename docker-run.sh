@@ -1,6 +1,7 @@
 case "$1" in
 (cuda) ;;
 (rocm) ;;
+(vulkan) ;;
 (*) exit ;;
 esac
 
@@ -15,8 +16,7 @@ docker build --platform linux/amd64 -f "$IMG/Dockerfile" -t "installama-$IMG" . 
 docker run --rm --platform linux/amd64 \
 	-v "$(pwd):/work" \
 	--tmpfs /work/deps \
-	--tmpfs /work/build \
+	--tmpfs /work/build:exec \
 	--workdir /work \
 	"installama-$IMG" \
 	"$@"
-
