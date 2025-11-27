@@ -1,6 +1,5 @@
 if(DEFINED ENV{EXTRA_SYSROOT})
     set(CMAKE_FIND_ROOT_PATH "$ENV{EXTRA_SYSROOT}")
-    message(STATUS "Toolchain: Added custom search path: $ENV{EXTRA_SYSROOT}")
 endif()
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
