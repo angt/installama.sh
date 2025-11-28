@@ -13,7 +13,7 @@ RUN ZIG="zig-$(uname -m)-linux-$ZIG_VERSION" \
  && wget -qO- "https://ziglang.org/download/$ZIG_VERSION/$ZIG.tar.xz" | tar -Jxf- -C ~ \
  && ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
-ARG VULKAN_VERSION=1.4.304.0
+ARG VULKAN_VERSION=1.4.328.1
 
 RUN VULKAN="vulkansdk-linux-$(uname -m)-$VULKAN_VERSION" \
  && wget -qO- "https://sdk.lunarg.com/sdk/download/$VULKAN_VERSION/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt \
