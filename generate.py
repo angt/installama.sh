@@ -11,6 +11,7 @@ ROCM_ARCHS = [
 ]
 CUDA_ARCHS = ["50", "61", "70", "75", "80", "86", "89"]
 METAL_ARCHS = {1: "13.3", 2: "13.3", 3: "14.0", 4: "15.0"}
+CPU_ARCHS = {}
 
 def generate_features(features, implications):
     m = cp_model.CpModel()
@@ -174,6 +175,21 @@ def generate_x86_64_flags(features):
     ])
     return flags
 
+def generate_cpu_archs():
+    CPU_ARCHS['aarch64'] = {}
+
+    for features in generate_aarch64_features():
+        name = featcode('aarch64', features)
+        flags = generate_aarch64_flags(features)
+        CPU_ARCHS['aarch64'][name] = flags
+
+    CPU_ARCHS['x86_64'] = {}
+
+    for features in generate_x86_64_features():
+        name = featcode('x86_64', features)
+        flags = generate_x86_64_flags(features)
+        CPU_ARCHS['x86_64'][name] = flags
+
 def generate_presets(name, processor, backend, toolchain, configs):
     name_map = {
         "Linux":   "linux",
@@ -227,51 +243,33 @@ def generate_presets(name, processor, backend, toolchain, configs):
 
     return configure, build, workflow
 
-def generate_aarch64_cpu_presets(system_name):
+def generate_cpu_presets(system_name, processor):
     configs = []
-    for features in generate_aarch64_features():
-        name = featcode("aarch64", features)
+    for name, flags in CPU_ARCHS[processor].items():
         cache = {
-            "INSTALLAMA_FLAGS": generate_aarch64_flags(features)
+            "INSTALLAMA_FLAGS": flags,
         }
         configs.append((name, cache))
 
     return generate_presets(
         name      = system_name,
-        processor = 'aarch64',
-        backend   = 'cpu',
-        toolchain = 'toolchains/cross.cmake',
-        configs   = configs,
-    )
-
-def generate_x86_64_cpu_presets(system_name):
-    configs = []
-    for features in generate_x86_64_features():
-        name = featcode("x86_64", features)
-        cache = {
-            "INSTALLAMA_FLAGS": generate_x86_64_flags(features)
-        }
-        configs.append((name, cache))
-
-    return generate_presets(
-        name      = system_name,
-        processor = 'x86_64',
+        processor = processor,
         backend   = 'cpu',
         toolchain = 'toolchains/cross.cmake',
         configs   = configs,
     )
 
 def generate_aarch64_linux_cpu_presets():
-    return generate_aarch64_cpu_presets('Linux')
+    return generate_cpu_presets('Linux', 'aarch64')
 
 def generate_x86_64_linux_cpu_presets():
-    return generate_x86_64_cpu_presets('Linux')
+    return generate_cpu_presets('Linux', 'x86_64')
 
 def generate_aarch64_freebsd_cpu_presets():
-    return generate_aarch64_cpu_presets('FreeBSD')
+    return generate_cpu_presets('FreeBSD', 'aarch64')
 
 def generate_x86_64_freebsd_cpu_presets():
-    return generate_x86_64_cpu_presets('FreeBSD')
+    return generate_cpu_presets('FreeBSD', 'x86_64')
 
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
@@ -350,10 +348,9 @@ def generate_x86_64_linux_cuda_probe_preset():
 
 def generate_x86_64_linux_vulkan_presets():
     configs = []
-    for features in generate_x86_64_features():
-        name = featcode("x86_64", features)
+    for name, flags in CPU_ARCHS["x86_64"].items():
         cache = {
-            "INSTALLAMA_FLAGS": generate_x86_64_flags(features),
+            "INSTALLAMA_FLAGS": flags,
             "GGML_VULKAN": "ON",
         }
         configs.append((name, cache))
@@ -405,6 +402,8 @@ def generate_metal_presets():
     )
 
 def main():
+    generate_cpu_archs()
+
     generators = [
         generate_aarch64_freebsd_cpu_presets,
         generate_x86_64_freebsd_cpu_presets,
