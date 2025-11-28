@@ -46,6 +46,15 @@ llama_server_rocm() {
 	dl_bin llama-server "$REPO/$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
 }
 
+llama_server_vulkan() {
+	[ -z "$SKIP_VULKAN" ] && printf "Probing Vulkan...\n" &&
+	dl_bin vulkan-probe "$REPO/$ARCH/$OS/vulkan/probe/probe.zst" &&
+	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
+	CONFIG=$(./vulkan-probe && ./featcode 2>/dev/null) &&
+	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
+	dl_bin llama-server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
+}
+
 llama_server_cpu() {
 	printf "Probing CPU...\n" &&
 	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
@@ -86,6 +95,7 @@ main() {
 	(macos)   [ -x llama-server ] || llama_server_metal ;;
 	(linux)   [ -x llama-server ] || llama_server_cuda
 	          [ -x llama-server ] || llama_server_rocm
+	          [ -x llama-server ] || llama_server_vulkan
 	          [ -x llama-server ] || llama_server_cpu ;;
 	(freebsd) [ -x llama-server ] || llama_server_cpu ;;
 	esac
