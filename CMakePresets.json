@@ -2354,6 +2354,230 @@
       "generator": "Ninja"
     },
     {
+      "name": "aarch64-linux-vulkan-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/yk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/uk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/sk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/lk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/nk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/rk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ql",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ml",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qn",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ym",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/mk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/kk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-probe",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/probe",
+        "INSTALLAMA_PROBE": "vulkan"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-macos-metal-m1",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -3722,6 +3946,126 @@
     {
       "name": "x86_64-linux-vulkan-probe",
       "configurePreset": "x86_64-linux-vulkan-probe",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-yk",
+      "configurePreset": "aarch64-linux-vulkan-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "configurePreset": "aarch64-linux-vulkan-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-sk",
+      "configurePreset": "aarch64-linux-vulkan-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-lk",
+      "configurePreset": "aarch64-linux-vulkan-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-nk",
+      "configurePreset": "aarch64-linux-vulkan-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-rk",
+      "configurePreset": "aarch64-linux-vulkan-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "configurePreset": "aarch64-linux-vulkan-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "configurePreset": "aarch64-linux-vulkan-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "configurePreset": "aarch64-linux-vulkan-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "configurePreset": "aarch64-linux-vulkan-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "configurePreset": "aarch64-linux-vulkan-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qk",
+      "configurePreset": "aarch64-linux-vulkan-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-mk",
+      "configurePreset": "aarch64-linux-vulkan-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-kk",
+      "configurePreset": "aarch64-linux-vulkan-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-probe",
+      "configurePreset": "aarch64-linux-vulkan-probe",
       "jobs": 0,
       "targets": [
         "installama"
@@ -5864,6 +6208,201 @@
         {
           "type": "build",
           "name": "x86_64-linux-vulkan-probe"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-qn"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-probe",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-probe"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-probe"
         }
       ]
     },

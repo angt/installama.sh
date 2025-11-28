@@ -1,4 +1,4 @@
-name: Build x86_64-linux-vulkan
+name: Build aarch64-linux-vulkan
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
         sudo mv /opt/"$V/$(uname -m)" /opt/vulkan-sdk
 
     - name: Build
-      run: cmake -DFILTER=x86_64-linux-vulkan -P build.cmake
+      run: cmake -DFILTER=aarch64-linux-vulkan -P build.cmake
 
     - name: Deploy
       if: ${{ vars.HF_REPO != '' }}

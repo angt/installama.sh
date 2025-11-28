@@ -346,9 +346,9 @@ def generate_x86_64_linux_cuda_probe_preset():
         configs   = configs,
     )
 
-def generate_x86_64_linux_vulkan_presets():
+def generate_linux_vulkan_presets(processor):
     configs = []
-    for name, flags in CPU_ARCHS["x86_64"].items():
+    for name, flags in CPU_ARCHS[processor].items():
         cache = {
             "INSTALLAMA_FLAGS": flags,
             "GGML_VULKAN": "ON",
@@ -357,13 +357,13 @@ def generate_x86_64_linux_vulkan_presets():
 
     return generate_presets(
         name      = 'Linux',
-        processor = 'x86_64',
+        processor = processor,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
     )
 
-def generate_x86_64_linux_vulkan_probe_preset():
+def generate_linux_vulkan_probe_preset(processor):
     configs = []
     name = "probe"
     cache = {
@@ -373,11 +373,23 @@ def generate_x86_64_linux_vulkan_probe_preset():
 
     return generate_presets(
         name      = 'Linux',
-        processor = 'x86_64',
+        processor = processor,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
     )
+
+def generate_x86_64_linux_vulkan_presets():
+    return generate_linux_vulkan_presets('x86_64')
+
+def generate_x86_64_linux_vulkan_probe_preset():
+    return generate_linux_vulkan_probe_preset('x86_64')
+
+def generate_aarch64_linux_vulkan_presets():
+    return generate_linux_vulkan_presets('aarch64')
+
+def generate_aarch64_linux_vulkan_probe_preset():
+    return generate_linux_vulkan_probe_preset('aarch64')
 
 def generate_metal_presets():
     configs = []
@@ -415,6 +427,8 @@ def main():
         generate_x86_64_linux_cuda_probe_preset,
         generate_x86_64_linux_vulkan_presets,
         generate_x86_64_linux_vulkan_probe_preset,
+        generate_aarch64_linux_vulkan_presets,
+        generate_aarch64_linux_vulkan_probe_preset,
         generate_metal_presets,
     ]
     data = {

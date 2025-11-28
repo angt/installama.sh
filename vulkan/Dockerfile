@@ -18,6 +18,3 @@ ARG VULKAN_VERSION=1.4.328.1
 RUN VULKAN="vulkansdk-linux-$(uname -m)-$VULKAN_VERSION" \
  && wget -qO- "https://sdk.lunarg.com/sdk/download/$VULKAN_VERSION/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt \
  && mv /opt/"$VULKAN_VERSION/$(uname -m)" /opt/vulkan-sdk
-
-ENV EXTRA_SYSROOT="/opt/vulkan-sdk"
-ENV PATH="/opt/vulkan-sdk/bin:$PATH"

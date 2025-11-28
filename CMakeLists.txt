@@ -76,6 +76,8 @@ else()
     message(WARNING "Unknown compiler: ${CMAKE_C_COMPILER_ID}")
 endif()
 
+include("${CMAKE_CURRENT_LIST_DIR}/vulkan/stub.cmake")
+
 if(INSTALLAMA_PROBE)
     add_subdirectory(${INSTALLAMA_PROBE})
     set(INSTALLAMA_TARGET "probe")
