@@ -1,35 +1,37 @@
-find_path(VULKAN_HEADERS
-    NAMES vulkan/vulkan.h
-    HINTS "$ENV{VULKAN_SDK}/include" "/opt/vulkan-sdk/include"
-    REQUIRED
-)
-add_library(vulkan_stub SHARED ${CMAKE_CURRENT_LIST_DIR}/stub.c)
-
-target_include_directories(vulkan_stub PUBLIC ${VULKAN_HEADERS})
-
-set_target_properties(vulkan_stub PROPERTIES
-    OUTPUT_NAME vulkan
-    VERSION 1.2.0
-    POSITION_INDEPENDENT_CODE ON
-    C_VISIBILITY_PRESET default
-)
-
-if(WIN32)
-    set_target_properties(vulkan_stub PROPERTIES
-        OUTPUT_NAME "vulkan-1"
-        PREFIX ""
-        SUFFIX ".dll"
+if(GGML_VULKAN)
+    find_path(VULKAN_HEADERS
+        NAMES vulkan/vulkan.h
+        HINTS "$ENV{VULKAN_SDK}/include" "/opt/vulkan-sdk/include"
+        REQUIRED
     )
-elseif(APPLE)
+    add_library(vulkan_stub SHARED ${CMAKE_CURRENT_LIST_DIR}/stub.c)
+
+    target_include_directories(vulkan_stub PUBLIC ${VULKAN_HEADERS})
+
     set_target_properties(vulkan_stub PROPERTIES
-        SOVERSION 1
-        SUFFIX ".dylib"
+        OUTPUT_NAME vulkan
+        VERSION 1.2.0
+        POSITION_INDEPENDENT_CODE ON
+        C_VISIBILITY_PRESET default
     )
-else()
-    set_target_properties(vulkan_stub PROPERTIES
-        SOVERSION 1
-        SUFFIX ".so"
-    )
+
+    if(WIN32)
+        set_target_properties(vulkan_stub PROPERTIES
+            OUTPUT_NAME "vulkan-1"
+            PREFIX ""
+            SUFFIX ".dll"
+        )
+    elseif(APPLE)
+        set_target_properties(vulkan_stub PROPERTIES
+            SOVERSION 1
+            SUFFIX ".dylib"
+        )
+    else()
+        set_target_properties(vulkan_stub PROPERTIES
+            SOVERSION 1
+            SUFFIX ".so"
+        )
+    endif()
+
+    list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}")
 endif()
-
-list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}")
