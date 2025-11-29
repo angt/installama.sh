@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+from collections import defaultdict
 import json
 from ortools.sat.python import cp_model
 
@@ -391,6 +392,9 @@ def generate_aarch64_linux_vulkan_presets():
 def generate_aarch64_linux_vulkan_probe_preset():
     return generate_linux_vulkan_probe_preset('aarch64')
 
+def metal_use_bf16(cpu):
+    return cpu >= 3
+
 def generate_metal_presets():
     configs = []
     for cpu, osx in METAL_ARCHS.items():
@@ -398,7 +402,7 @@ def generate_metal_presets():
         cache = {
             "GGML_METAL": "ON",
             "GGML_METAL_EMBED_LIBRARY": "ON",
-            "GGML_METAL_USE_BF16": "ON" if cpu >= 3 else "OFF",
+            "GGML_METAL_USE_BF16": "ON" if metal_use_bf16(cpu) else "OFF",
             "CMAKE_OSX_ARCHITECTURES": "arm64",
             "CMAKE_OSX_DEPLOYMENT_TARGET": osx,
             "INSTALLAMA_FLAGS": f"-mcpu=apple-m{cpu}"
@@ -412,6 +416,82 @@ def generate_metal_presets():
         toolchain = 'toolchains/base.cmake',
         configs   = configs
     )
+
+def format_x86_64_features(flags):
+    feats = []
+    arch = ""
+    parts = flags.split()
+    for p in parts:
+        if p.startswith("-march="):
+            arch = p.replace("-march=", "")
+        elif p.startswith("-m"):
+            feats.append(p[2:])
+    return arch, feats
+
+def format_aarch64_features(flags):
+    feats = []
+    arch = ""
+    parts = flags.replace("-mcpu=", "").split("+")
+    arch_map = {
+        "v8_2a":   "ARMv8.2-a",
+        "v8_7a":   "ARMv8.7-a",
+        "v9a":     "ARMv9-a",
+        "generic": "ARMv8.0-a"
+    }
+    for p in parts:
+        if p in arch_map:
+            arch = arch_map[p]
+        else:
+            feats.append(p)
+    return arch, feats
+
+def generate_report():
+    lines = []
+    lines.append("# Build Presets Reference\n")
+    lines.append("## CPU\n")
+
+    lines.append("### AArch64 (ARM64)\n")
+    lines.append("| Code | Architecture | Features |")
+    lines.append("|---|---|---|")
+    for code, flags in CPU_ARCHS['aarch64'].items():
+        arch, feats = format_aarch64_features(flags)
+        feats = " ".join(f"`{f}`" for f in feats) if feats else "-"
+        lines.append(f"| `{code}` | **{arch}** | {feats} |")
+    lines.append("\n")
+
+    lines.append("### x86_64 (Intel/AMD)\n")
+    lines.append("| Code | Architecture | Features |")
+    lines.append("|---|---|---|")
+    for code, flags in CPU_ARCHS['x86_64'].items():
+        arch, feats = format_x86_64_features(flags)
+        feats = " ".join(f"`{f}`" for f in feats) if feats else "-"
+        lines.append(f"| `{code}` | **{arch}** | {feats} |")
+    lines.append("\n")
+
+    lines.append("## GPU\n")
+
+    lines.append("### CUDA (NVIDIA)\n")
+    cuda_list = " ".join(f"`{a}`" for a in CUDA_ARCHS)
+    lines.append(f"- **Supported Architectures:** {cuda_list}")
+    lines.append("\n")
+
+    lines.append("### ROCm (AMD)\n")
+    lines.append("| Suffix | Features |")
+    lines.append("|---|---|")
+    for arch in ROCM_ARCHS:
+        feat = "**ROCWMMA** + FlashAttn" if rocwmma(arch) else "-"
+        lines.append(f"| `gfx{arch}` | {feat} |")
+    lines.append("\n")
+
+    lines.append("### Metal (Apple Silicon)\n")
+    lines.append("| Suffix | Chip | macOS | Features |")
+    lines.append("|---|---|---|---|")
+    for cpu, osx in METAL_ARCHS.items():
+        feat = "**BF16**" if metal_use_bf16(cpu) else "-"
+        lines.append(f"| `m{cpu}` | Apple **M{cpu}** | {osx}+ | {feat} |")
+    lines.append("\n")
+
+    return "\n".join(lines)
 
 def main():
     generate_cpu_archs()
@@ -445,6 +525,11 @@ def main():
 
     with open("CMakePresets.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
+    report = generate_report()
+
+    with open("PRESETS.md", "w", encoding="utf-8") as f:
+        f.write(report)
 
 if __name__ == "__main__":
     main()
