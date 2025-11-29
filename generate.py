@@ -479,7 +479,7 @@ def generate_report():
     lines.append("| Suffix | Features |")
     lines.append("|---|---|")
     for arch in ROCM_ARCHS:
-        feat = "**ROCWMMA** + FlashAttn" if rocwmma(arch) else "-"
+        feat = "ROCWMMA+FlashAttn" if rocwmma(arch) else "-"
         lines.append(f"| `gfx{arch}` | {feat} |")
     lines.append("\n")
 
@@ -487,8 +487,8 @@ def generate_report():
     lines.append("| Suffix | Chip | macOS | Features |")
     lines.append("|---|---|---|---|")
     for cpu, osx in METAL_ARCHS.items():
-        feat = "**BF16**" if metal_use_bf16(cpu) else "-"
-        lines.append(f"| `m{cpu}` | Apple **M{cpu}** | {osx}+ | {feat} |")
+        feat = "BF16" if metal_use_bf16(cpu) else "-"
+        lines.append(f"| `m{cpu}` | Apple M{cpu} | {osx}+ | {feat} |")
     lines.append("\n")
 
     return "\n".join(lines)

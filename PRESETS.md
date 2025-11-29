@@ -78,27 +78,27 @@
 | `gfx803` | - |
 | `gfx900` | - |
 | `gfx906` | - |
-| `gfx908` | **ROCWMMA** + FlashAttn |
-| `gfx90a` | **ROCWMMA** + FlashAttn |
-| `gfx942` | **ROCWMMA** + FlashAttn |
+| `gfx908` | ROCWMMA+FlashAttn |
+| `gfx90a` | ROCWMMA+FlashAttn |
+| `gfx942` | ROCWMMA+FlashAttn |
 | `gfx1010` | - |
 | `gfx1011` | - |
 | `gfx1030` | - |
 | `gfx1032` | - |
-| `gfx1100` | **ROCWMMA** + FlashAttn |
-| `gfx1101` | **ROCWMMA** + FlashAttn |
-| `gfx1102` | **ROCWMMA** + FlashAttn |
-| `gfx1151` | **ROCWMMA** + FlashAttn |
-| `gfx1200` | **ROCWMMA** + FlashAttn |
-| `gfx1201` | **ROCWMMA** + FlashAttn |
+| `gfx1100` | ROCWMMA+FlashAttn |
+| `gfx1101` | ROCWMMA+FlashAttn |
+| `gfx1102` | ROCWMMA+FlashAttn |
+| `gfx1151` | ROCWMMA+FlashAttn |
+| `gfx1200` | ROCWMMA+FlashAttn |
+| `gfx1201` | ROCWMMA+FlashAttn |
 
 
 ### Metal (Apple Silicon)
 
 | Suffix | Chip | macOS | Features |
 |---|---|---|---|
-| `m1` | Apple **M1** | 13.3+ | - |
-| `m2` | Apple **M2** | 13.3+ | - |
-| `m3` | Apple **M3** | 14.0+ | **BF16** |
-| `m4` | Apple **M4** | 15.0+ | **BF16** |
+| `m1` | Apple M1 | 13.3+ | - |
+| `m2` | Apple M2 | 13.3+ | - |
+| `m3` | Apple M3 | 14.0+ | BF16 |
+| `m4` | Apple M4 | 15.0+ | BF16 |
 

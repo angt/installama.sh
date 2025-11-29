@@ -7,14 +7,13 @@ It automatically detects your OS, architecture, and GPU capabilities, so you can
 
 ## Features
 
-- **Automatic detection** of CPU architecture (`x86_64` / `aarch64`) and OS (`Linux` / `macOS`).
-- Support for **GPU acceleration**:
-  - CUDA: `50` `61` `70` `75` `80` `86` `89`.
-  - ROCm: `gfx803` `gfx900` `gfx906` `gfx908` `gfx90a` `gfx942` `gfx1010` `gfx1011` `gfx1030` `gfx1032` `gfx1100` `gfx1101` `gfx1102` `gfx1200` `gfx1201` `gfx1151`.
-  - Metal: `M1` `M2` `M3` `M4`.
-- Fallback to **CPU optimized** builds if the GPU is not available.
-- **Lightweight** and **Fast**!
+- Supported architectures: `x86_64`, `aarch64`.
+- Supported OS: `Linux`, `macOS`, `FreeBSD`.
+- **Automatic detection** for **CPU acceleration**.
+- **Automatic detection** for **GPU acceleration**: `CUDA`, `ROCm`, `Vulkan`, `Metal`.
+- Builds are kept as **lightweight** as possible without compromising performance.
 
+See the full list of supported hardware and build configurations in [PRESETS.md](PRESETS.md).
 
 ## Usage
 
@@ -24,13 +23,13 @@ Install `llama-server` in one easy step:
 
 Then run the server, for example, with the [new awesome WebGUI](https://github.com/ggml-org/llama.cpp/discussions/16938):
 
-    ~/.installama/llama-server -hf ggml-org/gpt-oss-20b-GGUF --jinja
+    ~/.installama/llama-server -hf unsloth/Qwen3-4B-GGUF:Q4_0
 
 And open your favorite browser to http://127.0.0.1:8080/.
 
-You can also run everything in a single command:
+You can also directly launch a model in a single command:
 
-    curl angt.github.io/installama.sh | MODEL=ggml-org/gpt-oss-20b-GGUF sh
+    curl angt.github.io/installama.sh | MODEL=unsloth/Qwen3-4B-GGUF:Q4_0 sh
 
 In some scenarios, you may want to skip the CUDA backend.
 You can do this with the following command:
