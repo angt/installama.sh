@@ -36,7 +36,7 @@ You can do this with the following command:
 
     curl angt.github.io/installama.sh | SKIP_CUDA=1 sh
 
-Skipping ROCm is also possible by setting `SKIP_ROCM=1`.
+You can also use `SKIP_ROCM=1` or `SKIP_VULKAN=1` to disable those backends.
 
 
 ---
