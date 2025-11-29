@@ -104,7 +104,7 @@ main() {
 		"No prebuilt llama-server binary is available for your system." \
 		"Please compile llama.cpp from source instead."
 
-	[ "$MODEL" ] && set -- -hf "$MODEL" --jinja
+	[ "$MODEL" ] && set -- -hf "$MODEL"
 	[ $# -gt 0 ] && exec ./llama-server "$@"
 
 	printf "Run ~/.installama/llama-server to launch the llama.cpp server\n"
