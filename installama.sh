@@ -33,7 +33,7 @@ unzstd() (
 llama_server_cuda() {
 	[ -z "$SKIP_CUDA" ] && printf "Probing CUDA...\n" &&
 	dl_bin cuda-probe "$REPO/$ARCH/$OS/cuda/probe/probe.zst" &&
-	CONFIG=$(./cuda-probe 2>/dev/null) &&
+	CONFIG=$(./cuda-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
 	dl_bin llama-server "$REPO/$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
 }
@@ -41,7 +41,7 @@ llama_server_cuda() {
 llama_server_rocm() {
 	[ -z "$SKIP_ROCM" ] && printf "Probing ROCm...\n" &&
 	dl_bin rocm-probe "$REPO/$ARCH/$OS/rocm/probe/probe.zst" &&
-	CONFIG=$(./rocm-probe 2>/dev/null) &&
+	CONFIG=$(./rocm-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
 	dl_bin llama-server "$REPO/$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
 }
@@ -50,7 +50,7 @@ llama_server_vulkan() {
 	[ -z "$SKIP_VULKAN" ] && printf "Probing Vulkan...\n" &&
 	dl_bin vulkan-probe "$REPO/$ARCH/$OS/vulkan/probe/probe.zst" &&
 	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
-	CONFIG=$(./vulkan-probe && ./featcode 2>/dev/null) &&
+	CONFIG=$(./vulkan-probe && ./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
 	dl_bin llama-server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
 }
@@ -58,14 +58,14 @@ llama_server_vulkan() {
 llama_server_cpu() {
 	printf "Probing CPU...\n" &&
 	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
-	CONFIG=$(./featcode 2>/dev/null) &&
+	CONFIG=$(./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
 	dl_bin llama-server "$REPO/$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
 }
 
 llama_server_metal() {
 	printf "Probing Metal...\n" &&
-	CONFIG=$(sysctl -n machdep.cpu.brand_string 2>/dev/null | grep -o "Apple M[1-4]") &&
+	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-4]") 2>/dev/null &&
 	CONFIG=m${CONFIG##*M} &&
 	printf "Found: %s\n" "$CONFIG" &&
 	dl_bin llama-server "$REPO/$ARCH/$OS/metal/$CONFIG/llama-server.zst"
