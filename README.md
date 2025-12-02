@@ -19,7 +19,7 @@ See the full list of supported hardware and build configurations in [PRESETS.md]
 
 Install `llama-server` in one easy step:
 
-    curl angt.github.io/installama.sh | sh
+    curl installama.sh | sh
 
 Then run the server, for example, with the [new awesome WebGUI](https://github.com/ggml-org/llama.cpp/discussions/16938):
 
@@ -29,12 +29,12 @@ And open your favorite browser to http://127.0.0.1:8080/.
 
 You can also directly launch a model in a single command:
 
-    curl angt.github.io/installama.sh | MODEL=unsloth/Qwen3-4B-GGUF:Q4_0 sh
+    curl installama.sh | MODEL=unsloth/Qwen3-4B-GGUF:Q4_0 sh
 
 In some scenarios, you may want to skip the CUDA backend.
 You can do this with the following command:
 
-    curl angt.github.io/installama.sh | SKIP_CUDA=1 sh
+    curl installama.sh | SKIP_CUDA=1 sh
 
 You can also use `SKIP_ROCM=1` or `SKIP_VULKAN=1` to disable those backends.
 
