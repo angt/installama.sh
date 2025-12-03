@@ -3,7 +3,6 @@ import sys
 import subprocess
 from collections import defaultdict
 import json
-from ortools.sat.python import cp_model
 
 ROCM_ARCHS = [
     "803",  "900",  "906",  "908",  "90a",  "942",
@@ -15,19 +14,11 @@ METAL_ARCHS = {1: "13.3", 2: "13.3", 3: "14.0", 4: "15.0"}
 CPU_ARCHS = {}
 
 def generate_features(features, implications):
-    m = cp_model.CpModel()
-    v = {f: m.NewBoolVar(f) for f in features}
-
-    for child, parent in implications:
-        m.Add(v[child] <= v[parent])
-
-    class CB(cp_model.CpSolverSolutionCallback):
-        def on_solution_callback(self):
-            ret.append([f for f in features if self.Value(v[f])])
-
+    rules = [(1 << features.index(c), 1 << features.index(p)) for c, p in implications]
     ret = []
-    s = cp_model.CpSolver()
-    s.SearchForAllSolutions(m, CB())
+    for i in range(1 << len(features)):
+        if all(not (i & child) or (i & parent) for child, parent in rules):
+            ret.append([f for k, f in enumerate(features) if (i >> k) & 1])
     return ret
 
 def generate_aarch64_features():

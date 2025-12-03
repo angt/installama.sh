@@ -2,39 +2,11 @@
   "version": 7,
   "configurePresets": [
     {
-      "name": "aarch64-freebsd-cpu-yk",
+      "name": "aarch64-freebsd-cpu-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/uk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/sk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/kk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -58,95 +30,25 @@
       "generator": "Ninja"
     },
     {
+      "name": "aarch64-freebsd-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/mk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-freebsd-cpu-nk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/nk",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ql",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ml",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qn",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ym",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qm",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -170,11 +72,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-freebsd-cpu-mk",
+      "name": "aarch64-freebsd-cpu-rk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/mk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -184,11 +86,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-freebsd-cpu-kk",
+      "name": "aarch64-freebsd-cpu-sk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/kk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/sk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -198,11 +100,109 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-knxrk",
+      "name": "aarch64-freebsd-cpu-uk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/uk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ml",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ql",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ym",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qn",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/kkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -212,11 +212,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-klxrk",
+      "name": "x86_64-freebsd-cpu-lkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/lkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -226,11 +226,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-krxrk",
+      "name": "x86_64-freebsd-cpu-mkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/mkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -240,11 +240,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-krxqk",
+      "name": "x86_64-freebsd-cpu-qkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -254,11 +254,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-knxqk",
+      "name": "x86_64-freebsd-cpu-ylkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/ylkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -268,11 +268,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-klxqk",
+      "name": "x86_64-freebsd-cpu-qnkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qnkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -282,165 +282,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-klxok",
+      "name": "x86_64-freebsd-cpu-qrkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qrkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -492,11 +338,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-qrkkk",
+      "name": "x86_64-freebsd-cpu-klzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qrkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -506,11 +352,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-qnkkk",
+      "name": "x86_64-freebsd-cpu-knzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qnkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -520,11 +366,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-ylkkk",
+      "name": "x86_64-freebsd-cpu-krzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/ylkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -534,11 +380,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-qkkkk",
+      "name": "x86_64-freebsd-cpu-klzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -548,11 +394,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-mkkkk",
+      "name": "x86_64-freebsd-cpu-knzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/mkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -562,11 +408,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-lkkkk",
+      "name": "x86_64-freebsd-cpu-krzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/lkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -618,11 +464,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-krxnk",
+      "name": "x86_64-freebsd-cpu-klxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -646,11 +492,179 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-klxnk",
+      "name": "x86_64-freebsd-cpu-krxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "FreeBSD",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "FreeBSD",
@@ -688,53 +702,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-freebsd-cpu-kkkkk",
+      "name": "aarch64-linux-cpu-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/kkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-yk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/yk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-uk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/uk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-sk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/sk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/kk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -758,95 +730,25 @@
       "generator": "Ninja"
     },
     {
+      "name": "aarch64-linux-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/mk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-linux-cpu-nk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/nk",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-rk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/rk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-ql",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ql",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-ml",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ml",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-qn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qn",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-ym",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ym",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-cpu-qm",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qm",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -870,11 +772,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-linux-cpu-mk",
+      "name": "aarch64-linux-cpu-rk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/mk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/rk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -884,11 +786,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-linux-cpu-kk",
+      "name": "aarch64-linux-cpu-sk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/kk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/sk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -898,11 +800,109 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-knxrk",
+      "name": "aarch64-linux-cpu-uk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/uk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/yk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ml",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ql",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ym",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qn",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/kkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -912,11 +912,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-klxrk",
+      "name": "x86_64-linux-cpu-lkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/lkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -926,11 +926,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-krxrk",
+      "name": "x86_64-linux-cpu-mkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/mkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -940,11 +940,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-krxqk",
+      "name": "x86_64-linux-cpu-qkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -954,11 +954,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-knxqk",
+      "name": "x86_64-linux-cpu-ylkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/ylkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -968,11 +968,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-klxqk",
+      "name": "x86_64-linux-cpu-qnkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qnkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -982,165 +982,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-klxok",
+      "name": "x86_64-linux-cpu-qrkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-knxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-krxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-krxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-knxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-klxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-klzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-knzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-krzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-krzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-knzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-klzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qrkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1192,11 +1038,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-qrkkk",
+      "name": "x86_64-linux-cpu-klzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qrkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1206,11 +1052,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-qnkkk",
+      "name": "x86_64-linux-cpu-knzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qnkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1220,11 +1066,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-ylkkk",
+      "name": "x86_64-linux-cpu-krzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/ylkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1234,11 +1080,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-qkkkk",
+      "name": "x86_64-linux-cpu-klzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1248,11 +1094,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-mkkkk",
+      "name": "x86_64-linux-cpu-knzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/mkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1262,11 +1108,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-lkkkk",
+      "name": "x86_64-linux-cpu-krzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/lkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1318,11 +1164,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-krxnk",
+      "name": "x86_64-linux-cpu-klxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1346,11 +1192,179 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-cpu-klxnk",
+      "name": "x86_64-linux-cpu-krxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1379,20 +1393,6 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrn",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-cpu-kkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/kkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64"
       },
       "environment": {
         "CMAKE_SYSTEM_NAME": "Linux",
@@ -1800,11 +1800,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-knxrk",
+      "name": "x86_64-linux-vulkan-kkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/kkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1815,11 +1815,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-klxrk",
+      "name": "x86_64-linux-vulkan-lkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/lkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1830,11 +1830,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-krxrk",
+      "name": "x86_64-linux-vulkan-mkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/mkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1845,11 +1845,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-krxqk",
+      "name": "x86_64-linux-vulkan-qkkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qkkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1860,11 +1860,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-knxqk",
+      "name": "x86_64-linux-vulkan-ylkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/ylkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1875,11 +1875,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-klxqk",
+      "name": "x86_64-linux-vulkan-qnkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxqk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qnkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -1890,176 +1890,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-klxok",
+      "name": "x86_64-linux-vulkan-qrkkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxok",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-klxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxpk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzlk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qrkkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2115,11 +1950,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-qrkkk",
+      "name": "x86_64-linux-vulkan-klzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qrkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2130,11 +1965,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-qnkkk",
+      "name": "x86_64-linux-vulkan-knzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qnkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2145,11 +1980,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-ylkkk",
+      "name": "x86_64-linux-vulkan-krzkk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/ylkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzkk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2160,11 +1995,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-qkkkk",
+      "name": "x86_64-linux-vulkan-klzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2175,11 +2010,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-mkkkk",
+      "name": "x86_64-linux-vulkan-knzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/mkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2190,11 +2025,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-lkkkk",
+      "name": "x86_64-linux-vulkan-krzlk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/lkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzlk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2250,11 +2085,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-krxnk",
+      "name": "x86_64-linux-vulkan-klxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2280,11 +2115,191 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-klxnk",
+      "name": "x86_64-linux-vulkan-krxnk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxnk",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxnk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxok",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxpk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxqk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrk",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2325,21 +2340,6 @@
       "generator": "Ninja"
     },
     {
-      "name": "x86_64-linux-vulkan-kkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/kkkkk",
-        "INSTALLAMA_FLAGS": "-march=x86_64",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
       "name": "x86_64-linux-vulkan-probe",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -2354,41 +2354,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-linux-vulkan-yk",
+      "name": "aarch64-linux-vulkan-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/yk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-uk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/uk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-sk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/sk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve",
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/kk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2414,101 +2384,26 @@
       "generator": "Ninja"
     },
     {
+      "name": "aarch64-linux-vulkan-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/mk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-linux-vulkan-nk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/nk",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-rk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/rk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-ql",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ql",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-ml",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ml",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-qn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qn",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-ym",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ym",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme",
-        "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
-      },
-      "toolchainFile": "toolchains/vulkan.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-linux-vulkan-qm",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qm",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2534,11 +2429,11 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-linux-vulkan-mk",
+      "name": "aarch64-linux-vulkan-rk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/mk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod",
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/rk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2549,11 +2444,116 @@
       "generator": "Ninja"
     },
     {
-      "name": "aarch64-linux-vulkan-kk",
+      "name": "aarch64-linux-vulkan-sk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/kk",
-        "INSTALLAMA_FLAGS": "-mcpu=generic",
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/sk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/uk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/yk",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ml",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ql",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ym",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "environment": {
+        "CMAKE_SYSTEM_NAME": "Linux",
+        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qn",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme",
         "GGML_VULKAN": "ON"
       },
       "environment": {
@@ -2656,24 +2656,8 @@
   ],
   "buildPresets": [
     {
-      "name": "aarch64-freebsd-cpu-yk",
-      "configurePreset": "aarch64-freebsd-cpu-yk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "configurePreset": "aarch64-freebsd-cpu-uk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "configurePreset": "aarch64-freebsd-cpu-sk",
+      "name": "aarch64-freebsd-cpu-kk",
+      "configurePreset": "aarch64-freebsd-cpu-kk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -2688,56 +2672,16 @@
       ]
     },
     {
+      "name": "aarch64-freebsd-cpu-mk",
+      "configurePreset": "aarch64-freebsd-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
       "name": "aarch64-freebsd-cpu-nk",
       "configurePreset": "aarch64-freebsd-cpu-nk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "configurePreset": "aarch64-freebsd-cpu-rk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "configurePreset": "aarch64-freebsd-cpu-ql",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "configurePreset": "aarch64-freebsd-cpu-ml",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "configurePreset": "aarch64-freebsd-cpu-qn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "configurePreset": "aarch64-freebsd-cpu-ym",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "configurePreset": "aarch64-freebsd-cpu-qm",
       "jobs": 0,
       "targets": [
         "installama"
@@ -2752,160 +2696,128 @@
       ]
     },
     {
-      "name": "aarch64-freebsd-cpu-mk",
-      "configurePreset": "aarch64-freebsd-cpu-mk",
+      "name": "aarch64-freebsd-cpu-rk",
+      "configurePreset": "aarch64-freebsd-cpu-rk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "aarch64-freebsd-cpu-kk",
-      "configurePreset": "aarch64-freebsd-cpu-kk",
+      "name": "aarch64-freebsd-cpu-sk",
+      "configurePreset": "aarch64-freebsd-cpu-sk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxrk",
-      "configurePreset": "x86_64-freebsd-cpu-knxrk",
+      "name": "aarch64-freebsd-cpu-uk",
+      "configurePreset": "aarch64-freebsd-cpu-uk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxrk",
-      "configurePreset": "x86_64-freebsd-cpu-klxrk",
+      "name": "aarch64-freebsd-cpu-yk",
+      "configurePreset": "aarch64-freebsd-cpu-yk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxrk",
-      "configurePreset": "x86_64-freebsd-cpu-krxrk",
+      "name": "aarch64-freebsd-cpu-ml",
+      "configurePreset": "aarch64-freebsd-cpu-ml",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxqk",
-      "configurePreset": "x86_64-freebsd-cpu-krxqk",
+      "name": "aarch64-freebsd-cpu-ql",
+      "configurePreset": "aarch64-freebsd-cpu-ql",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxqk",
-      "configurePreset": "x86_64-freebsd-cpu-knxqk",
+      "name": "aarch64-freebsd-cpu-qm",
+      "configurePreset": "aarch64-freebsd-cpu-qm",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxqk",
-      "configurePreset": "x86_64-freebsd-cpu-klxqk",
+      "name": "aarch64-freebsd-cpu-ym",
+      "configurePreset": "aarch64-freebsd-cpu-ym",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxok",
-      "configurePreset": "x86_64-freebsd-cpu-klxok",
+      "name": "aarch64-freebsd-cpu-qn",
+      "configurePreset": "aarch64-freebsd-cpu-qn",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxok",
-      "configurePreset": "x86_64-freebsd-cpu-knxok",
+      "name": "x86_64-freebsd-cpu-kkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-kkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxok",
-      "configurePreset": "x86_64-freebsd-cpu-krxok",
+      "name": "x86_64-freebsd-cpu-lkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-lkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxpk",
-      "configurePreset": "x86_64-freebsd-cpu-krxpk",
+      "name": "x86_64-freebsd-cpu-mkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-mkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxpk",
-      "configurePreset": "x86_64-freebsd-cpu-knxpk",
+      "name": "x86_64-freebsd-cpu-qkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxpk",
-      "configurePreset": "x86_64-freebsd-cpu-klxpk",
+      "name": "x86_64-freebsd-cpu-ylkkk",
+      "configurePreset": "x86_64-freebsd-cpu-ylkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klzlk",
-      "configurePreset": "x86_64-freebsd-cpu-klzlk",
+      "name": "x86_64-freebsd-cpu-qnkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qnkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knzlk",
-      "configurePreset": "x86_64-freebsd-cpu-knzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "configurePreset": "x86_64-freebsd-cpu-krzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "configurePreset": "x86_64-freebsd-cpu-krzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "configurePreset": "x86_64-freebsd-cpu-knzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "configurePreset": "x86_64-freebsd-cpu-klzkk",
+      "name": "x86_64-freebsd-cpu-qrkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qrkkk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -2936,48 +2848,48 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qrkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qrkkk",
+      "name": "x86_64-freebsd-cpu-klzkk",
+      "configurePreset": "x86_64-freebsd-cpu-klzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qnkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qnkkk",
+      "name": "x86_64-freebsd-cpu-knzkk",
+      "configurePreset": "x86_64-freebsd-cpu-knzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-ylkkk",
-      "configurePreset": "x86_64-freebsd-cpu-ylkkk",
+      "name": "x86_64-freebsd-cpu-krzkk",
+      "configurePreset": "x86_64-freebsd-cpu-krzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qkkkk",
+      "name": "x86_64-freebsd-cpu-klzlk",
+      "configurePreset": "x86_64-freebsd-cpu-klzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-mkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-mkkkk",
+      "name": "x86_64-freebsd-cpu-knzlk",
+      "configurePreset": "x86_64-freebsd-cpu-knzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-lkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-lkkkk",
+      "name": "x86_64-freebsd-cpu-krzlk",
+      "configurePreset": "x86_64-freebsd-cpu-krzlk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3008,8 +2920,8 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxnk",
-      "configurePreset": "x86_64-freebsd-cpu-krxnk",
+      "name": "x86_64-freebsd-cpu-klxnk",
+      "configurePreset": "x86_64-freebsd-cpu-klxnk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3024,8 +2936,104 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxnk",
-      "configurePreset": "x86_64-freebsd-cpu-klxnk",
+      "name": "x86_64-freebsd-cpu-krxnk",
+      "configurePreset": "x86_64-freebsd-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "configurePreset": "x86_64-freebsd-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "configurePreset": "x86_64-freebsd-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "configurePreset": "x86_64-freebsd-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "configurePreset": "x86_64-freebsd-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "configurePreset": "x86_64-freebsd-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "configurePreset": "x86_64-freebsd-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "configurePreset": "x86_64-freebsd-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "configurePreset": "x86_64-freebsd-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "configurePreset": "x86_64-freebsd-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "configurePreset": "x86_64-freebsd-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "configurePreset": "x86_64-freebsd-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "configurePreset": "x86_64-freebsd-cpu-krxrk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3048,32 +3056,8 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-kkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-kkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-yk",
-      "configurePreset": "aarch64-linux-cpu-yk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-uk",
-      "configurePreset": "aarch64-linux-cpu-uk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-sk",
-      "configurePreset": "aarch64-linux-cpu-sk",
+      "name": "aarch64-linux-cpu-kk",
+      "configurePreset": "aarch64-linux-cpu-kk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3088,56 +3072,16 @@
       ]
     },
     {
+      "name": "aarch64-linux-cpu-mk",
+      "configurePreset": "aarch64-linux-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
       "name": "aarch64-linux-cpu-nk",
       "configurePreset": "aarch64-linux-cpu-nk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-rk",
-      "configurePreset": "aarch64-linux-cpu-rk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ql",
-      "configurePreset": "aarch64-linux-cpu-ql",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ml",
-      "configurePreset": "aarch64-linux-cpu-ml",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-qn",
-      "configurePreset": "aarch64-linux-cpu-qn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ym",
-      "configurePreset": "aarch64-linux-cpu-ym",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-qm",
-      "configurePreset": "aarch64-linux-cpu-qm",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3152,160 +3096,128 @@
       ]
     },
     {
-      "name": "aarch64-linux-cpu-mk",
-      "configurePreset": "aarch64-linux-cpu-mk",
+      "name": "aarch64-linux-cpu-rk",
+      "configurePreset": "aarch64-linux-cpu-rk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "aarch64-linux-cpu-kk",
-      "configurePreset": "aarch64-linux-cpu-kk",
+      "name": "aarch64-linux-cpu-sk",
+      "configurePreset": "aarch64-linux-cpu-sk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxrk",
-      "configurePreset": "x86_64-linux-cpu-knxrk",
+      "name": "aarch64-linux-cpu-uk",
+      "configurePreset": "aarch64-linux-cpu-uk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxrk",
-      "configurePreset": "x86_64-linux-cpu-klxrk",
+      "name": "aarch64-linux-cpu-yk",
+      "configurePreset": "aarch64-linux-cpu-yk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxrk",
-      "configurePreset": "x86_64-linux-cpu-krxrk",
+      "name": "aarch64-linux-cpu-ml",
+      "configurePreset": "aarch64-linux-cpu-ml",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxqk",
-      "configurePreset": "x86_64-linux-cpu-krxqk",
+      "name": "aarch64-linux-cpu-ql",
+      "configurePreset": "aarch64-linux-cpu-ql",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxqk",
-      "configurePreset": "x86_64-linux-cpu-knxqk",
+      "name": "aarch64-linux-cpu-qm",
+      "configurePreset": "aarch64-linux-cpu-qm",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxqk",
-      "configurePreset": "x86_64-linux-cpu-klxqk",
+      "name": "aarch64-linux-cpu-ym",
+      "configurePreset": "aarch64-linux-cpu-ym",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxok",
-      "configurePreset": "x86_64-linux-cpu-klxok",
+      "name": "aarch64-linux-cpu-qn",
+      "configurePreset": "aarch64-linux-cpu-qn",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxok",
-      "configurePreset": "x86_64-linux-cpu-knxok",
+      "name": "x86_64-linux-cpu-kkkkk",
+      "configurePreset": "x86_64-linux-cpu-kkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxok",
-      "configurePreset": "x86_64-linux-cpu-krxok",
+      "name": "x86_64-linux-cpu-lkkkk",
+      "configurePreset": "x86_64-linux-cpu-lkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxpk",
-      "configurePreset": "x86_64-linux-cpu-krxpk",
+      "name": "x86_64-linux-cpu-mkkkk",
+      "configurePreset": "x86_64-linux-cpu-mkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxpk",
-      "configurePreset": "x86_64-linux-cpu-knxpk",
+      "name": "x86_64-linux-cpu-qkkkk",
+      "configurePreset": "x86_64-linux-cpu-qkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxpk",
-      "configurePreset": "x86_64-linux-cpu-klxpk",
+      "name": "x86_64-linux-cpu-ylkkk",
+      "configurePreset": "x86_64-linux-cpu-ylkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klzlk",
-      "configurePreset": "x86_64-linux-cpu-klzlk",
+      "name": "x86_64-linux-cpu-qnkkk",
+      "configurePreset": "x86_64-linux-cpu-qnkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knzlk",
-      "configurePreset": "x86_64-linux-cpu-knzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-krzlk",
-      "configurePreset": "x86_64-linux-cpu-krzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-krzkk",
-      "configurePreset": "x86_64-linux-cpu-krzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-knzkk",
-      "configurePreset": "x86_64-linux-cpu-knzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-klzkk",
-      "configurePreset": "x86_64-linux-cpu-klzkk",
+      "name": "x86_64-linux-cpu-qrkkk",
+      "configurePreset": "x86_64-linux-cpu-qrkkk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3336,48 +3248,48 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qrkkk",
-      "configurePreset": "x86_64-linux-cpu-qrkkk",
+      "name": "x86_64-linux-cpu-klzkk",
+      "configurePreset": "x86_64-linux-cpu-klzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qnkkk",
-      "configurePreset": "x86_64-linux-cpu-qnkkk",
+      "name": "x86_64-linux-cpu-knzkk",
+      "configurePreset": "x86_64-linux-cpu-knzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-ylkkk",
-      "configurePreset": "x86_64-linux-cpu-ylkkk",
+      "name": "x86_64-linux-cpu-krzkk",
+      "configurePreset": "x86_64-linux-cpu-krzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qkkkk",
-      "configurePreset": "x86_64-linux-cpu-qkkkk",
+      "name": "x86_64-linux-cpu-klzlk",
+      "configurePreset": "x86_64-linux-cpu-klzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-mkkkk",
-      "configurePreset": "x86_64-linux-cpu-mkkkk",
+      "name": "x86_64-linux-cpu-knzlk",
+      "configurePreset": "x86_64-linux-cpu-knzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-cpu-lkkkk",
-      "configurePreset": "x86_64-linux-cpu-lkkkk",
+      "name": "x86_64-linux-cpu-krzlk",
+      "configurePreset": "x86_64-linux-cpu-krzlk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3408,8 +3320,8 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxnk",
-      "configurePreset": "x86_64-linux-cpu-krxnk",
+      "name": "x86_64-linux-cpu-klxnk",
+      "configurePreset": "x86_64-linux-cpu-klxnk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3424,8 +3336,104 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxnk",
-      "configurePreset": "x86_64-linux-cpu-klxnk",
+      "name": "x86_64-linux-cpu-krxnk",
+      "configurePreset": "x86_64-linux-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "configurePreset": "x86_64-linux-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "configurePreset": "x86_64-linux-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "configurePreset": "x86_64-linux-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "configurePreset": "x86_64-linux-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "configurePreset": "x86_64-linux-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "configurePreset": "x86_64-linux-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "configurePreset": "x86_64-linux-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "configurePreset": "x86_64-linux-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "configurePreset": "x86_64-linux-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "configurePreset": "x86_64-linux-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "configurePreset": "x86_64-linux-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "configurePreset": "x86_64-linux-cpu-krxrk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3442,14 +3450,6 @@
     {
       "name": "x86_64-linux-cpu-krxrn",
       "configurePreset": "x86_64-linux-cpu-krxrn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-kkkkk",
-      "configurePreset": "x86_64-linux-cpu-kkkkk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3656,144 +3656,56 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-knxrk",
-      "configurePreset": "x86_64-linux-vulkan-knxrk",
+      "name": "x86_64-linux-vulkan-kkkkk",
+      "configurePreset": "x86_64-linux-vulkan-kkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxrk",
-      "configurePreset": "x86_64-linux-vulkan-klxrk",
+      "name": "x86_64-linux-vulkan-lkkkk",
+      "configurePreset": "x86_64-linux-vulkan-lkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxrk",
-      "configurePreset": "x86_64-linux-vulkan-krxrk",
+      "name": "x86_64-linux-vulkan-mkkkk",
+      "configurePreset": "x86_64-linux-vulkan-mkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxqk",
-      "configurePreset": "x86_64-linux-vulkan-krxqk",
+      "name": "x86_64-linux-vulkan-qkkkk",
+      "configurePreset": "x86_64-linux-vulkan-qkkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-knxqk",
-      "configurePreset": "x86_64-linux-vulkan-knxqk",
+      "name": "x86_64-linux-vulkan-ylkkk",
+      "configurePreset": "x86_64-linux-vulkan-ylkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxqk",
-      "configurePreset": "x86_64-linux-vulkan-klxqk",
+      "name": "x86_64-linux-vulkan-qnkkk",
+      "configurePreset": "x86_64-linux-vulkan-qnkkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxok",
-      "configurePreset": "x86_64-linux-vulkan-klxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxok",
-      "configurePreset": "x86_64-linux-vulkan-knxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxok",
-      "configurePreset": "x86_64-linux-vulkan-krxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxpk",
-      "configurePreset": "x86_64-linux-vulkan-krxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxpk",
-      "configurePreset": "x86_64-linux-vulkan-knxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klxpk",
-      "configurePreset": "x86_64-linux-vulkan-klxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzlk",
-      "configurePreset": "x86_64-linux-vulkan-klzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzlk",
-      "configurePreset": "x86_64-linux-vulkan-knzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzlk",
-      "configurePreset": "x86_64-linux-vulkan-krzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzkk",
-      "configurePreset": "x86_64-linux-vulkan-krzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzkk",
-      "configurePreset": "x86_64-linux-vulkan-knzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzkk",
-      "configurePreset": "x86_64-linux-vulkan-klzkk",
+      "name": "x86_64-linux-vulkan-qrkkk",
+      "configurePreset": "x86_64-linux-vulkan-qrkkk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3824,48 +3736,48 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qrkkk",
-      "configurePreset": "x86_64-linux-vulkan-qrkkk",
+      "name": "x86_64-linux-vulkan-klzkk",
+      "configurePreset": "x86_64-linux-vulkan-klzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qnkkk",
-      "configurePreset": "x86_64-linux-vulkan-qnkkk",
+      "name": "x86_64-linux-vulkan-knzkk",
+      "configurePreset": "x86_64-linux-vulkan-knzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-ylkkk",
-      "configurePreset": "x86_64-linux-vulkan-ylkkk",
+      "name": "x86_64-linux-vulkan-krzkk",
+      "configurePreset": "x86_64-linux-vulkan-krzkk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qkkkk",
-      "configurePreset": "x86_64-linux-vulkan-qkkkk",
+      "name": "x86_64-linux-vulkan-klzlk",
+      "configurePreset": "x86_64-linux-vulkan-klzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-mkkkk",
-      "configurePreset": "x86_64-linux-vulkan-mkkkk",
+      "name": "x86_64-linux-vulkan-knzlk",
+      "configurePreset": "x86_64-linux-vulkan-knzlk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-lkkkk",
-      "configurePreset": "x86_64-linux-vulkan-lkkkk",
+      "name": "x86_64-linux-vulkan-krzlk",
+      "configurePreset": "x86_64-linux-vulkan-krzlk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3896,8 +3808,8 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxnk",
-      "configurePreset": "x86_64-linux-vulkan-krxnk",
+      "name": "x86_64-linux-vulkan-klxnk",
+      "configurePreset": "x86_64-linux-vulkan-klxnk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3912,8 +3824,104 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxnk",
-      "configurePreset": "x86_64-linux-vulkan-klxnk",
+      "name": "x86_64-linux-vulkan-krxnk",
+      "configurePreset": "x86_64-linux-vulkan-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "configurePreset": "x86_64-linux-vulkan-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "configurePreset": "x86_64-linux-vulkan-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "configurePreset": "x86_64-linux-vulkan-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "configurePreset": "x86_64-linux-vulkan-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "configurePreset": "x86_64-linux-vulkan-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "configurePreset": "x86_64-linux-vulkan-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "configurePreset": "x86_64-linux-vulkan-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "configurePreset": "x86_64-linux-vulkan-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "configurePreset": "x86_64-linux-vulkan-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "configurePreset": "x86_64-linux-vulkan-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "configurePreset": "x86_64-linux-vulkan-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "configurePreset": "x86_64-linux-vulkan-krxrk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3936,14 +3944,6 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-kkkkk",
-      "configurePreset": "x86_64-linux-vulkan-kkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
       "name": "x86_64-linux-vulkan-probe",
       "configurePreset": "x86_64-linux-vulkan-probe",
       "jobs": 0,
@@ -3952,24 +3952,8 @@
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-yk",
-      "configurePreset": "aarch64-linux-vulkan-yk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-uk",
-      "configurePreset": "aarch64-linux-vulkan-uk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-sk",
-      "configurePreset": "aarch64-linux-vulkan-sk",
+      "name": "aarch64-linux-vulkan-kk",
+      "configurePreset": "aarch64-linux-vulkan-kk",
       "jobs": 0,
       "targets": [
         "installama"
@@ -3984,56 +3968,16 @@
       ]
     },
     {
+      "name": "aarch64-linux-vulkan-mk",
+      "configurePreset": "aarch64-linux-vulkan-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
       "name": "aarch64-linux-vulkan-nk",
       "configurePreset": "aarch64-linux-vulkan-nk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-rk",
-      "configurePreset": "aarch64-linux-vulkan-rk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ql",
-      "configurePreset": "aarch64-linux-vulkan-ql",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ml",
-      "configurePreset": "aarch64-linux-vulkan-ml",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-qn",
-      "configurePreset": "aarch64-linux-vulkan-qn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ym",
-      "configurePreset": "aarch64-linux-vulkan-ym",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-qm",
-      "configurePreset": "aarch64-linux-vulkan-qm",
       "jobs": 0,
       "targets": [
         "installama"
@@ -4048,16 +3992,72 @@
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-mk",
-      "configurePreset": "aarch64-linux-vulkan-mk",
+      "name": "aarch64-linux-vulkan-rk",
+      "configurePreset": "aarch64-linux-vulkan-rk",
       "jobs": 0,
       "targets": [
         "installama"
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-kk",
-      "configurePreset": "aarch64-linux-vulkan-kk",
+      "name": "aarch64-linux-vulkan-sk",
+      "configurePreset": "aarch64-linux-vulkan-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "configurePreset": "aarch64-linux-vulkan-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-yk",
+      "configurePreset": "aarch64-linux-vulkan-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "configurePreset": "aarch64-linux-vulkan-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "configurePreset": "aarch64-linux-vulkan-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "configurePreset": "aarch64-linux-vulkan-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "configurePreset": "aarch64-linux-vulkan-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "configurePreset": "aarch64-linux-vulkan-qn",
       "jobs": 0,
       "targets": [
         "installama"
@@ -4106,41 +4106,15 @@
   ],
   "workflowPresets": [
     {
-      "name": "aarch64-freebsd-cpu-yk",
+      "name": "aarch64-freebsd-cpu-kk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-freebsd-cpu-yk"
+          "name": "aarch64-freebsd-cpu-kk"
         },
         {
           "type": "build",
-          "name": "aarch64-freebsd-cpu-yk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-uk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-uk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-sk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-sk"
+          "name": "aarch64-freebsd-cpu-kk"
         }
       ]
     },
@@ -4158,6 +4132,19 @@
       ]
     },
     {
+      "name": "aarch64-freebsd-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-mk"
+        }
+      ]
+    },
+    {
       "name": "aarch64-freebsd-cpu-nk",
       "steps": [
         {
@@ -4167,84 +4154,6 @@
         {
           "type": "build",
           "name": "aarch64-freebsd-cpu-nk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-rk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-rk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ql"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ql"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ml"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ml"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-qn"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-qn"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ym"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ym"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-qm"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-qm"
         }
       ]
     },
@@ -4262,262 +4171,210 @@
       ]
     },
     {
-      "name": "aarch64-freebsd-cpu-mk",
+      "name": "aarch64-freebsd-cpu-rk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-freebsd-cpu-mk"
+          "name": "aarch64-freebsd-cpu-rk"
         },
         {
           "type": "build",
-          "name": "aarch64-freebsd-cpu-mk"
+          "name": "aarch64-freebsd-cpu-rk"
         }
       ]
     },
     {
-      "name": "aarch64-freebsd-cpu-kk",
+      "name": "aarch64-freebsd-cpu-sk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-freebsd-cpu-kk"
+          "name": "aarch64-freebsd-cpu-sk"
         },
         {
           "type": "build",
-          "name": "aarch64-freebsd-cpu-kk"
+          "name": "aarch64-freebsd-cpu-sk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxrk",
+      "name": "aarch64-freebsd-cpu-uk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxrk"
+          "name": "aarch64-freebsd-cpu-uk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-knxrk"
+          "name": "aarch64-freebsd-cpu-uk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxrk",
+      "name": "aarch64-freebsd-cpu-yk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxrk"
+          "name": "aarch64-freebsd-cpu-yk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klxrk"
+          "name": "aarch64-freebsd-cpu-yk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxrk",
+      "name": "aarch64-freebsd-cpu-ml",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxrk"
+          "name": "aarch64-freebsd-cpu-ml"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-krxrk"
+          "name": "aarch64-freebsd-cpu-ml"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxqk",
+      "name": "aarch64-freebsd-cpu-ql",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxqk"
+          "name": "aarch64-freebsd-cpu-ql"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-krxqk"
+          "name": "aarch64-freebsd-cpu-ql"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxqk",
+      "name": "aarch64-freebsd-cpu-qm",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxqk"
+          "name": "aarch64-freebsd-cpu-qm"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-knxqk"
+          "name": "aarch64-freebsd-cpu-qm"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxqk",
+      "name": "aarch64-freebsd-cpu-ym",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxqk"
+          "name": "aarch64-freebsd-cpu-ym"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klxqk"
+          "name": "aarch64-freebsd-cpu-ym"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxok",
+      "name": "aarch64-freebsd-cpu-qn",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxok"
+          "name": "aarch64-freebsd-cpu-qn"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klxok"
+          "name": "aarch64-freebsd-cpu-qn"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxok",
+      "name": "x86_64-freebsd-cpu-kkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxok"
+          "name": "x86_64-freebsd-cpu-kkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-knxok"
+          "name": "x86_64-freebsd-cpu-kkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxok",
+      "name": "x86_64-freebsd-cpu-lkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxok"
+          "name": "x86_64-freebsd-cpu-lkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-krxok"
+          "name": "x86_64-freebsd-cpu-lkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxpk",
+      "name": "x86_64-freebsd-cpu-mkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxpk"
+          "name": "x86_64-freebsd-cpu-mkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-krxpk"
+          "name": "x86_64-freebsd-cpu-mkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knxpk",
+      "name": "x86_64-freebsd-cpu-qkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxpk"
+          "name": "x86_64-freebsd-cpu-qkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-knxpk"
+          "name": "x86_64-freebsd-cpu-qkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxpk",
+      "name": "x86_64-freebsd-cpu-ylkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxpk"
+          "name": "x86_64-freebsd-cpu-ylkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klxpk"
+          "name": "x86_64-freebsd-cpu-ylkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klzlk",
+      "name": "x86_64-freebsd-cpu-qnkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klzlk"
+          "name": "x86_64-freebsd-cpu-qnkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klzlk"
+          "name": "x86_64-freebsd-cpu-qnkkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-knzlk",
+      "name": "x86_64-freebsd-cpu-qrkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-knzlk"
+          "name": "x86_64-freebsd-cpu-qrkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-knzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klzkk"
+          "name": "x86_64-freebsd-cpu-qrkkk"
         }
       ]
     },
@@ -4561,80 +4418,80 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qrkkk",
+      "name": "x86_64-freebsd-cpu-klzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-qrkkk"
+          "name": "x86_64-freebsd-cpu-klzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-qrkkk"
+          "name": "x86_64-freebsd-cpu-klzkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qnkkk",
+      "name": "x86_64-freebsd-cpu-knzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-qnkkk"
+          "name": "x86_64-freebsd-cpu-knzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-qnkkk"
+          "name": "x86_64-freebsd-cpu-knzkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-ylkkk",
+      "name": "x86_64-freebsd-cpu-krzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-ylkkk"
+          "name": "x86_64-freebsd-cpu-krzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-ylkkk"
+          "name": "x86_64-freebsd-cpu-krzkk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-qkkkk",
+      "name": "x86_64-freebsd-cpu-klzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-qkkkk"
+          "name": "x86_64-freebsd-cpu-klzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-qkkkk"
+          "name": "x86_64-freebsd-cpu-klzlk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-mkkkk",
+      "name": "x86_64-freebsd-cpu-knzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-mkkkk"
+          "name": "x86_64-freebsd-cpu-knzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-mkkkk"
+          "name": "x86_64-freebsd-cpu-knzlk"
         }
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-lkkkk",
+      "name": "x86_64-freebsd-cpu-krzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-lkkkk"
+          "name": "x86_64-freebsd-cpu-krzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-lkkkk"
+          "name": "x86_64-freebsd-cpu-krzlk"
         }
       ]
     },
@@ -4678,15 +4535,15 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-krxnk",
+      "name": "x86_64-freebsd-cpu-klxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxnk"
+          "name": "x86_64-freebsd-cpu-klxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-krxnk"
+          "name": "x86_64-freebsd-cpu-klxnk"
         }
       ]
     },
@@ -4704,15 +4561,171 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-klxnk",
+      "name": "x86_64-freebsd-cpu-krxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxnk"
+          "name": "x86_64-freebsd-cpu-krxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-klxnk"
+          "name": "x86_64-freebsd-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxrk"
         }
       ]
     },
@@ -4743,54 +4756,15 @@
       ]
     },
     {
-      "name": "x86_64-freebsd-cpu-kkkkk",
+      "name": "aarch64-linux-cpu-kk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-freebsd-cpu-kkkkk"
+          "name": "aarch64-linux-cpu-kk"
         },
         {
           "type": "build",
-          "name": "x86_64-freebsd-cpu-kkkkk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-yk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-yk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-yk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-uk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-uk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-uk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-sk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-sk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-sk"
+          "name": "aarch64-linux-cpu-kk"
         }
       ]
     },
@@ -4808,6 +4782,19 @@
       ]
     },
     {
+      "name": "aarch64-linux-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cpu-mk"
+        }
+      ]
+    },
+    {
       "name": "aarch64-linux-cpu-nk",
       "steps": [
         {
@@ -4817,84 +4804,6 @@
         {
           "type": "build",
           "name": "aarch64-linux-cpu-nk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-rk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-rk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-rk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ql",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-ql"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-ql"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ml",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-ml"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-ml"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-qn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-qn"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-qn"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-ym",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-ym"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-ym"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-cpu-qm",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-cpu-qm"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-cpu-qm"
         }
       ]
     },
@@ -4912,262 +4821,210 @@
       ]
     },
     {
-      "name": "aarch64-linux-cpu-mk",
+      "name": "aarch64-linux-cpu-rk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-linux-cpu-mk"
+          "name": "aarch64-linux-cpu-rk"
         },
         {
           "type": "build",
-          "name": "aarch64-linux-cpu-mk"
+          "name": "aarch64-linux-cpu-rk"
         }
       ]
     },
     {
-      "name": "aarch64-linux-cpu-kk",
+      "name": "aarch64-linux-cpu-sk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-linux-cpu-kk"
+          "name": "aarch64-linux-cpu-sk"
         },
         {
           "type": "build",
-          "name": "aarch64-linux-cpu-kk"
+          "name": "aarch64-linux-cpu-sk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxrk",
+      "name": "aarch64-linux-cpu-uk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-knxrk"
+          "name": "aarch64-linux-cpu-uk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-knxrk"
+          "name": "aarch64-linux-cpu-uk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxrk",
+      "name": "aarch64-linux-cpu-yk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klxrk"
+          "name": "aarch64-linux-cpu-yk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klxrk"
+          "name": "aarch64-linux-cpu-yk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxrk",
+      "name": "aarch64-linux-cpu-ml",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-krxrk"
+          "name": "aarch64-linux-cpu-ml"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-krxrk"
+          "name": "aarch64-linux-cpu-ml"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxqk",
+      "name": "aarch64-linux-cpu-ql",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-krxqk"
+          "name": "aarch64-linux-cpu-ql"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-krxqk"
+          "name": "aarch64-linux-cpu-ql"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxqk",
+      "name": "aarch64-linux-cpu-qm",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-knxqk"
+          "name": "aarch64-linux-cpu-qm"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-knxqk"
+          "name": "aarch64-linux-cpu-qm"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxqk",
+      "name": "aarch64-linux-cpu-ym",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klxqk"
+          "name": "aarch64-linux-cpu-ym"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klxqk"
+          "name": "aarch64-linux-cpu-ym"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxok",
+      "name": "aarch64-linux-cpu-qn",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klxok"
+          "name": "aarch64-linux-cpu-qn"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klxok"
+          "name": "aarch64-linux-cpu-qn"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxok",
+      "name": "x86_64-linux-cpu-kkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-knxok"
+          "name": "x86_64-linux-cpu-kkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-knxok"
+          "name": "x86_64-linux-cpu-kkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxok",
+      "name": "x86_64-linux-cpu-lkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-krxok"
+          "name": "x86_64-linux-cpu-lkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-krxok"
+          "name": "x86_64-linux-cpu-lkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxpk",
+      "name": "x86_64-linux-cpu-mkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-krxpk"
+          "name": "x86_64-linux-cpu-mkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-krxpk"
+          "name": "x86_64-linux-cpu-mkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knxpk",
+      "name": "x86_64-linux-cpu-qkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-knxpk"
+          "name": "x86_64-linux-cpu-qkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-knxpk"
+          "name": "x86_64-linux-cpu-qkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxpk",
+      "name": "x86_64-linux-cpu-ylkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klxpk"
+          "name": "x86_64-linux-cpu-ylkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klxpk"
+          "name": "x86_64-linux-cpu-ylkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klzlk",
+      "name": "x86_64-linux-cpu-qnkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klzlk"
+          "name": "x86_64-linux-cpu-qnkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klzlk"
+          "name": "x86_64-linux-cpu-qnkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-knzlk",
+      "name": "x86_64-linux-cpu-qrkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-knzlk"
+          "name": "x86_64-linux-cpu-qrkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-knzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-krzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-cpu-krzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-cpu-krzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-krzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-cpu-krzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-cpu-krzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-knzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-cpu-knzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-cpu-knzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-klzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-cpu-klzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-cpu-klzkk"
+          "name": "x86_64-linux-cpu-qrkkk"
         }
       ]
     },
@@ -5211,80 +5068,80 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qrkkk",
+      "name": "x86_64-linux-cpu-klzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-qrkkk"
+          "name": "x86_64-linux-cpu-klzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-qrkkk"
+          "name": "x86_64-linux-cpu-klzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qnkkk",
+      "name": "x86_64-linux-cpu-knzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-qnkkk"
+          "name": "x86_64-linux-cpu-knzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-qnkkk"
+          "name": "x86_64-linux-cpu-knzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-ylkkk",
+      "name": "x86_64-linux-cpu-krzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-ylkkk"
+          "name": "x86_64-linux-cpu-krzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-ylkkk"
+          "name": "x86_64-linux-cpu-krzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-qkkkk",
+      "name": "x86_64-linux-cpu-klzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-qkkkk"
+          "name": "x86_64-linux-cpu-klzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-qkkkk"
+          "name": "x86_64-linux-cpu-klzlk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-mkkkk",
+      "name": "x86_64-linux-cpu-knzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-mkkkk"
+          "name": "x86_64-linux-cpu-knzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-mkkkk"
+          "name": "x86_64-linux-cpu-knzlk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-cpu-lkkkk",
+      "name": "x86_64-linux-cpu-krzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-lkkkk"
+          "name": "x86_64-linux-cpu-krzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-lkkkk"
+          "name": "x86_64-linux-cpu-krzlk"
         }
       ]
     },
@@ -5328,15 +5185,15 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-krxnk",
+      "name": "x86_64-linux-cpu-klxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-krxnk"
+          "name": "x86_64-linux-cpu-klxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-krxnk"
+          "name": "x86_64-linux-cpu-klxnk"
         }
       ]
     },
@@ -5354,15 +5211,171 @@
       ]
     },
     {
-      "name": "x86_64-linux-cpu-klxnk",
+      "name": "x86_64-linux-cpu-krxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-cpu-klxnk"
+          "name": "x86_64-linux-cpu-krxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-cpu-klxnk"
+          "name": "x86_64-linux-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-cpu-krxrk"
         }
       ]
     },
@@ -5389,19 +5402,6 @@
         {
           "type": "build",
           "name": "x86_64-linux-cpu-krxrn"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-cpu-kkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-cpu-kkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-cpu-kkkkk"
         }
       ]
     },
@@ -5731,236 +5731,93 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-knxrk",
+      "name": "x86_64-linux-vulkan-kkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-knxrk"
+          "name": "x86_64-linux-vulkan-kkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-knxrk"
+          "name": "x86_64-linux-vulkan-kkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxrk",
+      "name": "x86_64-linux-vulkan-lkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-klxrk"
+          "name": "x86_64-linux-vulkan-lkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-klxrk"
+          "name": "x86_64-linux-vulkan-lkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxrk",
+      "name": "x86_64-linux-vulkan-mkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-krxrk"
+          "name": "x86_64-linux-vulkan-mkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-krxrk"
+          "name": "x86_64-linux-vulkan-mkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxqk",
+      "name": "x86_64-linux-vulkan-qkkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-krxqk"
+          "name": "x86_64-linux-vulkan-qkkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-krxqk"
+          "name": "x86_64-linux-vulkan-qkkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-knxqk",
+      "name": "x86_64-linux-vulkan-ylkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-knxqk"
+          "name": "x86_64-linux-vulkan-ylkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-knxqk"
+          "name": "x86_64-linux-vulkan-ylkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxqk",
+      "name": "x86_64-linux-vulkan-qnkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-klxqk"
+          "name": "x86_64-linux-vulkan-qnkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-klxqk"
+          "name": "x86_64-linux-vulkan-qnkkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxok",
+      "name": "x86_64-linux-vulkan-qrkkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-klxok"
+          "name": "x86_64-linux-vulkan-qrkkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-klxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxok",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-knxok"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-knxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxok",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-krxok"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-krxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-krxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-krxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-knxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-knxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-klxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-klxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-klzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-klzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-knzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-knzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-krzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-krzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-krzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-krzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-krzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-knzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-knzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-knzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-linux-vulkan-klzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-klzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-klzkk"
+          "name": "x86_64-linux-vulkan-qrkkk"
         }
       ]
     },
@@ -6004,80 +5861,80 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qrkkk",
+      "name": "x86_64-linux-vulkan-klzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-qrkkk"
+          "name": "x86_64-linux-vulkan-klzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-qrkkk"
+          "name": "x86_64-linux-vulkan-klzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qnkkk",
+      "name": "x86_64-linux-vulkan-knzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-qnkkk"
+          "name": "x86_64-linux-vulkan-knzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-qnkkk"
+          "name": "x86_64-linux-vulkan-knzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-ylkkk",
+      "name": "x86_64-linux-vulkan-krzkk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-ylkkk"
+          "name": "x86_64-linux-vulkan-krzkk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-ylkkk"
+          "name": "x86_64-linux-vulkan-krzkk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-qkkkk",
+      "name": "x86_64-linux-vulkan-klzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-qkkkk"
+          "name": "x86_64-linux-vulkan-klzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-qkkkk"
+          "name": "x86_64-linux-vulkan-klzlk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-mkkkk",
+      "name": "x86_64-linux-vulkan-knzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-mkkkk"
+          "name": "x86_64-linux-vulkan-knzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-mkkkk"
+          "name": "x86_64-linux-vulkan-knzlk"
         }
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-lkkkk",
+      "name": "x86_64-linux-vulkan-krzlk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-lkkkk"
+          "name": "x86_64-linux-vulkan-krzlk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-lkkkk"
+          "name": "x86_64-linux-vulkan-krzlk"
         }
       ]
     },
@@ -6121,15 +5978,15 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-krxnk",
+      "name": "x86_64-linux-vulkan-klxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-krxnk"
+          "name": "x86_64-linux-vulkan-klxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-krxnk"
+          "name": "x86_64-linux-vulkan-klxnk"
         }
       ]
     },
@@ -6147,15 +6004,171 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-klxnk",
+      "name": "x86_64-linux-vulkan-krxnk",
       "steps": [
         {
           "type": "configure",
-          "name": "x86_64-linux-vulkan-klxnk"
+          "name": "x86_64-linux-vulkan-krxnk"
         },
         {
           "type": "build",
-          "name": "x86_64-linux-vulkan-klxnk"
+          "name": "x86_64-linux-vulkan-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-linux-vulkan-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-linux-vulkan-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-linux-vulkan-krxrk"
         }
       ]
     },
@@ -6186,19 +6199,6 @@
       ]
     },
     {
-      "name": "x86_64-linux-vulkan-kkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-linux-vulkan-kkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-linux-vulkan-kkkkk"
-        }
-      ]
-    },
-    {
       "name": "x86_64-linux-vulkan-probe",
       "steps": [
         {
@@ -6212,41 +6212,15 @@
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-yk",
+      "name": "aarch64-linux-vulkan-kk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-linux-vulkan-yk"
+          "name": "aarch64-linux-vulkan-kk"
         },
         {
           "type": "build",
-          "name": "aarch64-linux-vulkan-yk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-uk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-uk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-uk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-sk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-sk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-sk"
+          "name": "aarch64-linux-vulkan-kk"
         }
       ]
     },
@@ -6264,6 +6238,19 @@
       ]
     },
     {
+      "name": "aarch64-linux-vulkan-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-mk"
+        }
+      ]
+    },
+    {
       "name": "aarch64-linux-vulkan-nk",
       "steps": [
         {
@@ -6273,84 +6260,6 @@
         {
           "type": "build",
           "name": "aarch64-linux-vulkan-nk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-rk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-rk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-rk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ql",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-ql"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-ql"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ml",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-ml"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-ml"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-qn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-qn"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-qn"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-ym",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-ym"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-ym"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-linux-vulkan-qm",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-linux-vulkan-qm"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-linux-vulkan-qm"
         }
       ]
     },
@@ -6368,28 +6277,119 @@
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-mk",
+      "name": "aarch64-linux-vulkan-rk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-linux-vulkan-mk"
+          "name": "aarch64-linux-vulkan-rk"
         },
         {
           "type": "build",
-          "name": "aarch64-linux-vulkan-mk"
+          "name": "aarch64-linux-vulkan-rk"
         }
       ]
     },
     {
-      "name": "aarch64-linux-vulkan-kk",
+      "name": "aarch64-linux-vulkan-sk",
       "steps": [
         {
           "type": "configure",
-          "name": "aarch64-linux-vulkan-kk"
+          "name": "aarch64-linux-vulkan-sk"
         },
         {
           "type": "build",
-          "name": "aarch64-linux-vulkan-kk"
+          "name": "aarch64-linux-vulkan-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-vulkan-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-vulkan-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-vulkan-qn"
         }
       ]
     },
