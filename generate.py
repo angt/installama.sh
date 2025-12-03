@@ -182,40 +182,22 @@ def generate_cpu_archs():
         flags = generate_x86_64_flags(features)
         CPU_ARCHS['x86_64'][name] = flags
 
-def generate_presets(name, processor, backend, toolchain, configs):
-    name_map = {
-        "Linux":   "linux",
-        "FreeBSD": "freebsd",
-        "Darwin":  "macos",
-    }
-    processor_map = {
-        "x86_64":  "x86_64",
-        "amd64":   "x86_64",
-        "AMD64":   "x86_64",
-        "aarch64": "aarch64",
-        "arm64":   "aarch64",
-        "ARM64":   "aarch64",
-    }
-    osname = name_map[name]
-    arch = processor_map[processor]
-
+def generate_presets(os_name, arch, backend, toolchain, configs):
     configure = []
     build = []
     workflow = []
 
     for config_name, config_cache in configs:
-        preset_name = f"{arch}-{osname}-{backend}-{config_name}"
-        preset_path = f"{arch}/{osname}/{backend}/{config_name}"
+        preset_name = f"{arch}-{os_name}-{backend}-{config_name}"
+        preset_path = f"{arch}/{os_name}/{backend}/{config_name}"
         configure.append({
             "name": preset_name,
             "binaryDir": "build/${presetName}",
             "cacheVariables": {
                 "INSTALLAMA_DIR": f"${{sourceDir}}/output/{preset_path}",
+                "INSTALLAMA_OS": os_name,
+                "INSTALLAMA_ARCH": arch,
             } | config_cache,
-            "environment": {
-                "CMAKE_SYSTEM_NAME": name,
-                "CMAKE_SYSTEM_PROCESSOR": processor
-            },
             "toolchainFile": toolchain,
             "generator": "Ninja",
         })
@@ -235,33 +217,33 @@ def generate_presets(name, processor, backend, toolchain, configs):
 
     return configure, build, workflow
 
-def generate_cpu_presets(system_name, processor):
+def generate_cpu_presets(os_name, arch):
     configs = []
-    for name, flags in CPU_ARCHS[processor].items():
+    for name, flags in CPU_ARCHS[arch].items():
         cache = {
             "INSTALLAMA_FLAGS": flags,
         }
         configs.append((name, cache))
 
     return generate_presets(
-        name      = system_name,
-        processor = processor,
+        os_name   = os_name,
+        arch      = arch,
         backend   = 'cpu',
         toolchain = 'toolchains/cross.cmake',
         configs   = configs,
     )
 
 def generate_aarch64_linux_cpu_presets():
-    return generate_cpu_presets('Linux', 'aarch64')
+    return generate_cpu_presets('linux', 'aarch64')
 
 def generate_x86_64_linux_cpu_presets():
-    return generate_cpu_presets('Linux', 'x86_64')
+    return generate_cpu_presets('linux', 'x86_64')
 
 def generate_aarch64_freebsd_cpu_presets():
-    return generate_cpu_presets('FreeBSD', 'aarch64')
+    return generate_cpu_presets('freebsd', 'aarch64')
 
 def generate_x86_64_freebsd_cpu_presets():
-    return generate_cpu_presets('FreeBSD', 'x86_64')
+    return generate_cpu_presets('freebsd', 'x86_64')
 
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
@@ -278,8 +260,8 @@ def generate_x86_64_linux_rocm_presets():
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = 'x86_64',
+        os_name   = 'linux',
+        arch      = 'x86_64',
         backend   = 'rocm',
         toolchain = 'toolchains/rocm.cmake',
         configs   = configs,
@@ -294,8 +276,8 @@ def generate_x86_64_linux_rocm_probe_preset():
     configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = 'x86_64',
+        os_name   = 'linux',
+        arch      = 'x86_64',
         backend   = 'rocm',
         toolchain = 'toolchains/rocm.cmake',
         configs   = configs,
@@ -313,10 +295,10 @@ def generate_x86_64_linux_cuda_presets():
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = 'x86_64',
+        os_name   = 'linux',
+        arch      = 'x86_64',
         backend   = 'cuda',
-        toolchain = 'toolchains/cuda.cmake',
+        toolchain = 'toolchains/base.cmake',
         configs   = configs,
     )
 
@@ -331,16 +313,16 @@ def generate_x86_64_linux_cuda_probe_preset():
     configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = 'x86_64',
+        os_name   = 'linux',
+        arch      = 'x86_64',
         backend   = 'cuda',
-        toolchain = 'toolchains/cuda.cmake',
+        toolchain = 'toolchains/base.cmake',
         configs   = configs,
     )
 
-def generate_linux_vulkan_presets(processor):
+def generate_linux_vulkan_presets(arch):
     configs = []
-    for name, flags in CPU_ARCHS[processor].items():
+    for name, flags in CPU_ARCHS[arch].items():
         cache = {
             "INSTALLAMA_FLAGS": flags,
             "GGML_VULKAN": "ON",
@@ -348,14 +330,14 @@ def generate_linux_vulkan_presets(processor):
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = processor,
+        os_name   = 'linux',
+        arch      = arch,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
     )
 
-def generate_linux_vulkan_probe_preset(processor):
+def generate_linux_vulkan_probe_preset(arch):
     configs = []
     name = "probe"
     cache = {
@@ -364,8 +346,8 @@ def generate_linux_vulkan_probe_preset(processor):
     configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Linux',
-        processor = processor,
+        os_name   = 'linux',
+        arch      = arch,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
@@ -401,8 +383,8 @@ def generate_metal_presets():
         configs.append((name, cache))
 
     return generate_presets(
-        name      = 'Darwin',
-        processor = 'arm64',
+        os_name   = 'macos',
+        arch      = 'aarch64',
         backend   = 'metal',
         toolchain = 'toolchains/base.cmake',
         configs   = configs

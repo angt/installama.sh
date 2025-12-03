@@ -6,11 +6,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/kk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -20,11 +18,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/lk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -34,11 +30,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/mk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -48,11 +42,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/nk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -62,11 +54,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -76,11 +66,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -90,11 +78,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/sk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -104,11 +90,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/uk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -118,11 +102,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -132,11 +114,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ml",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -146,11 +126,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ql",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -160,11 +138,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qm",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -174,11 +150,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ym",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -188,11 +162,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -202,11 +174,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/kkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -216,11 +186,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/lkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -230,11 +198,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/mkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -244,11 +210,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -258,11 +222,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/ylkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -272,11 +234,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qnkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -286,11 +246,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qrkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -300,11 +258,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -314,11 +270,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -328,11 +282,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -342,11 +294,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -356,11 +306,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -370,11 +318,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -384,11 +330,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -398,11 +342,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -412,11 +354,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -426,11 +366,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -440,11 +378,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -454,11 +390,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -468,11 +402,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -482,11 +414,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -496,11 +426,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -510,11 +438,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -524,11 +450,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -538,11 +462,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -552,11 +474,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -566,11 +486,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -580,11 +498,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -594,11 +510,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -608,11 +522,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -622,11 +534,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -636,11 +546,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -650,11 +558,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -664,11 +570,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -678,11 +582,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -692,11 +594,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "FreeBSD",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -706,11 +606,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/kk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -720,11 +618,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/lk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -734,11 +630,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/mk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -748,11 +642,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/nk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -762,11 +654,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -776,11 +666,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/rk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -790,11 +678,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/sk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -804,11 +690,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/uk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -818,11 +702,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/yk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -832,11 +714,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ml",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -846,11 +726,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ql",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -860,11 +738,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qm",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -874,11 +750,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/ym",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -888,11 +762,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -902,11 +774,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/kkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -916,11 +786,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/lkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -930,11 +798,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/mkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -944,11 +810,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -958,11 +822,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/ylkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -972,11 +834,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qnkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -986,11 +846,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/qrkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1000,11 +858,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1014,11 +870,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1028,11 +882,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1042,11 +894,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1056,11 +906,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1070,11 +918,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1084,11 +930,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1098,11 +942,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1112,11 +954,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1126,11 +966,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1140,11 +978,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1154,11 +990,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1168,11 +1002,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1182,11 +1014,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1196,11 +1026,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1210,11 +1038,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1224,11 +1050,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1238,11 +1062,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1252,11 +1074,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1266,11 +1086,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1280,11 +1098,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1294,11 +1110,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1308,11 +1122,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1322,11 +1134,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1336,11 +1146,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1350,11 +1158,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1364,11 +1170,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1378,11 +1182,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1392,11 +1194,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1406,13 +1206,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx803",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx803"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1422,13 +1220,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx900",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx900"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1438,13 +1234,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx906",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx906"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1454,13 +1248,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx908",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx908"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1470,13 +1262,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx90a",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx90a"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1486,13 +1276,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx942",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx942"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1502,13 +1290,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1010",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx1010"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1518,13 +1304,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1011",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx1011"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1534,13 +1318,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1030",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx1030"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1550,13 +1332,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1032",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "OFF",
         "CMAKE_HIP_ARCHITECTURES": "gfx1032"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1566,13 +1346,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1100",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1100"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1582,13 +1360,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1101",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1101"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1598,13 +1374,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1102",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1102"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1614,13 +1388,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1151",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1151"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1630,13 +1402,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1200",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1200"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1646,13 +1416,11 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/gfx1201",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_HIP": "ON",
         "GGML_HIP_ROCWMMA_FATTN": "ON",
         "CMAKE_HIP_ARCHITECTURES": "gfx1201"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1662,11 +1430,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/rocm/probe",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_PROBE": "rocm"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/rocm.cmake",
       "generator": "Ninja"
@@ -1676,15 +1442,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/50",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "50-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1692,15 +1456,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/61",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "61-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1708,15 +1470,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/70",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "70-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1724,15 +1484,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/75",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "75-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1740,15 +1498,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/80",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "80-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1756,15 +1512,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/86",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "86-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1772,15 +1526,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/89",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
         "CMAKE_CUDA_ARCHITECTURES": "89-real"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1788,15 +1540,13 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cuda/probe",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_PROBE": "cuda",
         "INSTALLAMA_PROBE_ARCHS": "50,61,70,75,80,86,89",
         "CMAKE_CUDA_ARCHITECTURES": "50;61;70;75;80;86;89"
       },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
-      },
-      "toolchainFile": "toolchains/cuda.cmake",
+      "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
     },
     {
@@ -1804,12 +1554,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/kkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1819,12 +1567,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/lkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1834,12 +1580,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/mkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1849,12 +1593,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qkkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1864,12 +1606,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/ylkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1879,12 +1619,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qnkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1894,12 +1632,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/qrkkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1909,12 +1645,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1924,12 +1658,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1939,12 +1671,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krokk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1954,12 +1684,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1969,12 +1697,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1984,12 +1710,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzkk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -1999,12 +1723,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2014,12 +1736,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2029,12 +1749,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzlk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2044,12 +1762,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2059,12 +1775,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2074,12 +1788,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxmk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2089,12 +1801,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2104,12 +1814,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2119,12 +1827,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxnk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2134,12 +1840,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2149,12 +1853,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2164,12 +1866,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxok",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2179,12 +1879,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2194,12 +1892,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2209,12 +1905,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxpk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2224,12 +1918,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2239,12 +1931,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2254,12 +1944,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxqk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2269,12 +1957,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2284,12 +1970,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2299,12 +1983,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2314,12 +1996,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2329,12 +2009,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2344,11 +2022,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/probe",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_PROBE": "vulkan"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "x86_64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2358,12 +2034,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/kk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2373,12 +2047,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/lk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2388,12 +2060,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/mk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2403,12 +2073,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/nk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2418,12 +2086,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2433,12 +2099,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/rk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2448,12 +2112,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/sk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2463,12 +2125,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/uk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2478,12 +2138,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/yk",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2493,12 +2151,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ml",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2508,12 +2164,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ql",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2523,12 +2177,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qm",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2538,12 +2190,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/ym",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2553,12 +2203,10 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qn",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme",
         "GGML_VULKAN": "ON"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2568,11 +2216,9 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/probe",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
         "INSTALLAMA_PROBE": "vulkan"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Linux",
-        "CMAKE_SYSTEM_PROCESSOR": "aarch64"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
       "generator": "Ninja"
@@ -2582,16 +2228,14 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m1",
+        "INSTALLAMA_OS": "macos",
+        "INSTALLAMA_ARCH": "aarch64",
         "GGML_METAL": "ON",
         "GGML_METAL_EMBED_LIBRARY": "ON",
         "GGML_METAL_USE_BF16": "OFF",
         "CMAKE_OSX_ARCHITECTURES": "arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "13.3",
         "INSTALLAMA_FLAGS": "-mcpu=apple-m1"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Darwin",
-        "CMAKE_SYSTEM_PROCESSOR": "arm64"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -2601,16 +2245,14 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m2",
+        "INSTALLAMA_OS": "macos",
+        "INSTALLAMA_ARCH": "aarch64",
         "GGML_METAL": "ON",
         "GGML_METAL_EMBED_LIBRARY": "ON",
         "GGML_METAL_USE_BF16": "OFF",
         "CMAKE_OSX_ARCHITECTURES": "arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "13.3",
         "INSTALLAMA_FLAGS": "-mcpu=apple-m2"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Darwin",
-        "CMAKE_SYSTEM_PROCESSOR": "arm64"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -2620,16 +2262,14 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m3",
+        "INSTALLAMA_OS": "macos",
+        "INSTALLAMA_ARCH": "aarch64",
         "GGML_METAL": "ON",
         "GGML_METAL_EMBED_LIBRARY": "ON",
         "GGML_METAL_USE_BF16": "ON",
         "CMAKE_OSX_ARCHITECTURES": "arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "14.0",
         "INSTALLAMA_FLAGS": "-mcpu=apple-m3"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Darwin",
-        "CMAKE_SYSTEM_PROCESSOR": "arm64"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -2639,16 +2279,14 @@
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m4",
+        "INSTALLAMA_OS": "macos",
+        "INSTALLAMA_ARCH": "aarch64",
         "GGML_METAL": "ON",
         "GGML_METAL_EMBED_LIBRARY": "ON",
         "GGML_METAL_USE_BF16": "ON",
         "CMAKE_OSX_ARCHITECTURES": "arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "15.0",
         "INSTALLAMA_FLAGS": "-mcpu=apple-m4"
-      },
-      "environment": {
-        "CMAKE_SYSTEM_NAME": "Darwin",
-        "CMAKE_SYSTEM_PROCESSOR": "arm64"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"

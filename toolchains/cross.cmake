@@ -1,33 +1,18 @@
-set(CMAKE_SYSTEM_NAME      $ENV{CMAKE_SYSTEM_NAME})
-set(CMAKE_SYSTEM_PROCESSOR $ENV{CMAKE_SYSTEM_PROCESSOR})
+include("${CMAKE_CURRENT_LIST_DIR}/init.cmake")
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+set(CROSS_ABI "none")
+
+if(INSTALLAMA_OS STREQUAL "linux")
     if(CROSS_GLIBC)
-        set(CROSS_TARGET "linux-gnu.2.27")
+        set(CROSS_ABI "gnu.2.27")
     else()
-        set(CROSS_TARGET "linux-musl")
+        set(CROSS_ABI "musl")
     endif()
+elseif(INSTALLAMA_OS STREQUAL "windows")
+    set(CROSS_ABI "gnu")
 endif()
 
-if(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
-    set(CROSS_TARGET "freebsd-none")
-endif()
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-    set(CROSS_TARGET "windows-gnu")
-endif()
-
-if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-    set(CROSS_TARGET "macos-none")
-endif()
-
-if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|ARM64|arm64)$")
-    set(CROSS_ARCH "aarch64")
-endif()
-
-if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|AMD64|amd64)$")
-    set(CROSS_ARCH "x86_64")
-endif()
+set(CROSS_TARGET "${INSTALLAMA_ARCH}-${INSTALLAMA_OS}-${CROSS_ABI}")
 
 find_program(ZIG zig REQUIRED)
 
@@ -49,13 +34,13 @@ set(CMAKE_OBJCOPY      "${CMAKE_BINARY_DIR}/zig-objcopy")
 
 set(CMAKE_C_COMPILER_AR     "${CMAKE_AR}")
 set(CMAKE_C_COMPILER_RANLIB "${CMAKE_RANLIB}")
-set(CMAKE_C_COMPILER_TARGET "${CROSS_ARCH}-${CROSS_TARGET}")
+set(CMAKE_C_COMPILER_TARGET "${CROSS_TARGET}")
 
 set(CMAKE_CXX_COMPILER_AR     "${CMAKE_AR}")
 set(CMAKE_CXX_COMPILER_RANLIB "${CMAKE_RANLIB}")
-set(CMAKE_CXX_COMPILER_TARGET "${CROSS_ARCH}-${CROSS_TARGET}")
+set(CMAKE_CXX_COMPILER_TARGET "${CROSS_TARGET}")
 
 set(HOST_C_COMPILER   "${CMAKE_C_COMPILER}")
 set(HOST_CXX_COMPILER "${CMAKE_CXX_COMPILER}")
 
-include("${CMAKE_CURRENT_LIST_DIR}/base.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/exit.cmake")
