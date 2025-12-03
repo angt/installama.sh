@@ -1,4 +1,4 @@
-name: Build metal
+name: Build aarch64-macos-metal
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Build
-      run: cmake -DFILTER=metal -P build.cmake
+      run: cmake -DFILTER=aarch64-macos-metal -P build.cmake
 
     - name: Deploy
       if: ${{ vars.HF_REPO != '' }}
