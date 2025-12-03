@@ -2,6 +2,606 @@
   "version": 7,
   "configurePresets": [
     {
+      "name": "aarch64-windows-cpu-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/kk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/lk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/mk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/nk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/qk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/rk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/sk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/uk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/yk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/ml",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/ql",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/qm",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/ym",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/qn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/kkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/lkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/mkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/qkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/ylkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/qnkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/qrkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxrn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxrn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-freebsd-cpu-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -2294,6 +2894,406 @@
   ],
   "buildPresets": [
     {
+      "name": "aarch64-windows-cpu-kk",
+      "configurePreset": "aarch64-windows-cpu-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-lk",
+      "configurePreset": "aarch64-windows-cpu-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-mk",
+      "configurePreset": "aarch64-windows-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-nk",
+      "configurePreset": "aarch64-windows-cpu-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qk",
+      "configurePreset": "aarch64-windows-cpu-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-rk",
+      "configurePreset": "aarch64-windows-cpu-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-sk",
+      "configurePreset": "aarch64-windows-cpu-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-uk",
+      "configurePreset": "aarch64-windows-cpu-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-yk",
+      "configurePreset": "aarch64-windows-cpu-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ml",
+      "configurePreset": "aarch64-windows-cpu-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ql",
+      "configurePreset": "aarch64-windows-cpu-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qm",
+      "configurePreset": "aarch64-windows-cpu-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ym",
+      "configurePreset": "aarch64-windows-cpu-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qn",
+      "configurePreset": "aarch64-windows-cpu-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-kkkkk",
+      "configurePreset": "x86_64-windows-cpu-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-lkkkk",
+      "configurePreset": "x86_64-windows-cpu-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-mkkkk",
+      "configurePreset": "x86_64-windows-cpu-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qkkkk",
+      "configurePreset": "x86_64-windows-cpu-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-ylkkk",
+      "configurePreset": "x86_64-windows-cpu-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qnkkk",
+      "configurePreset": "x86_64-windows-cpu-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qrkkk",
+      "configurePreset": "x86_64-windows-cpu-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klokk",
+      "configurePreset": "x86_64-windows-cpu-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knokk",
+      "configurePreset": "x86_64-windows-cpu-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krokk",
+      "configurePreset": "x86_64-windows-cpu-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klzkk",
+      "configurePreset": "x86_64-windows-cpu-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knzkk",
+      "configurePreset": "x86_64-windows-cpu-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krzkk",
+      "configurePreset": "x86_64-windows-cpu-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klzlk",
+      "configurePreset": "x86_64-windows-cpu-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knzlk",
+      "configurePreset": "x86_64-windows-cpu-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krzlk",
+      "configurePreset": "x86_64-windows-cpu-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxmk",
+      "configurePreset": "x86_64-windows-cpu-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxmk",
+      "configurePreset": "x86_64-windows-cpu-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxmk",
+      "configurePreset": "x86_64-windows-cpu-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxnk",
+      "configurePreset": "x86_64-windows-cpu-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxnk",
+      "configurePreset": "x86_64-windows-cpu-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxnk",
+      "configurePreset": "x86_64-windows-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxok",
+      "configurePreset": "x86_64-windows-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxok",
+      "configurePreset": "x86_64-windows-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxok",
+      "configurePreset": "x86_64-windows-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxpk",
+      "configurePreset": "x86_64-windows-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxpk",
+      "configurePreset": "x86_64-windows-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxpk",
+      "configurePreset": "x86_64-windows-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxqk",
+      "configurePreset": "x86_64-windows-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxqk",
+      "configurePreset": "x86_64-windows-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxqk",
+      "configurePreset": "x86_64-windows-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxrk",
+      "configurePreset": "x86_64-windows-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrk",
+      "configurePreset": "x86_64-windows-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrk",
+      "configurePreset": "x86_64-windows-cpu-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrn",
+      "configurePreset": "x86_64-windows-cpu-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrn",
+      "configurePreset": "x86_64-windows-cpu-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
       "name": "aarch64-freebsd-cpu-kk",
       "configurePreset": "aarch64-freebsd-cpu-kk",
       "jobs": 0,
@@ -3743,6 +4743,656 @@
     }
   ],
   "workflowPresets": [
+    {
+      "name": "aarch64-windows-cpu-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-cpu-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-cpu-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-cpu-qn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-cpu-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-cpu-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-cpu-krxrn"
+        }
+      ]
+    },
     {
       "name": "aarch64-freebsd-cpu-kk",
       "steps": [

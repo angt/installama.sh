@@ -245,6 +245,12 @@ def generate_aarch64_freebsd_cpu_presets():
 def generate_x86_64_freebsd_cpu_presets():
     return generate_cpu_presets('freebsd', 'x86_64')
 
+def generate_aarch64_windows_cpu_presets():
+    return generate_cpu_presets('windows', 'aarch64')
+
+def generate_x86_64_windows_cpu_presets():
+    return generate_cpu_presets('windows', 'x86_64')
+
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
 
@@ -470,6 +476,8 @@ def main():
     generate_cpu_archs()
 
     generators = [
+        generate_aarch64_windows_cpu_presets,
+        generate_x86_64_windows_cpu_presets,
         generate_aarch64_freebsd_cpu_presets,
         generate_x86_64_freebsd_cpu_presets,
         generate_aarch64_linux_cpu_presets,
