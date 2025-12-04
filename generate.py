@@ -326,7 +326,7 @@ def generate_x86_64_linux_cuda_probe_preset():
         configs   = configs,
     )
 
-def generate_linux_vulkan_presets(arch):
+def generate_vulkan_presets(os_name, arch):
     configs = []
     for name, flags in CPU_ARCHS[arch].items():
         cache = {
@@ -336,14 +336,14 @@ def generate_linux_vulkan_presets(arch):
         configs.append((name, cache))
 
     return generate_presets(
-        os_name   = 'linux',
+        os_name   = os_name,
         arch      = arch,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
     )
 
-def generate_linux_vulkan_probe_preset(arch):
+def generate_vulkan_probe_preset(os_name, arch):
     configs = []
     name = "probe"
     cache = {
@@ -352,7 +352,7 @@ def generate_linux_vulkan_probe_preset(arch):
     configs.append((name, cache))
 
     return generate_presets(
-        os_name   = 'linux',
+        os_name   = os_name,
         arch      = arch,
         backend   = 'vulkan',
         toolchain = 'toolchains/vulkan.cmake',
@@ -360,16 +360,16 @@ def generate_linux_vulkan_probe_preset(arch):
     )
 
 def generate_x86_64_linux_vulkan_presets():
-    return generate_linux_vulkan_presets('x86_64')
+    return generate_vulkan_presets('linux', 'x86_64')
 
 def generate_x86_64_linux_vulkan_probe_preset():
-    return generate_linux_vulkan_probe_preset('x86_64')
+    return generate_vulkan_probe_preset('linux', 'x86_64')
 
 def generate_aarch64_linux_vulkan_presets():
-    return generate_linux_vulkan_presets('aarch64')
+    return generate_vulkan_presets('linux', 'aarch64')
 
 def generate_aarch64_linux_vulkan_probe_preset():
-    return generate_linux_vulkan_probe_preset('aarch64')
+    return generate_vulkan_probe_preset('linux', 'aarch64')
 
 def metal_use_bf16(cpu):
     return cpu >= 3
