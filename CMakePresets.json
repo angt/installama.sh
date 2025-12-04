@@ -2,6 +2,656 @@
   "version": 7,
   "configurePresets": [
     {
+      "name": "aarch64-windows-vulkan-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/kk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/lk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/mk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/nk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/qk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/rk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/sk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/uk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/yk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/ml",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/ql",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/qm",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/ym",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-windows-vulkan-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/qn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/kkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/lkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/mkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/qkkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/ylkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/qnkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/qrkkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krokk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krzkk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krzlk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxmk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxnk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxok",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxpk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxqk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxrk",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxrn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxrn",
+        "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "GGML_VULKAN": "ON"
+      },
+      "toolchainFile": "toolchains/vulkan.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "aarch64-windows-cpu-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -2894,6 +3544,406 @@
   ],
   "buildPresets": [
     {
+      "name": "aarch64-windows-vulkan-kk",
+      "configurePreset": "aarch64-windows-vulkan-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-lk",
+      "configurePreset": "aarch64-windows-vulkan-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-mk",
+      "configurePreset": "aarch64-windows-vulkan-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-nk",
+      "configurePreset": "aarch64-windows-vulkan-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qk",
+      "configurePreset": "aarch64-windows-vulkan-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-rk",
+      "configurePreset": "aarch64-windows-vulkan-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-sk",
+      "configurePreset": "aarch64-windows-vulkan-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-uk",
+      "configurePreset": "aarch64-windows-vulkan-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-yk",
+      "configurePreset": "aarch64-windows-vulkan-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ml",
+      "configurePreset": "aarch64-windows-vulkan-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ql",
+      "configurePreset": "aarch64-windows-vulkan-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qm",
+      "configurePreset": "aarch64-windows-vulkan-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ym",
+      "configurePreset": "aarch64-windows-vulkan-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qn",
+      "configurePreset": "aarch64-windows-vulkan-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-kkkkk",
+      "configurePreset": "x86_64-windows-vulkan-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-lkkkk",
+      "configurePreset": "x86_64-windows-vulkan-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-mkkkk",
+      "configurePreset": "x86_64-windows-vulkan-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qkkkk",
+      "configurePreset": "x86_64-windows-vulkan-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-ylkkk",
+      "configurePreset": "x86_64-windows-vulkan-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qnkkk",
+      "configurePreset": "x86_64-windows-vulkan-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qrkkk",
+      "configurePreset": "x86_64-windows-vulkan-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klokk",
+      "configurePreset": "x86_64-windows-vulkan-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knokk",
+      "configurePreset": "x86_64-windows-vulkan-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krokk",
+      "configurePreset": "x86_64-windows-vulkan-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzkk",
+      "configurePreset": "x86_64-windows-vulkan-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzkk",
+      "configurePreset": "x86_64-windows-vulkan-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzkk",
+      "configurePreset": "x86_64-windows-vulkan-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzlk",
+      "configurePreset": "x86_64-windows-vulkan-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzlk",
+      "configurePreset": "x86_64-windows-vulkan-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzlk",
+      "configurePreset": "x86_64-windows-vulkan-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxmk",
+      "configurePreset": "x86_64-windows-vulkan-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxmk",
+      "configurePreset": "x86_64-windows-vulkan-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxmk",
+      "configurePreset": "x86_64-windows-vulkan-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxnk",
+      "configurePreset": "x86_64-windows-vulkan-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxnk",
+      "configurePreset": "x86_64-windows-vulkan-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxnk",
+      "configurePreset": "x86_64-windows-vulkan-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxok",
+      "configurePreset": "x86_64-windows-vulkan-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxok",
+      "configurePreset": "x86_64-windows-vulkan-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxok",
+      "configurePreset": "x86_64-windows-vulkan-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxpk",
+      "configurePreset": "x86_64-windows-vulkan-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxpk",
+      "configurePreset": "x86_64-windows-vulkan-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxpk",
+      "configurePreset": "x86_64-windows-vulkan-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxqk",
+      "configurePreset": "x86_64-windows-vulkan-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxqk",
+      "configurePreset": "x86_64-windows-vulkan-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxqk",
+      "configurePreset": "x86_64-windows-vulkan-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxrk",
+      "configurePreset": "x86_64-windows-vulkan-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrk",
+      "configurePreset": "x86_64-windows-vulkan-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrk",
+      "configurePreset": "x86_64-windows-vulkan-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrn",
+      "configurePreset": "x86_64-windows-vulkan-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrn",
+      "configurePreset": "x86_64-windows-vulkan-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
       "name": "aarch64-windows-cpu-kk",
       "configurePreset": "aarch64-windows-cpu-kk",
       "jobs": 0,
@@ -4743,6 +5793,656 @@
     }
   ],
   "workflowPresets": [
+    {
+      "name": "aarch64-windows-vulkan-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-windows-vulkan-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-windows-vulkan-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-windows-vulkan-qn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-windows-vulkan-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-windows-vulkan-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-windows-vulkan-krxrn"
+        }
+      ]
+    },
     {
       "name": "aarch64-windows-cpu-kk",
       "steps": [

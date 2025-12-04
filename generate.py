@@ -371,6 +371,18 @@ def generate_aarch64_linux_vulkan_presets():
 def generate_aarch64_linux_vulkan_probe_preset():
     return generate_vulkan_probe_preset('linux', 'aarch64')
 
+def generate_x86_64_windows_vulkan_presets():
+    return generate_vulkan_presets('windows', 'x86_64')
+
+def generate_x86_64_windows_vulkan_probe_preset():
+    return generate_vulkan_probe_preset('windows', 'x86_64')
+
+def generate_aarch64_windows_vulkan_presets():
+    return generate_vulkan_presets('windows', 'aarch64')
+
+def generate_aarch64_windows_vulkan_probe_preset():
+    return generate_vulkan_probe_preset('windows', 'aarch64')
+
 def metal_use_bf16(cpu):
     return cpu >= 3
 
@@ -476,6 +488,8 @@ def main():
     generate_cpu_archs()
 
     generators = [
+        generate_aarch64_windows_vulkan_presets,
+        generate_x86_64_windows_vulkan_presets,
         generate_aarch64_windows_cpu_presets,
         generate_x86_64_windows_cpu_presets,
         generate_aarch64_freebsd_cpu_presets,
