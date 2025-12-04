@@ -30,45 +30,45 @@ unzstd() (
 	exec ./unzstd
 )
 
-llama_server_cuda() {
+probe_cuda() {
 	[ -z "$SKIP_CUDA" ] && printf "Probing CUDA...\n" &&
 	dl_bin cuda-probe "$REPO/$ARCH/$OS/cuda/probe/probe.zst" &&
 	CONFIG=$(./cuda-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin llama-server "$REPO/$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
+	dl_bin server "$REPO/$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
 }
 
-llama_server_rocm() {
+probe_rocm() {
 	[ -z "$SKIP_ROCM" ] && printf "Probing ROCm...\n" &&
 	dl_bin rocm-probe "$REPO/$ARCH/$OS/rocm/probe/probe.zst" &&
 	CONFIG=$(./rocm-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin llama-server "$REPO/$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
+	dl_bin server "$REPO/$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
 }
 
-llama_server_vulkan() {
+probe_vulkan() {
 	[ -z "$SKIP_VULKAN" ] && printf "Probing Vulkan...\n" &&
 	dl_bin vulkan-probe "$REPO/$ARCH/$OS/vulkan/probe/probe.zst" &&
 	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
 	CONFIG=$(./vulkan-probe && ./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin llama-server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
+	dl_bin server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
 }
 
-llama_server_cpu() {
+probe_cpu() {
 	printf "Probing CPU...\n" &&
 	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
 	CONFIG=$(./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin llama-server "$REPO/$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
+	dl_bin server "$REPO/$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
 }
 
-llama_server_metal() {
+probe_metal() {
 	printf "Probing Metal...\n" &&
 	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-4]") 2>/dev/null &&
 	CONFIG=m${CONFIG##*M} &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin llama-server "$REPO/$ARCH/$OS/metal/$CONFIG/llama-server.zst"
+	dl_bin server "$REPO/$ARCH/$OS/metal/$CONFIG/llama-server.zst"
 }
 
 main() {
@@ -92,22 +92,21 @@ main() {
 	cd ~/.installama || exit 1
 
 	case "$OS" in
-	(macos)   [ -x llama-server ] || llama_server_metal ;;
-	(linux)   [ -x llama-server ] || llama_server_cuda
-	          [ -x llama-server ] || llama_server_rocm
-	          [ -x llama-server ] || llama_server_vulkan
-	          [ -x llama-server ] || llama_server_cpu ;;
-	(freebsd) [ -x llama-server ] || llama_server_cpu ;;
+	(macos)   [ -x server ] || probe_metal ;;
+	(linux)   [ -x server ] || probe_cuda
+	          [ -x server ] || probe_rocm
+	          [ -x server ] || probe_vulkan
+	          [ -x server ] || probe_cpu ;;
+	(freebsd) [ -x server ] || probe_cpu ;;
 	esac
 
-	[ -x llama-server ] || die \
-		"No prebuilt llama-server binary is available for your system." \
+	[ -x server ] || die \
+		"No prebuilt server binary is available for your system." \
 		"Please compile llama.cpp from source instead."
 
-	[ "$MODEL" ] && set -- -hf "$MODEL"
-	[ $# -gt 0 ] && exec ./llama-server "$@"
+	[ $# -gt 0 ] && exec ./server "$@"
 
-	printf "Run ~/.installama/llama-server to launch the llama.cpp server\n"
+	printf "Run ~/.installama/server to launch the llama.cpp server\n"
 }
 
 main "$@"

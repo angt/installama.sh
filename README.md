@@ -1,43 +1,60 @@
 # `installama.sh`
 
-_The fastest way to install `llama.cpp` on Linux and macOS._
+_Instantly install llama.cpp._
 
-`installama.sh` is a simple shell script that downloads and sets up a prebuilt `llama-server` binary for your system.
+`installama.sh` is a simple script that downloads and sets up a prebuilt `llama-server` binary for your system.
 It automatically detects your OS, architecture, and GPU capabilities, so you can start using `llama.cpp` in seconds.
 
 ## Features
 
 - Supported architectures: `x86_64`, `aarch64`.
-- Supported OS: `Linux`, `macOS`, `FreeBSD`.
+- Supported OS: `Linux`, `macOS`, `FreeBSD`, `Windows`.
 - **Automatic detection** for **CPU acceleration**.
 - **Automatic detection** for **GPU acceleration**: `CUDA`, `ROCm`, `Vulkan`, `Metal`.
 - Builds are kept as **lightweight** as possible without compromising performance.
 
+> [!WARNING]
+> **Active Development**
+> - Some backends may be missing or incomplete.
+> - Performance optimizations are still being tuned.
+> - Expect rough edges and occasional bugs.
+
 See the full list of supported hardware and build configurations in [PRESETS.md](PRESETS.md).
 
-## Usage
+## Installation & Usage
 
-Install `llama-server` in one easy step:
+### POSIX systems
+
+Run the following command in your terminal:
 
     curl installama.sh | sh
 
-Then run the server, for example, with the [new awesome WebGUI](https://github.com/ggml-org/llama.cpp/discussions/16938):
+Launch the server:
 
-    ~/.installama/llama-server -hf unsloth/Qwen3-4B-GGUF:Q4_0
+    ~/.installama/server -hf unsloth/Qwen3-4B-GGUF:Q4_0
 
-And open your favorite browser to http://127.0.0.1:8080/.
-
-You can also directly launch a model in a single command:
-
-    curl installama.sh | MODEL=unsloth/Qwen3-4B-GGUF:Q4_0 sh
-
-In some scenarios, you may want to skip the CUDA backend.
-You can do this with the following command:
+In some scenarios, you may want to skip detection for specific backends.
+You can do this by setting environment variables before piping to `sh`:
 
     curl installama.sh | SKIP_CUDA=1 sh
 
-You can also use `SKIP_ROCM=1` or `SKIP_VULKAN=1` to disable those backends.
+Available options: `SKIP_CUDA=1`, `SKIP_ROCM=1`, `SKIP_VULKAN=1`.
 
+### Windows
+
+Run the following command in `PowerShell`:
+
+    irm installama.sh | iex
+
+Launch the server:
+
+    & $env:USERPROFILE\installama\server.exe -hf unsloth/Qwen3-4B-GGUF:Q4_0
+
+## Enjoy!
+
+Once the server is running with your chosen model, simply open your browser and navigate to:
+
+　　　　**http://127.0.0.1:8080**
 
 ---
-⚠️ This is still a PoC. If it doesn't work on your system, please [create an issue](https://github.com/angt/installama.sh/issues/new).
+If it doesn't work on your system, please [create an issue](https://github.com/angt/installama.sh/issues/new).

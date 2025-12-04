@@ -1,6 +1,6 @@
 $FEATCODE = "https://github.com/angt/featcode/releases/latest/download"
-$UNZSTD = "https://github.com/angt/unzstd/releases/latest/download"
-$REPO = "https://huggingface.co/datasets/angt/installama.sh/resolve/main"
+$UNZSTD   = "https://github.com/angt/unzstd/releases/latest/download"
+$REPO     = "https://huggingface.co/datasets/angt/installama.sh/resolve/main"
 
 function Die {
     param([string[]]$Messages)
@@ -19,7 +19,7 @@ function Download {
             Download "unzstd.exe" "$UNZSTD/$ARCH-windows-unzstd.exe"
             irm $URL -OutFile "tmp.zst"
             Start-Process -FilePath ".\unzstd.exe" -RedirectStandardInput "tmp.zst" -RedirectStandardOutput $FILE -NoNewWindow -Wait
-            Remove-Item "tmp.zst"
+            rm "tmp.zst"
         } else {
             irm $URL -OutFile $FILE
         }
@@ -28,12 +28,12 @@ function Download {
     }
 }
 
-function LlamaServerCpu {
+function ProbeCPU {
     "Probing CPU..."
     Download "featcode.exe" "$FEATCODE/$ARCH-windows-featcode.exe"
-    $CONFIG = & .\featcode.exe 2>$null
+    $CONFIG = .\featcode.exe 2>$null
     .\featcode.exe $CONFIG 2>$null | % { "Found: $_" }
-    Download "llama-server.exe" "$REPO/$ARCH/windows/cpu/$CONFIG/llama-server.zst"
+    Download "server.exe" "$REPO/$ARCH/windows/cpu/$CONFIG/llama-server.zst"
 }
 
 function Main {
@@ -44,23 +44,21 @@ function Main {
     }
     $DIR = Join-Path $env:USERPROFILE "installama"
 
-    if (Test-Path $DIR) {
-        Remove-Item -Path $DIR -Recurse -Force
-    }
-    New-Item -Path $DIR -ItemType Directory -Force | Out-Null
-    Set-Location $DIR
+    rm $DIR -Recurse -Force 2>$null
+    md $DIR -Force | Out-Null
+    cd $DIR
 
-    LlamaServerCpu
+    ProbeCPU
 
-    if (!(Test-Path "llama-server.exe")) {
-        Die "No prebuilt llama-server binary is available for your system." `
+    if (!(Test-Path "server.exe")) {
+        Die "No prebuilt server binary is available for your system." `
             "Please compile llama.cpp from source instead."
     }
     if ($args.Length -gt 0) {
-        & ".\llama-server.exe" @args
+        .\server.exe @args
         exit $LASTEXITCODE
     }
-    "Run $DIR/llama-server.exe to launch the llama.cpp server"
+    "Run $DIR\server.exe to launch the llama.cpp server"
 }
 
 Main @args
