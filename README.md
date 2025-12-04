@@ -27,7 +27,7 @@ See the full list of supported hardware and build configurations in [PRESETS.md]
 
 Run the following command in your terminal:
 
-    curl installama.sh | sh
+    curl https://installama.sh | sh
 
 Launch the server:
 
@@ -36,7 +36,7 @@ Launch the server:
 In some scenarios, you may want to skip detection for specific backends.
 You can do this by setting environment variables before piping to `sh`:
 
-    curl installama.sh | SKIP_CUDA=1 sh
+    curl https://installama.sh | SKIP_CUDA=1 sh
 
 Available options: `SKIP_CUDA=1`, `SKIP_ROCM=1`, `SKIP_VULKAN=1`.
 
@@ -44,7 +44,7 @@ Available options: `SKIP_CUDA=1`, `SKIP_ROCM=1`, `SKIP_VULKAN=1`.
 
 Run the following command in `PowerShell`:
 
-    irm installama.sh | iex
+    irm https://installama.sh | iex
 
 Launch the server:
 
