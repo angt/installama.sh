@@ -1,4 +1,4 @@
-name: Build cross x86_64-linux-cpu
+name: Build all x86_64-linux-cpu
 on:
   workflow_dispatch:
 jobs:
@@ -44,7 +44,7 @@ jobs:
           - x86_64-linux-cpu-krxrk
           - x86_64-linux-cpu-knxrn
           - x86_64-linux-cpu-krxrn
-    uses: ./.github/workflows/build-cross.yml
+    uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
     secrets: inherit
