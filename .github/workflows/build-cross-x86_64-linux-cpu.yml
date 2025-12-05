@@ -1,0 +1,50 @@
+name: Build cross x86_64-linux-cpu
+on:
+  workflow_dispatch:
+jobs:
+  dispatch:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-cpu-kkkkk
+          - x86_64-linux-cpu-lkkkk
+          - x86_64-linux-cpu-mkkkk
+          - x86_64-linux-cpu-qkkkk
+          - x86_64-linux-cpu-ylkkk
+          - x86_64-linux-cpu-qnkkk
+          - x86_64-linux-cpu-qrkkk
+          - x86_64-linux-cpu-klokk
+          - x86_64-linux-cpu-knokk
+          - x86_64-linux-cpu-krokk
+          - x86_64-linux-cpu-klzkk
+          - x86_64-linux-cpu-knzkk
+          - x86_64-linux-cpu-krzkk
+          - x86_64-linux-cpu-klzlk
+          - x86_64-linux-cpu-knzlk
+          - x86_64-linux-cpu-krzlk
+          - x86_64-linux-cpu-klxmk
+          - x86_64-linux-cpu-knxmk
+          - x86_64-linux-cpu-krxmk
+          - x86_64-linux-cpu-klxnk
+          - x86_64-linux-cpu-knxnk
+          - x86_64-linux-cpu-krxnk
+          - x86_64-linux-cpu-klxok
+          - x86_64-linux-cpu-knxok
+          - x86_64-linux-cpu-krxok
+          - x86_64-linux-cpu-klxpk
+          - x86_64-linux-cpu-knxpk
+          - x86_64-linux-cpu-krxpk
+          - x86_64-linux-cpu-klxqk
+          - x86_64-linux-cpu-knxqk
+          - x86_64-linux-cpu-krxqk
+          - x86_64-linux-cpu-klxrk
+          - x86_64-linux-cpu-knxrk
+          - x86_64-linux-cpu-krxrk
+          - x86_64-linux-cpu-knxrn
+          - x86_64-linux-cpu-krxrn
+    uses: ./.github/workflows/build-cross.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
