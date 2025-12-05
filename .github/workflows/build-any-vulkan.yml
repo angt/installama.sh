@@ -30,7 +30,7 @@ jobs:
 
     - name: Setup Zig
       run: |
-        V="0.15.2" ZIG="zig-$(uname -m)-linux-$V"
+        V="0.16.0-dev.1484+d0ba6642b" ZIG="zig-$(uname -m)-linux-$V"
         curl -sSf "https://ziglang.org/download/$V/$ZIG.tar.xz" | tar -Jxf- -C ~
         sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
