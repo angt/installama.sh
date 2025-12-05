@@ -3,6 +3,7 @@ import sys
 import subprocess
 from collections import defaultdict
 import json
+from ruamel.yaml import YAML
 
 ROCM_ARCHS = [
     "803",  "900",  "906",  "908",  "90a",  "942",
@@ -484,6 +485,30 @@ def generate_report():
 
     return "\n".join(lines)
 
+def generate_workflow(template, variants):
+    return {
+        "name": f"Build all {template}",
+        "on": {
+            "workflow_dispatch": None,
+        },
+        "jobs": {
+            "dispatch": {
+                "name": "${{ matrix.filter }}",
+                "strategy": {
+                    "fail-fast": False,
+                    "matrix": {
+                        "filter": variants
+                    }
+                },
+                "uses": f"./.github/workflows/build-any-{template}.yml",
+                "with": {
+                    "filter": "${{ matrix.filter }}",
+                },
+                "secrets": "inherit"
+            }
+        }
+    }
+
 def main():
     generate_cpu_archs()
 
@@ -525,6 +550,21 @@ def main():
 
     with open("PRESETS.md", "w", encoding="utf-8") as f:
         f.write(report)
+
+    workflows = defaultdict(list)
+    for workflow in data.get("workflowPresets", []):
+        parts = workflow["name"].split("-")
+        template = parts[2] # for now template = backend
+        workflows[template].append(workflow["name"])
+
+    yaml = YAML()
+    yaml.preserve_quotes = True
+    yaml.default_flow_style = False
+    yaml.indent(mapping=2, sequence=4, offset=2)
+
+    for template, variants in sorted(workflows.items()):
+        with open(f".github/workflows/build-all-{template}.yml", "w", encoding="utf-8") as f:
+            yaml.dump(generate_workflow(template, variants), f)
 
 if __name__ == "__main__":
     main()
