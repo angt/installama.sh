@@ -8,7 +8,7 @@ RUN apt-get update -y \
 ARG ZIG_VERSION=0.16.0-dev.1484+d0ba6642b
 
 RUN ZIG="zig-$(uname -m)-linux-$ZIG_VERSION" \
- && wget -qO- "https://ziglang.org/download/$ZIG_VERSION/$ZIG.tar.xz" | tar -Jxf- -C ~ \
+ && wget -qO- "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~ \
  && ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
 ARG VULKAN_VERSION=1.4.328.1
