@@ -5,9 +5,7 @@ RUN apt-get update -y \
     xz-utils \
  && rm -rf /var/lib/apt/lists/*
 
-ARG ZIG_VERSION=0.15.2
-ENV ZIG_GLOBAL_CACHE_DIR="/tmp/zig-cache"
-ENV ZIG_LOCAL_CACHE_DIR="/tmp/zig-local"
+ARG ZIG_VERSION=0.16.0-dev.1484+d0ba6642b
 
 RUN ZIG="zig-$(uname -m)-linux-$ZIG_VERSION" \
  && wget -qO- "https://ziglang.org/download/$ZIG_VERSION/$ZIG.tar.xz" | tar -Jxf- -C ~ \
