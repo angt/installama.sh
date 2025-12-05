@@ -20,7 +20,7 @@ if(NOT EXISTS "${CMAKE_BINARY_DIR}/zig-cc")
     execute_process(
         COMMAND ${ZIG} cc "${CMAKE_CURRENT_LIST_DIR}/zig.c" -o "${CMAKE_BINARY_DIR}/zig-cc"
     )
-    foreach(WRAPPER c++ ar ranlib objcopy)
+    foreach(WRAPPER c++ ar ranlib objcopy rc dlltool)
         file(COPY_FILE "${CMAKE_BINARY_DIR}/zig-cc" "${CMAKE_BINARY_DIR}/zig-${WRAPPER}")
     endforeach()
 endif()
@@ -31,6 +31,8 @@ set(CMAKE_CXX_COMPILER "${CMAKE_BINARY_DIR}/zig-c++")
 set(CMAKE_AR           "${CMAKE_BINARY_DIR}/zig-ar")
 set(CMAKE_RANLIB       "${CMAKE_BINARY_DIR}/zig-ranlib")
 set(CMAKE_OBJCOPY      "${CMAKE_BINARY_DIR}/zig-objcopy")
+set(CMAKE_RC_COMPILER  "${CMAKE_BINARY_DIR}/zig-rc")
+set(CMAKE_DLLTOOL      "${CMAKE_BINARY_DIR}/zig-dlltool")
 
 set(CMAKE_C_COMPILER_AR     "${CMAKE_AR}")
 set(CMAKE_C_COMPILER_RANLIB "${CMAKE_RANLIB}")
