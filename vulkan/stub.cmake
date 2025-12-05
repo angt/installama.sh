@@ -1,9 +1,11 @@
-if(GGML_VULKAN)
-    find_path(VULKAN_HEADERS
-        NAMES vulkan/vulkan.h
-        HINTS "$ENV{VULKAN_SDK}/include" "/opt/vulkan-sdk/include"
-        REQUIRED
-    )
+find_path(VULKAN_HEADERS
+    NAMES vulkan/vulkan.h
+    HINTS "$ENV{VULKAN_SDK}/include" "/opt/vulkan-sdk/include"
+)
+
+list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}")
+
+if (VULKAN_HEADERS)
     add_library(vulkan_stub SHARED ${CMAKE_CURRENT_LIST_DIR}/stub.c)
 
     target_include_directories(vulkan_stub PUBLIC ${VULKAN_HEADERS})
@@ -32,6 +34,4 @@ if(GGML_VULKAN)
             SUFFIX ".so"
         )
     endif()
-
-    list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}")
 endif()
