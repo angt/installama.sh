@@ -1,7 +1,26 @@
-name: Build aarch64-linux-vulkan
+name: Build any vulkan
 
 on:
+  workflow_call:
+    inputs:
+      filter:
+        required: true
+        type: string
+      deploy:
+        required: false
+        type: boolean
+        default: true
+
   workflow_dispatch:
+    inputs:
+      filter:
+        required: true
+        type: string
+      deploy:
+        description: 'Deploy?'
+        required: false
+        type: boolean
+        default: true
 
 jobs:
   build:
@@ -21,11 +40,11 @@ jobs:
         curl -sSf "https://sdk.lunarg.com/sdk/download/$V/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt
         sudo mv /opt/"$V/$(uname -m)" /opt/vulkan-sdk
 
-    - name: Build
-      run: cmake -DFILTER=aarch64-linux-vulkan -P build.cmake
+    - name: Build ${{ inputs.filter }}
+      run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
 
     - name: Deploy
-      if: ${{ vars.HF_REPO != '' }}
+      if: ${{ inputs.deploy && vars.HF_REPO != '' }}
       env:
         HF_XET_HIGH_PERFORMANCE: 1
         HF_TOKEN: ${{ secrets.HF_TOKEN }}

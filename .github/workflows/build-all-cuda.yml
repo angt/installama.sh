@@ -1,0 +1,22 @@
+name: Build all cuda
+on:
+  workflow_dispatch:
+jobs:
+  dispatch:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-cuda-50
+          - x86_64-linux-cuda-61
+          - x86_64-linux-cuda-70
+          - x86_64-linux-cuda-75
+          - x86_64-linux-cuda-80
+          - x86_64-linux-cuda-86
+          - x86_64-linux-cuda-89
+          - x86_64-linux-cuda-probe
+    uses: ./.github/workflows/build-any-cuda.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit

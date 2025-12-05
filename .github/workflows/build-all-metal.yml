@@ -1,4 +1,4 @@
-name: Build all aarch64-macos-metal
+name: Build all metal
 on:
   workflow_dispatch:
 jobs:

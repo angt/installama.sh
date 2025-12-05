@@ -1,7 +1,26 @@
-name: Build x86_64-linux-cuda
+name: Build any cuda
 
 on:
+  workflow_call:
+    inputs:
+      filter:
+        required: true
+        type: string
+      deploy:
+        required: false
+        type: boolean
+        default: true
+
   workflow_dispatch:
+    inputs:
+      filter:
+        required: true
+        type: string
+      deploy:
+        description: 'Deploy?'
+        required: false
+        type: boolean
+        default: true
 
 jobs:
   build:
@@ -19,11 +38,11 @@ jobs:
         sudo apt-get install -y --no-install-recommends cuda-toolkit-12-4
         echo "/usr/local/cuda-12.4/bin" >> $GITHUB_PATH
 
-    - name: Build
-      run: cmake -DFILTER=x86_64-linux-cuda -P build.cmake
+    - name: Build ${{ inputs.filter }}
+      run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
 
     - name: Deploy
-      if: ${{ vars.HF_REPO != '' }}
+      if: ${{ inputs.deploy && vars.HF_REPO != '' }}
       env:
         HF_XET_HIGH_PERFORMANCE: 1
         HF_TOKEN: ${{ secrets.HF_TOKEN }}
