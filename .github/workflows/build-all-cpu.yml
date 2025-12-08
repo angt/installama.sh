@@ -8,56 +8,6 @@ jobs:
       fail-fast: false
       matrix:
         filter:
-          - aarch64-windows-cpu-kk
-          - aarch64-windows-cpu-lk
-          - aarch64-windows-cpu-mk
-          - aarch64-windows-cpu-nk
-          - aarch64-windows-cpu-qk
-          - aarch64-windows-cpu-rk
-          - aarch64-windows-cpu-sk
-          - aarch64-windows-cpu-uk
-          - aarch64-windows-cpu-yk
-          - aarch64-windows-cpu-ml
-          - aarch64-windows-cpu-ql
-          - aarch64-windows-cpu-qm
-          - aarch64-windows-cpu-ym
-          - aarch64-windows-cpu-qn
-          - x86_64-windows-cpu-kkkkk
-          - x86_64-windows-cpu-lkkkk
-          - x86_64-windows-cpu-mkkkk
-          - x86_64-windows-cpu-qkkkk
-          - x86_64-windows-cpu-ylkkk
-          - x86_64-windows-cpu-qnkkk
-          - x86_64-windows-cpu-qrkkk
-          - x86_64-windows-cpu-klokk
-          - x86_64-windows-cpu-knokk
-          - x86_64-windows-cpu-krokk
-          - x86_64-windows-cpu-klzkk
-          - x86_64-windows-cpu-knzkk
-          - x86_64-windows-cpu-krzkk
-          - x86_64-windows-cpu-klzlk
-          - x86_64-windows-cpu-knzlk
-          - x86_64-windows-cpu-krzlk
-          - x86_64-windows-cpu-klxmk
-          - x86_64-windows-cpu-knxmk
-          - x86_64-windows-cpu-krxmk
-          - x86_64-windows-cpu-klxnk
-          - x86_64-windows-cpu-knxnk
-          - x86_64-windows-cpu-krxnk
-          - x86_64-windows-cpu-klxok
-          - x86_64-windows-cpu-knxok
-          - x86_64-windows-cpu-krxok
-          - x86_64-windows-cpu-klxpk
-          - x86_64-windows-cpu-knxpk
-          - x86_64-windows-cpu-krxpk
-          - x86_64-windows-cpu-klxqk
-          - x86_64-windows-cpu-knxqk
-          - x86_64-windows-cpu-krxqk
-          - x86_64-windows-cpu-klxrk
-          - x86_64-windows-cpu-knxrk
-          - x86_64-windows-cpu-krxrk
-          - x86_64-windows-cpu-knxrn
-          - x86_64-windows-cpu-krxrn
           - aarch64-freebsd-cpu-kk
           - aarch64-freebsd-cpu-lk
           - aarch64-freebsd-cpu-mk
@@ -158,6 +108,56 @@ jobs:
           - x86_64-linux-cpu-krxrk
           - x86_64-linux-cpu-knxrn
           - x86_64-linux-cpu-krxrn
+          - aarch64-windows-cpu-kk
+          - aarch64-windows-cpu-lk
+          - aarch64-windows-cpu-mk
+          - aarch64-windows-cpu-nk
+          - aarch64-windows-cpu-qk
+          - aarch64-windows-cpu-rk
+          - aarch64-windows-cpu-sk
+          - aarch64-windows-cpu-uk
+          - aarch64-windows-cpu-yk
+          - aarch64-windows-cpu-ml
+          - aarch64-windows-cpu-ql
+          - aarch64-windows-cpu-qm
+          - aarch64-windows-cpu-ym
+          - aarch64-windows-cpu-qn
+          - x86_64-windows-cpu-kkkkk
+          - x86_64-windows-cpu-lkkkk
+          - x86_64-windows-cpu-mkkkk
+          - x86_64-windows-cpu-qkkkk
+          - x86_64-windows-cpu-ylkkk
+          - x86_64-windows-cpu-qnkkk
+          - x86_64-windows-cpu-qrkkk
+          - x86_64-windows-cpu-klokk
+          - x86_64-windows-cpu-knokk
+          - x86_64-windows-cpu-krokk
+          - x86_64-windows-cpu-klzkk
+          - x86_64-windows-cpu-knzkk
+          - x86_64-windows-cpu-krzkk
+          - x86_64-windows-cpu-klzlk
+          - x86_64-windows-cpu-knzlk
+          - x86_64-windows-cpu-krzlk
+          - x86_64-windows-cpu-klxmk
+          - x86_64-windows-cpu-knxmk
+          - x86_64-windows-cpu-krxmk
+          - x86_64-windows-cpu-klxnk
+          - x86_64-windows-cpu-knxnk
+          - x86_64-windows-cpu-krxnk
+          - x86_64-windows-cpu-klxok
+          - x86_64-windows-cpu-knxok
+          - x86_64-windows-cpu-krxok
+          - x86_64-windows-cpu-klxpk
+          - x86_64-windows-cpu-knxpk
+          - x86_64-windows-cpu-krxpk
+          - x86_64-windows-cpu-klxqk
+          - x86_64-windows-cpu-knxqk
+          - x86_64-windows-cpu-krxqk
+          - x86_64-windows-cpu-klxrk
+          - x86_64-windows-cpu-knxrk
+          - x86_64-windows-cpu-krxrk
+          - x86_64-windows-cpu-knxrn
+          - x86_64-windows-cpu-krxrn
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}

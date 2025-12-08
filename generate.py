@@ -234,24 +234,6 @@ def generate_cpu_presets(os_name, arch):
         configs   = configs,
     )
 
-def generate_aarch64_linux_cpu_presets():
-    return generate_cpu_presets('linux', 'aarch64')
-
-def generate_x86_64_linux_cpu_presets():
-    return generate_cpu_presets('linux', 'x86_64')
-
-def generate_aarch64_freebsd_cpu_presets():
-    return generate_cpu_presets('freebsd', 'aarch64')
-
-def generate_x86_64_freebsd_cpu_presets():
-    return generate_cpu_presets('freebsd', 'x86_64')
-
-def generate_aarch64_windows_cpu_presets():
-    return generate_cpu_presets('windows', 'aarch64')
-
-def generate_x86_64_windows_cpu_presets():
-    return generate_cpu_presets('windows', 'x86_64')
-
 def rocwmma(arch):
     return arch.startswith(('11', '12')) or (arch.startswith('9') and arch not in {'900', '906'})
 
@@ -359,30 +341,6 @@ def generate_vulkan_probe_preset(os_name, arch):
         toolchain = 'toolchains/vulkan.cmake',
         configs   = configs,
     )
-
-def generate_x86_64_linux_vulkan_presets():
-    return generate_vulkan_presets('linux', 'x86_64')
-
-def generate_x86_64_linux_vulkan_probe_preset():
-    return generate_vulkan_probe_preset('linux', 'x86_64')
-
-def generate_aarch64_linux_vulkan_presets():
-    return generate_vulkan_presets('linux', 'aarch64')
-
-def generate_aarch64_linux_vulkan_probe_preset():
-    return generate_vulkan_probe_preset('linux', 'aarch64')
-
-def generate_x86_64_windows_vulkan_presets():
-    return generate_vulkan_presets('windows', 'x86_64')
-
-def generate_x86_64_windows_vulkan_probe_preset():
-    return generate_vulkan_probe_preset('windows', 'x86_64')
-
-def generate_aarch64_windows_vulkan_presets():
-    return generate_vulkan_presets('windows', 'aarch64')
-
-def generate_aarch64_windows_vulkan_probe_preset():
-    return generate_vulkan_probe_preset('windows', 'aarch64')
 
 def metal_use_bf16(cpu):
     return cpu >= 3
@@ -510,24 +468,22 @@ def generate_workflow(template, variants):
 def main():
     generate_cpu_archs()
 
-    generators = [
-        generate_aarch64_windows_vulkan_presets,
-        generate_x86_64_windows_vulkan_presets,
-        generate_aarch64_windows_cpu_presets,
-        generate_x86_64_windows_cpu_presets,
-        generate_aarch64_freebsd_cpu_presets,
-        generate_x86_64_freebsd_cpu_presets,
-        generate_aarch64_linux_cpu_presets,
-        generate_x86_64_linux_cpu_presets,
-        generate_x86_64_linux_rocm_presets,
-        generate_x86_64_linux_rocm_probe_preset,
-        generate_x86_64_linux_cuda_presets,
-        generate_x86_64_linux_cuda_probe_preset,
-        generate_x86_64_linux_vulkan_presets,
-        generate_x86_64_linux_vulkan_probe_preset,
-        generate_aarch64_linux_vulkan_presets,
-        generate_aarch64_linux_vulkan_probe_preset,
-        generate_metal_presets,
+    presets = [
+        *[generate_cpu_presets(os_name, arch)
+          for os_name in ['freebsd', 'linux', 'windows']
+          for arch in ['aarch64', 'x86_64']
+        ],
+        *[preset
+          for os_name in ['linux', 'windows']
+          for arch in ['aarch64', 'x86_64']
+          for preset in (generate_vulkan_presets(os_name, arch),
+                         generate_vulkan_probe_preset(os_name, arch))
+        ],
+        generate_x86_64_linux_cuda_presets(),
+        generate_x86_64_linux_cuda_probe_preset(),
+        generate_x86_64_linux_rocm_presets(),
+        generate_x86_64_linux_rocm_probe_preset(),
+        generate_metal_presets(),
     ]
     data = {
         "version": 7,
@@ -535,11 +491,10 @@ def main():
         "buildPresets": [],
         "workflowPresets": []
     }
-    for gen in generators:
-        c, b, w = gen()
-        data["configurePresets"].extend(c)
-        data["buildPresets"].extend(b)
-        data["workflowPresets"].extend(w)
+    for configure, build, workflow in presets:
+        data["configurePresets"].extend(configure)
+        data["buildPresets"].extend(build)
+        data["workflowPresets"].extend(workflow)
 
     with open("CMakePresets.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
