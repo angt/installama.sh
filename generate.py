@@ -437,53 +437,51 @@ def format_aarch64_features(flags):
             feats.append(p)
     return arch, feats
 
+def make_table(cols, rows):
+    if not rows:
+        return []
+
+    widths = [max(map(len, x)) for x in zip(*([cols] + rows))]
+    header = [[c.ljust(w) for c, w in zip(cols, widths)], ["-" * w for w in widths]]
+    rows   = [[r.ljust(w) for r, w in zip(row, widths)] for row in rows]
+
+    return "\n".join([
+        "| " + " | ".join(line) + " |"
+        for line in header + rows
+    ])
+
 def generate_report():
-    lines = []
-    lines.append("# Build Presets Reference\n")
-    lines.append("## CPU\n")
-
-    lines.append("### AArch64 (ARM64)\n")
-    lines.append("| Code | Architecture | Features |")
-    lines.append("|---|---|---|")
-    for code, flags in CPU_ARCHS['aarch64'].items():
-        arch, feats = format_aarch64_features(flags)
-        feats = " ".join(f"`{f}`" for f in feats) if feats else "-"
-        lines.append(f"| `{code}` | **{arch}** | {feats} |")
-    lines.append("\n")
-
-    lines.append("### x86_64 (Intel/AMD)\n")
-    lines.append("| Code | Architecture | Features |")
-    lines.append("|---|---|---|")
-    for code, flags in CPU_ARCHS['x86_64'].items():
-        arch, feats = format_x86_64_features(flags)
-        feats = " ".join(f"`{f}`" for f in feats) if feats else "-"
-        lines.append(f"| `{code}` | **{arch}** | {feats} |")
-    lines.append("\n")
-
-    lines.append("## GPU\n")
-
-    lines.append("### CUDA (NVIDIA)\n")
-    cuda_list = " ".join(f"`{a}`" for a in CUDA_ARCHS)
-    lines.append(f"- **Supported Architectures:** {cuda_list}")
-    lines.append("\n")
-
-    lines.append("### ROCm (AMD)\n")
-    lines.append("| Suffix | Features |")
-    lines.append("|---|---|")
-    for arch in ROCM_ARCHS:
-        feat = "ROCWMMA+FlashAttn" if rocwmma(arch) else "-"
-        lines.append(f"| `gfx{arch}` | {feat} |")
-    lines.append("\n")
-
-    lines.append("### Metal (Apple Silicon)\n")
-    lines.append("| Suffix | Chip | macOS | Features |")
-    lines.append("|---|---|---|---|")
-    for cpu, osx in METAL_ARCHS.items():
-        feat = "BF16" if metal_use_bf16(cpu) else "-"
-        lines.append(f"| `m{cpu}` | Apple M{cpu} | {osx}+ | {feat} |")
-    lines.append("\n")
-
-    return "\n".join(lines)
+    return "\n\n".join([
+        "# Build Presets Reference",
+        "## CPU",
+        "### AArch64 (ARM64)",
+        make_table(["Suffix", "Architecture", "Features"], [
+            [f"`{code}`", f"**{arch}**", " ".join(f"`{f}`" for f in feats) or "-"]
+            for code, flags in CPU_ARCHS['aarch64'].items()
+            for arch, feats in [format_aarch64_features(flags)]
+        ]),
+        "### x86_64 (Intel/AMD)",
+        make_table(["Suffix", "Architecture", "Features"], [
+            [f"`{code}`", f"**{arch}**", " ".join(f"`{f}`" for f in feats) or "-"]
+            for code, flags in CPU_ARCHS['x86_64'].items()
+            for arch, feats in [format_x86_64_features(flags)]
+        ]),
+        "## GPU",
+        "### CUDA (NVIDIA)",
+        make_table(["Architecture"], [
+            [f"`{a}`"] for a in CUDA_ARCHS
+        ]),
+        "### ROCm (AMD)",
+        make_table(["Architecture", "Features"], [
+            [f"`gfx{arch}`", "ROCWMMA+FlashAttn" if rocwmma(arch) else "-"]
+            for arch in ROCM_ARCHS
+        ]),
+        "### Metal (Apple Silicon)",
+        make_table(["Suffix", "Architecture", "Features"], [
+            [f"`m{cpu}`", f"Apple M{cpu}", "BF16" if metal_use_bf16(cpu) else "-"]
+            for cpu, _ in METAL_ARCHS.items()
+        ]),
+    ])
 
 def generate_workflow(template, variants):
     return {
