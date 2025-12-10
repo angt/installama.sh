@@ -167,9 +167,8 @@ def main():
     groups = defaultdict(list)
     for src in Path("reqs").rglob('*.zst'):
         dst = src.with_suffix('')
-        if not dst.exists():
-            with src.open('rb') as fsrc, dst.open('wb') as fdst:
-                zstd.ZstdDecompressor().copy_stream(fsrc, fdst)
+        with src.open('rb') as fsrc, dst.open('wb') as fdst:
+            zstd.ZstdDecompressor().copy_stream(fsrc, fdst)
         if (entry := analyze(str(dst))):
             groups[entry].append(str(dst))
 
