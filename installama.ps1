@@ -28,6 +28,18 @@ function Download {
     }
 }
 
+function ProbeVulkan {
+    if ($env:SKIP_VULKAN) { return }
+    "Probing Vulkan..."
+    Download "vulkan-probe.exe" "$REPO/$ARCH/windows/vulkan/probe/probe.zst"
+    Download "featcode.exe" "$FEATCODE/$ARCH-windows-featcode.exe"
+    .\vulkan-probe.exe 2>$null
+    if ($LASTEXITCODE) { return }
+    $CONFIG = .\featcode.exe 2>$null
+    .\featcode.exe $CONFIG 2>$null | % { "Found: $_" }
+    Download "server.exe" "$REPO/$ARCH/windows/vulkan/$CONFIG/llama-server.zst"
+}
+
 function ProbeCPU {
     "Probing CPU..."
     Download "featcode.exe" "$FEATCODE/$ARCH-windows-featcode.exe"
@@ -48,8 +60,8 @@ function Main {
     md $DIR -Force | Out-Null
     cd $DIR
 
-    ProbeCPU
-
+    if (!(Test-Path "server.exe")) { ProbeVulkan }
+    if (!(Test-Path "server.exe")) { ProbeCPU    }
     if (!(Test-Path "server.exe")) {
         Die "No prebuilt server binary is available for your system." `
             "Please compile llama.cpp from source instead."
