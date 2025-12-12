@@ -272,26 +272,26 @@ def generate_x86_64_linux_rocm_probe_preset():
         configs   = configs,
     )
 
-def generate_x86_64_linux_cuda_presets():
+def generate_linux_cuda_presets(arch):
     configs = []
-    for arch in CUDA_ARCHS:
-        name = arch
+    for cuda_arch in CUDA_ARCHS:
+        name = cuda_arch
         cache = {
             "GGML_CUDA": "ON",
             "GGML_STATIC": "ON",
-            "CMAKE_CUDA_ARCHITECTURES": f"{arch}-real",
+            "CMAKE_CUDA_ARCHITECTURES": f"{cuda_arch}-real",
         }
         configs.append((name, cache))
 
     return generate_presets(
         os_name   = 'linux',
-        arch      = 'x86_64',
+        arch      = arch,
         backend   = 'cuda',
         toolchain = 'toolchains/base.cmake',
         configs   = configs,
     )
 
-def generate_x86_64_linux_cuda_probe_preset():
+def generate_linux_cuda_probe_preset(arch):
     configs = []
     name = "probe"
     cache = {
@@ -303,7 +303,7 @@ def generate_x86_64_linux_cuda_probe_preset():
 
     return generate_presets(
         os_name   = 'linux',
-        arch      = 'x86_64',
+        arch      = arch,
         backend   = 'cuda',
         toolchain = 'toolchains/base.cmake',
         configs   = configs,
@@ -479,8 +479,11 @@ def main():
           for preset in (generate_vulkan_presets(os_name, arch),
                          generate_vulkan_probe_preset(os_name, arch))
         ],
-        generate_x86_64_linux_cuda_presets(),
-        generate_x86_64_linux_cuda_probe_preset(),
+        *[preset
+          for arch in ['aarch64', 'x86_64']
+          for preset in (generate_linux_cuda_presets(arch),
+                         generate_linux_cuda_probe_preset(arch))
+        ],
         generate_x86_64_linux_rocm_presets(),
         generate_x86_64_linux_rocm_probe_preset(),
         generate_metal_presets(),
@@ -508,7 +511,12 @@ def main():
     for workflow in data.get("workflowPresets", []):
         parts = workflow["name"].split("-")
         template = parts[2] # for now template = backend
-        workflows[template].append(workflow["name"])
+        if template == "cuda":
+            item = parts[3]
+        else:
+            item = workflow["name"]
+        if item not in workflows[template]:
+            workflows[template].append(item)
 
     yaml = YAML()
     yaml.preserve_quotes = True

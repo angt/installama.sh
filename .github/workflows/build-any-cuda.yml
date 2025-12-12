@@ -24,22 +24,34 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            arch: x86_64
+            repo: x86_64
+          - os: ubuntu-22.04-arm
+            arch: aarch64
+            repo: sbsa
+
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
 
     - name: Install deps
       run: |
-        sudo wget -qO /etc/apt/trusted.gpg.d/cuda.asc "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/3bf863cc.pub"
+        ARCH="${{ matrix.repo }}"
+        sudo wget -qO /etc/apt/trusted.gpg.d/cuda.asc "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/$ARCH/3bf863cc.pub"
         sudo tee /etc/apt/sources.list.d/installama.list <<EOF
-        deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64 /
+        deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/$ARCH /
         EOF
         sudo apt-get update -y
         sudo apt-get install -y --no-install-recommends cuda-toolkit-12-4
         echo "/usr/local/cuda-12.4/bin" >> $GITHUB_PATH
 
-    - name: Build ${{ inputs.filter }}
-      run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
+    - name: Build ${{ matrix.arch }}-linux-cuda-${{ inputs.filter }}
+      run: cmake -DFILTER=${{ matrix.arch }}-linux-cuda-${{ inputs.filter }} -P build.cmake
 
     - name: Deploy
       if: ${{ inputs.deploy && vars.HF_REPO != '' }}

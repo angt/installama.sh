@@ -8,14 +8,14 @@ jobs:
       fail-fast: false
       matrix:
         filter:
-          - x86_64-linux-cuda-50
-          - x86_64-linux-cuda-61
-          - x86_64-linux-cuda-70
-          - x86_64-linux-cuda-75
-          - x86_64-linux-cuda-80
-          - x86_64-linux-cuda-86
-          - x86_64-linux-cuda-89
-          - x86_64-linux-cuda-probe
+          - '50'
+          - '61'
+          - '70'
+          - '75'
+          - '80'
+          - '86'
+          - '89'
+          - probe
     uses: ./.github/workflows/build-any-cuda.yml
     with:
       filter: ${{ matrix.filter }}

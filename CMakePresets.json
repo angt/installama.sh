@@ -3150,6 +3150,118 @@
       "generator": "Ninja"
     },
     {
+      "name": "aarch64-linux-cuda-50",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/50",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "50-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-61",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/61",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "61-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-70",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/70",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "70-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-75",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/75",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "75-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-80",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/80",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "80-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-86",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/86",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "86-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-89",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/89",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_CUDA": "ON",
+        "GGML_STATIC": "ON",
+        "CMAKE_CUDA_ARCHITECTURES": "89-real"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-linux-cuda-probe",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cuda/probe",
+        "INSTALLAMA_OS": "linux",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_PROBE": "cuda",
+        "INSTALLAMA_PROBE_ARCHS": "50,61,70,75,80,86,89",
+        "CMAKE_CUDA_ARCHITECTURES": "50;61;70;75;80;86;89"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
+    },
+    {
       "name": "x86_64-linux-cuda-50",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -5594,6 +5706,70 @@
     {
       "name": "x86_64-windows-vulkan-probe",
       "configurePreset": "x86_64-windows-vulkan-probe",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-50",
+      "configurePreset": "aarch64-linux-cuda-50",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-61",
+      "configurePreset": "aarch64-linux-cuda-61",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-70",
+      "configurePreset": "aarch64-linux-cuda-70",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-75",
+      "configurePreset": "aarch64-linux-cuda-75",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-80",
+      "configurePreset": "aarch64-linux-cuda-80",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-86",
+      "configurePreset": "aarch64-linux-cuda-86",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-89",
+      "configurePreset": "aarch64-linux-cuda-89",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-probe",
+      "configurePreset": "aarch64-linux-cuda-probe",
       "jobs": 0,
       "targets": [
         "installama"
@@ -9132,6 +9308,110 @@
         {
           "type": "build",
           "name": "x86_64-windows-vulkan-probe"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-50",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-50"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-50"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-61",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-61"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-61"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-70",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-70"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-70"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-75",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-75"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-75"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-80",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-80"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-80"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-86",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-86"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-86"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-89",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-89"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-89"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-linux-cuda-probe",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-linux-cuda-probe"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-linux-cuda-probe"
         }
       ]
     },
