@@ -47,8 +47,8 @@ jobs:
         deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/$ARCH /
         EOF
         sudo apt-get update -y
-        sudo apt-get install -y --no-install-recommends cuda-toolkit-12-4
-        echo "/usr/local/cuda-12.4/bin" >> $GITHUB_PATH
+        sudo apt-get install -y --no-install-recommends cuda-toolkit-12-8
+        echo "/usr/local/cuda-12.8/bin" >> $GITHUB_PATH
 
     - name: Build ${{ matrix.arch }}-linux-cuda-${{ inputs.filter }}
       run: cmake -DFILTER=${{ matrix.arch }}-linux-cuda-${{ inputs.filter }} -P build.cmake

@@ -15,6 +15,9 @@ jobs:
           - '80'
           - '86'
           - '89'
+          - '90'
+          - '100'
+          - '120'
           - probe
     uses: ./.github/workflows/build-any-cuda.yml
     with:

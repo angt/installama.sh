@@ -1,5 +1,4 @@
 import os
-import sys
 import subprocess
 from collections import defaultdict
 import json
@@ -10,7 +9,7 @@ ROCM_ARCHS = [
     "1010", "1011", "1030", "1032", "1100", "1101",
     "1102", "1151", "1200", "1201"
 ]
-CUDA_ARCHS = ["50", "61", "70", "75", "80", "86", "89"]
+CUDA_ARCHS = ["50", "61", "70", "75", "80", "86", "89", "90", "100", "120"]
 METAL_ARCHS = {1: "13.3", 2: "13.3", 3: "14.0", 4: "15.0"}
 CPU_ARCHS = {}
 
