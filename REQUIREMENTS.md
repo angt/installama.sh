@@ -5,6 +5,7 @@
 | freebsd | `aarch64` | `cpu`      | FBSD 1.7   | -                                                      |
 | freebsd | `x86_64`  | `cpu`      | FBSD 1.7   | -                                                      |
 | linux   | `aarch64` | `cpu`      | None       | -                                                      |
+| linux   | `aarch64` | `cuda`     | GLIBC 2.34 | `libcuda.so.1`                                         |
 | linux   | `aarch64` | `vulkan`   | GLIBC 2.27 | `libvulkan.so.1`                                       |
 | linux   | `x86_64`  | `cpu`      | None       | -                                                      |
 | linux   | `x86_64`  | `cuda`     | GLIBC 2.34 | `libcuda.so.1`                                         |
