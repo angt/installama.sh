@@ -3158,7 +3158,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "50-real"
+        "CMAKE_CUDA_ARCHITECTURES": "50"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3172,7 +3172,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "61-real"
+        "CMAKE_CUDA_ARCHITECTURES": "61"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3186,7 +3186,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "70-real"
+        "CMAKE_CUDA_ARCHITECTURES": "70"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3200,7 +3200,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "75-real"
+        "CMAKE_CUDA_ARCHITECTURES": "75"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3214,7 +3214,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "80-real"
+        "CMAKE_CUDA_ARCHITECTURES": "80"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3228,7 +3228,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "86-real"
+        "CMAKE_CUDA_ARCHITECTURES": "86"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3242,7 +3242,7 @@
         "INSTALLAMA_ARCH": "aarch64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "89-real"
+        "CMAKE_CUDA_ARCHITECTURES": "89"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3270,7 +3270,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "50-real"
+        "CMAKE_CUDA_ARCHITECTURES": "50"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3284,7 +3284,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "61-real"
+        "CMAKE_CUDA_ARCHITECTURES": "61"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3298,7 +3298,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "70-real"
+        "CMAKE_CUDA_ARCHITECTURES": "70"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3312,7 +3312,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "75-real"
+        "CMAKE_CUDA_ARCHITECTURES": "75"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3326,7 +3326,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "80-real"
+        "CMAKE_CUDA_ARCHITECTURES": "80"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3340,7 +3340,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "86-real"
+        "CMAKE_CUDA_ARCHITECTURES": "86"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
@@ -3354,7 +3354,7 @@
         "INSTALLAMA_ARCH": "x86_64",
         "GGML_CUDA": "ON",
         "GGML_STATIC": "ON",
-        "CMAKE_CUDA_ARCHITECTURES": "89-real"
+        "CMAKE_CUDA_ARCHITECTURES": "89"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
