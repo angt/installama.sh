@@ -445,6 +445,7 @@ def generate_workflow(template, variants):
         "name": f"Build all {template}",
         "on": {
             "workflow_dispatch": None,
+            "schedule": [ {"cron": "0 1 * * 1"} ],
         },
         "jobs": {
             "dispatch": {
