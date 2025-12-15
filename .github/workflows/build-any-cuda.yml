@@ -30,10 +30,8 @@ jobs:
         include:
           - os: ubuntu-22.04
             arch: x86_64
-            repo: x86_64
           - os: ubuntu-22.04-arm
             arch: aarch64
-            repo: sbsa
 
     runs-on: ${{ matrix.os }}
     steps:
@@ -41,14 +39,10 @@ jobs:
 
     - name: Install deps
       run: |
-        ARCH="${{ matrix.repo }}"
-        sudo wget -qO /etc/apt/trusted.gpg.d/cuda.asc "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/$ARCH/3bf863cc.pub"
-        sudo tee /etc/apt/sources.list.d/installama.list <<EOF
-        deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/$ARCH /
-        EOF
-        sudo apt-get update -y
-        sudo apt-get install -y --no-install-recommends cuda-toolkit-12-8
-        echo "/usr/local/cuda-12.8/bin" >> $GITHUB_PATH
+        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
+        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
+        python scripts/install-cuda.py
+        echo "$GITHUB_WORKSPACE/deps/cuda/bin" >> $GITHUB_PATH
 
     - name: Build ${{ matrix.arch }}-linux-cuda-${{ inputs.filter }}
       run: cmake -DFILTER=${{ matrix.arch }}-linux-cuda-${{ inputs.filter }} -P build.cmake
