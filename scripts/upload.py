@@ -5,7 +5,7 @@ from huggingface_hub import HfApi, utils
 
 def create_client():
     return httpx.Client(
-        timeout=httpx.Timeout(300.0, connect=60.0),
+        timeout=httpx.Timeout(60.0),
         headers={"user-agent": "upload-folder/1.0"},
         event_hooks={"request": [utils._http.hf_request_event_hook]},
         follow_redirects=True,
@@ -13,7 +13,7 @@ def create_client():
 
 def upload_folder():
     api = HfApi()
-    for attempt in range(1, 6):
+    for i in reversed(range(5)):
         try:
             api.upload_folder(
                 repo_id=os.environ.get("HF_REPO"),
@@ -23,11 +23,10 @@ def upload_folder():
                 commit_message="Update"
             )
             return
-        except Exception as e:
-            print(f"Upload failed: {e}")
-            time.sleep(10 * attempt)
-
-    raise Exception("Upload failed")
+        except Exception:
+            if not i:
+                raise
+            time.sleep(10)
 
 if __name__ == "__main__":
     utils.disable_progress_bars()
