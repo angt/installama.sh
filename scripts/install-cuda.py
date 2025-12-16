@@ -1,12 +1,14 @@
 import sys
 import os
 import json
+import time
 from urllib.request import urlopen
 import tarfile
 import shutil
 import platform
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from functools import wraps
 
 ROOT = Path.cwd() / "deps" / "cuda"
 DEST = ROOT.with_suffix(".tmp")
@@ -21,6 +23,18 @@ COMPONENTS = [
     "cuda_nvprune",
 ]
 
+def retry(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        for i in reversed(range(5)):
+            try:
+                return func(*args, **kwargs)
+            except Exception:
+                if not i:
+                    raise
+                time.sleep(10)
+    return wrapper
+
 def detect_arch():
     machine = platform.machine().lower()
     if machine in ["x86_64", "amd64"]:
@@ -29,15 +43,7 @@ def detect_arch():
         return "aarch64"
     return machine
 
-def download(url):
-    for i in reversed(range(5)):
-        try:
-            return urlopen(url, timeout=60)
-        except Exception:
-            if not i:
-                raise
-            time.sleep(10)
-
+@retry
 def install(args):
     name, file = args
 
@@ -48,11 +54,16 @@ def install(args):
                 member.name = str(Path(*parts[1:]))
                 yield member
 
-    with download(f"{URL}/{file}") as r:
+    with urlopen(f"{URL}/{file}", timeout=60) as r:
         with tarfile.open(fileobj=r, mode="r|*") as tar:
             tar.extractall(DEST, members=members(tar), filter='tar')
 
     return f" - {name}"
+
+@retry
+def download_manifest():
+    with urlopen(f"{URL}/redistrib_{VERSION}.json", timeout=60) as r:
+        return json.load(r)
 
 def main():
     arch = sys.argv[1] if len(sys.argv) >= 2 else detect_arch()
@@ -66,9 +77,7 @@ def main():
     DEST.mkdir(parents=True)
 
     print(f"Installing CUDA {VERSION} ({platform_key})...")
-
-    with download(f"{URL}/redistrib_{VERSION}.json") as r:
-        manifest = json.load(r)
+    manifest = download_manifest()
 
     tasks = []
     for c in COMPONENTS:
@@ -77,8 +86,9 @@ def main():
         tasks.append((name, data[platform_key]["relative_path"]))
 
     with ThreadPoolExecutor(2) as pool:
-        for res in pool.map(install, tasks):
-            print(res)
+        futures = [pool.submit(install, task) for task in tasks]
+        for f in as_completed(futures):
+            print(f.result())
 
     DEST.rename(ROOT)
     (ROOT / "lib64").symlink_to("lib")
