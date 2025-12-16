@@ -14,11 +14,11 @@ DEST = ROOT.with_suffix(".tmp")
 VERSION = os.getenv("CUDA_VERSION", "12.8.1")
 URL = "https://developer.download.nvidia.com/compute/cuda/redist"
 COMPONENTS = [
-    "cuda_nvprune",
-    "cuda_nvcc",
+    "libcublas",
     "cuda_cudart",
+    "cuda_nvcc",
     "cuda_cccl",
-    "libcublas"
+    "cuda_nvprune",
 ]
 
 def detect_arch():
@@ -28,6 +28,15 @@ def detect_arch():
     if machine in ["aarch64", "arm64"]:
         return "aarch64"
     return machine
+
+def download(url):
+    for i in reversed(range(5)):
+        try:
+            return urlopen(url, timeout=60)
+        except Exception:
+            if not i:
+                raise
+            time.sleep(10)
 
 def install(args):
     name, file = args
@@ -39,7 +48,7 @@ def install(args):
                 member.name = str(Path(*parts[1:]))
                 yield member
 
-    with urlopen(f"{URL}/{file}") as r:
+    with download(f"{URL}/{file}") as r:
         with tarfile.open(fileobj=r, mode="r|*") as tar:
             tar.extractall(DEST, members=members(tar), filter='tar')
 
@@ -58,7 +67,7 @@ def main():
 
     print(f"Installing CUDA {VERSION} ({platform_key})...")
 
-    with urlopen(f"{URL}/redistrib_{VERSION}.json") as r:
+    with download(f"{URL}/redistrib_{VERSION}.json") as r:
         manifest = json.load(r)
 
     tasks = []
@@ -67,7 +76,7 @@ def main():
         name = f"{data['name']} version {data['version']}"
         tasks.append((name, data[platform_key]["relative_path"]))
 
-    with ThreadPoolExecutor(len(tasks)) as pool:
+    with ThreadPoolExecutor(2) as pool:
         for res in pool.map(install, tasks):
             print(res)
 
