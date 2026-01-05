@@ -26,8 +26,8 @@ Fetch(boringssl
     EXCLUDE_FROM_ALL
 )
 
-set(LLAMACPP_GIT "https://github.com/ggml-org/llama.cpp")
-set(LLAMACPP_VERSION "master")
+set(LLAMACPP_GIT "https://github.com/angt/llama.cpp")
+set(LLAMACPP_VERSION "installama")
 Fetch(llamacpp
     ${LLAMACPP_GIT}
     ${LLAMACPP_VERSION}
