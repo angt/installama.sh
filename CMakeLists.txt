@@ -19,7 +19,7 @@ macro(Fetch NAME GIT_REPOSITORY GIT_TAG)
 endmacro()
 
 set(BORINGSSL_GIT "https://boringssl.googlesource.com/boringssl")
-set(BORINGSSL_VERSION "0.20251002.0")
+set(BORINGSSL_VERSION "0.20251124.0")
 Fetch(boringssl
     ${BORINGSSL_GIT}
     ${BORINGSSL_VERSION}
