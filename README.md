@@ -20,6 +20,7 @@ It automatically detects your OS, architecture, and GPU capabilities, so you can
 > - Expect rough edges and occasional bugs.
 
 See the full list of supported hardware and build configurations in [PRESETS.md](PRESETS.md).
+Check [REQUIREMENTS.md](REQUIREMENTS.md) for the detailed requirements, including minimum OS versions and runtime library dependencies.
 
 ## Installation & Usage
 
