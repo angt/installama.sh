@@ -25,12 +25,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ZIG_VERSION: "0.16.0-dev.2193+fc517bd01"
+
     steps:
     - uses: actions/checkout@v4
 
     - name: Setup Zig
       run: |
-        V="0.16.0-dev.2193+fc517bd01" ZIG="zig-$(uname -m)-linux-$V"
+        ZIG="zig-$(uname -m)-linux-$ZIG_VERSION"
         curl -sSf "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~
         sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
