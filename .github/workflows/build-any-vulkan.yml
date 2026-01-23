@@ -41,8 +41,8 @@ jobs:
       - name: Setup Vulkan
         run: |
           VULKAN="vulkansdk-linux-$(uname -m)-$VULKAN_VERSION"
-          curl -sSf "https://sdk.lunarg.com/sdk/download/$V/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt
-          sudo mv /opt/"$V/$(uname -m)" /opt/vulkan-sdk
+          curl -sSf "https://sdk.lunarg.com/sdk/download/$VULKAN_VERSION/linux/$VULKAN.tar.xz" | tar -Jxf- -C /opt
+          sudo mv /opt/"$VULKAN_VERSION/$(uname -m)" /opt/vulkan-sdk
 
       - name: Build ${{ inputs.filter }}
         run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
