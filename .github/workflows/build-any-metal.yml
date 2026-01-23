@@ -26,17 +26,17 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Build ${{ inputs.filter }}
-      run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
+      - name: Build ${{ inputs.filter }}
+        run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
 
-    - name: Deploy
-      if: ${{ inputs.deploy && vars.HF_REPO != '' }}
-      env:
-        HF_XET_HIGH_PERFORMANCE: 1
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        HF_REPO: ${{ vars.HF_REPO }}
-      run: |
-        pip install -U "huggingface_hub[cli,hf_xet]"
-        python scripts/upload.py
+      - name: Deploy
+        if: ${{ inputs.deploy && vars.HF_REPO != '' }}
+        env:
+          HF_XET_HIGH_PERFORMANCE: 1
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_REPO: ${{ vars.HF_REPO }}
+        run: |
+          pip install -U "huggingface_hub[cli,hf_xet]"
+          python scripts/upload.py

@@ -35,24 +35,24 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Install deps
-      run: |
-        sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
-        sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
-        python scripts/install-cuda.py
-        echo "$GITHUB_WORKSPACE/deps/cuda/bin" >> $GITHUB_PATH
+      - name: Install deps
+        run: |
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 100
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 100
+          python scripts/install-cuda.py
+          echo "$GITHUB_WORKSPACE/deps/cuda/bin" >> $GITHUB_PATH
 
-    - name: Build ${{ matrix.arch }}-linux-cuda-${{ inputs.filter }}
-      run: cmake -DFILTER=${{ matrix.arch }}-linux-cuda-${{ inputs.filter }} -P build.cmake
+      - name: Build ${{ matrix.arch }}-linux-cuda-${{ inputs.filter }}
+        run: cmake -DFILTER=${{ matrix.arch }}-linux-cuda-${{ inputs.filter }} -P build.cmake
 
-    - name: Deploy
-      if: ${{ inputs.deploy && vars.HF_REPO != '' }}
-      env:
-        HF_XET_HIGH_PERFORMANCE: 1
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        HF_REPO: ${{ vars.HF_REPO }}
-      run: |
-        pip install -U "huggingface_hub[cli,hf_xet]"
-        python scripts/upload.py
+      - name: Deploy
+        if: ${{ inputs.deploy && vars.HF_REPO != '' }}
+        env:
+          HF_XET_HIGH_PERFORMANCE: 1
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_REPO: ${{ vars.HF_REPO }}
+        run: |
+          pip install -U "huggingface_hub[cli,hf_xet]"
+          python scripts/upload.py

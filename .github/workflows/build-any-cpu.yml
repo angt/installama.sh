@@ -26,26 +26,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ZIG_VERSION: "0.16.0-dev.2193+fc517bd01"
+      ZIG_VERSION: "0.16.0-dev.2290+200fb7c2a"
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Setup Zig
-      run: |
-        ZIG="zig-$(uname -m)-linux-$ZIG_VERSION"
-        curl -sSf "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~
-        sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
+      - name: Setup Zig
+        run: |
+          ZIG="zig-$(uname -m)-linux-$ZIG_VERSION"
+          curl -sSf "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~
+          sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
-    - name: Build ${{ inputs.filter }}
-      run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
+      - name: Build ${{ inputs.filter }}
+        run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
 
-    - name: Deploy
-      if: ${{ inputs.deploy && vars.HF_REPO != '' }}
-      env:
-        HF_XET_HIGH_PERFORMANCE: 1
-        HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        HF_REPO: ${{ vars.HF_REPO }}
-      run: |
-        pip install -U "huggingface_hub[cli,hf_xet]"
-        python scripts/upload.py
+      - name: Deploy
+        if: ${{ inputs.deploy && vars.HF_REPO != '' }}
+        env:
+          HF_XET_HIGH_PERFORMANCE: 1
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_REPO: ${{ vars.HF_REPO }}
+        run: |
+          pip install -U "huggingface_hub[cli,hf_xet]"
+          python scripts/upload.py

@@ -521,6 +521,7 @@ def main():
     yaml = YAML()
     yaml.preserve_quotes = True
     yaml.default_flow_style = False
+    yaml.width = 4096
     yaml.indent(mapping=2, sequence=4, offset=2)
 
     for template, variants in sorted(workflows.items()):
