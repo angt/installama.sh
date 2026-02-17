@@ -139,7 +139,6 @@ def select_min_x86_64_arch(features):
     return next((march[f] for f in march if f in set(features)), 'x86_64')
 
 def featcode(arch, features):
-    args = ['+' + feat for feat in features]
     result = subprocess.run(
         ['featcode', '+'] + ['+' + feat for feat in features],
         env={**os.environ, 'FEATCODE_ARCH': arch},
@@ -470,7 +469,7 @@ def main():
 
     presets = [
         *[generate_cpu_presets(os_name, arch)
-          for os_name in ['freebsd', 'linux', 'windows']
+          for os_name in ['linux', 'windows', 'freebsd', 'openbsd', 'netbsd']
           for arch in ['aarch64', 'x86_64']
         ],
         *[preset
@@ -509,6 +508,8 @@ def main():
 
     workflows = defaultdict(list)
     for workflow in data.get("workflowPresets", []):
+        if any(f"-{os}-" in workflow["name"] for os in ["netbsd", "openbsd"]):
+            continue
         parts = workflow["name"].split("-")
         template = parts[2] # for now template = backend
         if template == "cuda":

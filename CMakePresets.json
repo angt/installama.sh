@@ -2,606 +2,6 @@
   "version": 7,
   "configurePresets": [
     {
-      "name": "aarch64-freebsd-cpu-kk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/kk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-lk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/lk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-mk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/mk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-nk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/nk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/sk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/uk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-yk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ml",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ql",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qm",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ym",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qn",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-kkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/kkkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-lkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/lkkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-mkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/mkkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qkkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qkkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-ylkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/ylkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qnkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qnkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qrkkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qrkkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klokk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klokk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knokk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knokk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krokk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krokk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxmk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxmk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxmk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxmk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxmk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxmk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxnk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxnk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxnk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxnk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxok",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxok",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxok",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxok",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxpk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxqk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxqk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxqk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxqk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxqk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxqk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxrk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrk",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrn",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrn",
-      "binaryDir": "build/${presetName}",
-      "cacheVariables": {
-        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrn",
-        "INSTALLAMA_OS": "freebsd",
-        "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
-      },
-      "toolchainFile": "toolchains/cross.cmake",
-      "generator": "Ninja"
-    },
-    {
       "name": "aarch64-linux-cpu-kk",
       "binaryDir": "build/${presetName}",
       "cacheVariables": {
@@ -1795,6 +1195,1806 @@
       "cacheVariables": {
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxrn",
         "INSTALLAMA_OS": "windows",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/kk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/lk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/mk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/nk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/sk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/uk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ml",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ql",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qm",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/ym",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/kkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/lkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/mkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qkkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/ylkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qnkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/qrkkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krokk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxmk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxok",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxqk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrn",
+        "INSTALLAMA_OS": "freebsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/kk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/lk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/mk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/nk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/qk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/rk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/sk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/uk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/yk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/ml",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/ql",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/qm",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/ym",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/qn",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/kkkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/lkkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/mkkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/qkkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/ylkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/qnkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/qrkkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klokk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knokk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krokk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klzkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knzkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krzkk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klzlk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knzlk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krzlk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxmk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxmk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxmk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxnk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxnk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxnk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxok",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxok",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxok",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxpk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxpk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxpk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxqk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxqk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxqk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/klxrk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxrk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxrk",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/knxrn",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/openbsd/cpu/krxrn",
+        "INSTALLAMA_OS": "openbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-kk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/kk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-lk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/lk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-mk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/mk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-nk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/nk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/qk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-rk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/rk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-sk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/sk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-uk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/uk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-yk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/yk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ml",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/ml",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ql",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/ql",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qm",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/qm",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ym",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/ym",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_7a+fullfp16+dotprod+i8mm+sve+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/qn",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "aarch64",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v9a+fullfp16+dotprod+i8mm+sve+sve2+sme"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-kkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/kkkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-lkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/lkkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-mkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/mkkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qkkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/qkkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v2 -mavx -mf16c -mfma"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-ylkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/ylkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qnkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/qnkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qrkkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/qrkkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klokk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knokk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krokk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krokk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klzkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knzkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzkk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krzkk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klzlk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knzlk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzlk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krzlk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxmk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxmk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxmk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxmk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxnk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxnk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxnk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxnk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxok",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxok",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxok",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxok",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxpk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxpk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxpk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxpk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxqk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxqk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxqk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxqk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/klxrk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxrk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrk",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxrk",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/knxrn",
+        "INSTALLAMA_OS": "netbsd",
+        "INSTALLAMA_ARCH": "x86_64",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+      },
+      "toolchainFile": "toolchains/cross.cmake",
+      "generator": "Ninja"
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrn",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/netbsd/cpu/krxrn",
+        "INSTALLAMA_OS": "netbsd",
         "INSTALLAMA_ARCH": "x86_64",
         "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
       },
@@ -3764,406 +4964,6 @@
   ],
   "buildPresets": [
     {
-      "name": "aarch64-freebsd-cpu-kk",
-      "configurePreset": "aarch64-freebsd-cpu-kk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-lk",
-      "configurePreset": "aarch64-freebsd-cpu-lk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-mk",
-      "configurePreset": "aarch64-freebsd-cpu-mk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-nk",
-      "configurePreset": "aarch64-freebsd-cpu-nk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qk",
-      "configurePreset": "aarch64-freebsd-cpu-qk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "configurePreset": "aarch64-freebsd-cpu-rk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "configurePreset": "aarch64-freebsd-cpu-sk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "configurePreset": "aarch64-freebsd-cpu-uk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-yk",
-      "configurePreset": "aarch64-freebsd-cpu-yk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "configurePreset": "aarch64-freebsd-cpu-ml",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "configurePreset": "aarch64-freebsd-cpu-ql",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "configurePreset": "aarch64-freebsd-cpu-qm",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "configurePreset": "aarch64-freebsd-cpu-ym",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "configurePreset": "aarch64-freebsd-cpu-qn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-kkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-kkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-lkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-lkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-mkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-mkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qkkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qkkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-ylkkk",
-      "configurePreset": "x86_64-freebsd-cpu-ylkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qnkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qnkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qrkkk",
-      "configurePreset": "x86_64-freebsd-cpu-qrkkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klokk",
-      "configurePreset": "x86_64-freebsd-cpu-klokk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knokk",
-      "configurePreset": "x86_64-freebsd-cpu-knokk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krokk",
-      "configurePreset": "x86_64-freebsd-cpu-krokk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "configurePreset": "x86_64-freebsd-cpu-klzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "configurePreset": "x86_64-freebsd-cpu-knzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "configurePreset": "x86_64-freebsd-cpu-krzkk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzlk",
-      "configurePreset": "x86_64-freebsd-cpu-klzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzlk",
-      "configurePreset": "x86_64-freebsd-cpu-knzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "configurePreset": "x86_64-freebsd-cpu-krzlk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxmk",
-      "configurePreset": "x86_64-freebsd-cpu-klxmk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxmk",
-      "configurePreset": "x86_64-freebsd-cpu-knxmk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxmk",
-      "configurePreset": "x86_64-freebsd-cpu-krxmk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxnk",
-      "configurePreset": "x86_64-freebsd-cpu-klxnk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxnk",
-      "configurePreset": "x86_64-freebsd-cpu-knxnk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxnk",
-      "configurePreset": "x86_64-freebsd-cpu-krxnk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxok",
-      "configurePreset": "x86_64-freebsd-cpu-klxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxok",
-      "configurePreset": "x86_64-freebsd-cpu-knxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxok",
-      "configurePreset": "x86_64-freebsd-cpu-krxok",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxpk",
-      "configurePreset": "x86_64-freebsd-cpu-klxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxpk",
-      "configurePreset": "x86_64-freebsd-cpu-knxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxpk",
-      "configurePreset": "x86_64-freebsd-cpu-krxpk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxqk",
-      "configurePreset": "x86_64-freebsd-cpu-klxqk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxqk",
-      "configurePreset": "x86_64-freebsd-cpu-knxqk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxqk",
-      "configurePreset": "x86_64-freebsd-cpu-krxqk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxrk",
-      "configurePreset": "x86_64-freebsd-cpu-klxrk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrk",
-      "configurePreset": "x86_64-freebsd-cpu-knxrk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrk",
-      "configurePreset": "x86_64-freebsd-cpu-krxrk",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrn",
-      "configurePreset": "x86_64-freebsd-cpu-knxrn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrn",
-      "configurePreset": "x86_64-freebsd-cpu-krxrn",
-      "jobs": 0,
-      "targets": [
-        "installama"
-      ]
-    },
-    {
       "name": "aarch64-linux-cpu-kk",
       "configurePreset": "aarch64-linux-cpu-kk",
       "jobs": 0,
@@ -4958,6 +5758,1206 @@
     {
       "name": "x86_64-windows-cpu-krxrn",
       "configurePreset": "x86_64-windows-cpu-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-kk",
+      "configurePreset": "aarch64-freebsd-cpu-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-lk",
+      "configurePreset": "aarch64-freebsd-cpu-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-mk",
+      "configurePreset": "aarch64-freebsd-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-nk",
+      "configurePreset": "aarch64-freebsd-cpu-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qk",
+      "configurePreset": "aarch64-freebsd-cpu-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-rk",
+      "configurePreset": "aarch64-freebsd-cpu-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-sk",
+      "configurePreset": "aarch64-freebsd-cpu-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-uk",
+      "configurePreset": "aarch64-freebsd-cpu-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-yk",
+      "configurePreset": "aarch64-freebsd-cpu-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ml",
+      "configurePreset": "aarch64-freebsd-cpu-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ql",
+      "configurePreset": "aarch64-freebsd-cpu-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qm",
+      "configurePreset": "aarch64-freebsd-cpu-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ym",
+      "configurePreset": "aarch64-freebsd-cpu-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qn",
+      "configurePreset": "aarch64-freebsd-cpu-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-kkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-lkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-mkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qkkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-ylkkk",
+      "configurePreset": "x86_64-freebsd-cpu-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qnkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qrkkk",
+      "configurePreset": "x86_64-freebsd-cpu-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klokk",
+      "configurePreset": "x86_64-freebsd-cpu-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knokk",
+      "configurePreset": "x86_64-freebsd-cpu-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krokk",
+      "configurePreset": "x86_64-freebsd-cpu-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzkk",
+      "configurePreset": "x86_64-freebsd-cpu-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzkk",
+      "configurePreset": "x86_64-freebsd-cpu-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzkk",
+      "configurePreset": "x86_64-freebsd-cpu-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzlk",
+      "configurePreset": "x86_64-freebsd-cpu-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzlk",
+      "configurePreset": "x86_64-freebsd-cpu-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzlk",
+      "configurePreset": "x86_64-freebsd-cpu-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxmk",
+      "configurePreset": "x86_64-freebsd-cpu-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxmk",
+      "configurePreset": "x86_64-freebsd-cpu-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxmk",
+      "configurePreset": "x86_64-freebsd-cpu-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxnk",
+      "configurePreset": "x86_64-freebsd-cpu-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxnk",
+      "configurePreset": "x86_64-freebsd-cpu-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxnk",
+      "configurePreset": "x86_64-freebsd-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "configurePreset": "x86_64-freebsd-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "configurePreset": "x86_64-freebsd-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "configurePreset": "x86_64-freebsd-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "configurePreset": "x86_64-freebsd-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "configurePreset": "x86_64-freebsd-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "configurePreset": "x86_64-freebsd-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "configurePreset": "x86_64-freebsd-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "configurePreset": "x86_64-freebsd-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "configurePreset": "x86_64-freebsd-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "configurePreset": "x86_64-freebsd-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "configurePreset": "x86_64-freebsd-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "configurePreset": "x86_64-freebsd-cpu-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrn",
+      "configurePreset": "x86_64-freebsd-cpu-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrn",
+      "configurePreset": "x86_64-freebsd-cpu-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-kk",
+      "configurePreset": "aarch64-openbsd-cpu-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-lk",
+      "configurePreset": "aarch64-openbsd-cpu-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-mk",
+      "configurePreset": "aarch64-openbsd-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-nk",
+      "configurePreset": "aarch64-openbsd-cpu-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qk",
+      "configurePreset": "aarch64-openbsd-cpu-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-rk",
+      "configurePreset": "aarch64-openbsd-cpu-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-sk",
+      "configurePreset": "aarch64-openbsd-cpu-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-uk",
+      "configurePreset": "aarch64-openbsd-cpu-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-yk",
+      "configurePreset": "aarch64-openbsd-cpu-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ml",
+      "configurePreset": "aarch64-openbsd-cpu-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ql",
+      "configurePreset": "aarch64-openbsd-cpu-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qm",
+      "configurePreset": "aarch64-openbsd-cpu-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ym",
+      "configurePreset": "aarch64-openbsd-cpu-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qn",
+      "configurePreset": "aarch64-openbsd-cpu-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-kkkkk",
+      "configurePreset": "x86_64-openbsd-cpu-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-lkkkk",
+      "configurePreset": "x86_64-openbsd-cpu-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-mkkkk",
+      "configurePreset": "x86_64-openbsd-cpu-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qkkkk",
+      "configurePreset": "x86_64-openbsd-cpu-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-ylkkk",
+      "configurePreset": "x86_64-openbsd-cpu-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qnkkk",
+      "configurePreset": "x86_64-openbsd-cpu-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qrkkk",
+      "configurePreset": "x86_64-openbsd-cpu-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klokk",
+      "configurePreset": "x86_64-openbsd-cpu-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knokk",
+      "configurePreset": "x86_64-openbsd-cpu-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krokk",
+      "configurePreset": "x86_64-openbsd-cpu-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzkk",
+      "configurePreset": "x86_64-openbsd-cpu-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzkk",
+      "configurePreset": "x86_64-openbsd-cpu-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzkk",
+      "configurePreset": "x86_64-openbsd-cpu-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzlk",
+      "configurePreset": "x86_64-openbsd-cpu-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzlk",
+      "configurePreset": "x86_64-openbsd-cpu-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzlk",
+      "configurePreset": "x86_64-openbsd-cpu-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxmk",
+      "configurePreset": "x86_64-openbsd-cpu-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxmk",
+      "configurePreset": "x86_64-openbsd-cpu-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxmk",
+      "configurePreset": "x86_64-openbsd-cpu-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxnk",
+      "configurePreset": "x86_64-openbsd-cpu-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxnk",
+      "configurePreset": "x86_64-openbsd-cpu-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxnk",
+      "configurePreset": "x86_64-openbsd-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxok",
+      "configurePreset": "x86_64-openbsd-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxok",
+      "configurePreset": "x86_64-openbsd-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxok",
+      "configurePreset": "x86_64-openbsd-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxpk",
+      "configurePreset": "x86_64-openbsd-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxpk",
+      "configurePreset": "x86_64-openbsd-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxpk",
+      "configurePreset": "x86_64-openbsd-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxqk",
+      "configurePreset": "x86_64-openbsd-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxqk",
+      "configurePreset": "x86_64-openbsd-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxqk",
+      "configurePreset": "x86_64-openbsd-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxrk",
+      "configurePreset": "x86_64-openbsd-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrk",
+      "configurePreset": "x86_64-openbsd-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrk",
+      "configurePreset": "x86_64-openbsd-cpu-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrn",
+      "configurePreset": "x86_64-openbsd-cpu-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrn",
+      "configurePreset": "x86_64-openbsd-cpu-krxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-kk",
+      "configurePreset": "aarch64-netbsd-cpu-kk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-lk",
+      "configurePreset": "aarch64-netbsd-cpu-lk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-mk",
+      "configurePreset": "aarch64-netbsd-cpu-mk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-nk",
+      "configurePreset": "aarch64-netbsd-cpu-nk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qk",
+      "configurePreset": "aarch64-netbsd-cpu-qk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-rk",
+      "configurePreset": "aarch64-netbsd-cpu-rk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-sk",
+      "configurePreset": "aarch64-netbsd-cpu-sk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-uk",
+      "configurePreset": "aarch64-netbsd-cpu-uk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-yk",
+      "configurePreset": "aarch64-netbsd-cpu-yk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ml",
+      "configurePreset": "aarch64-netbsd-cpu-ml",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ql",
+      "configurePreset": "aarch64-netbsd-cpu-ql",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qm",
+      "configurePreset": "aarch64-netbsd-cpu-qm",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ym",
+      "configurePreset": "aarch64-netbsd-cpu-ym",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qn",
+      "configurePreset": "aarch64-netbsd-cpu-qn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-kkkkk",
+      "configurePreset": "x86_64-netbsd-cpu-kkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-lkkkk",
+      "configurePreset": "x86_64-netbsd-cpu-lkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-mkkkk",
+      "configurePreset": "x86_64-netbsd-cpu-mkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qkkkk",
+      "configurePreset": "x86_64-netbsd-cpu-qkkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-ylkkk",
+      "configurePreset": "x86_64-netbsd-cpu-ylkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qnkkk",
+      "configurePreset": "x86_64-netbsd-cpu-qnkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qrkkk",
+      "configurePreset": "x86_64-netbsd-cpu-qrkkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klokk",
+      "configurePreset": "x86_64-netbsd-cpu-klokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knokk",
+      "configurePreset": "x86_64-netbsd-cpu-knokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krokk",
+      "configurePreset": "x86_64-netbsd-cpu-krokk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzkk",
+      "configurePreset": "x86_64-netbsd-cpu-klzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzkk",
+      "configurePreset": "x86_64-netbsd-cpu-knzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzkk",
+      "configurePreset": "x86_64-netbsd-cpu-krzkk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzlk",
+      "configurePreset": "x86_64-netbsd-cpu-klzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzlk",
+      "configurePreset": "x86_64-netbsd-cpu-knzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzlk",
+      "configurePreset": "x86_64-netbsd-cpu-krzlk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxmk",
+      "configurePreset": "x86_64-netbsd-cpu-klxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxmk",
+      "configurePreset": "x86_64-netbsd-cpu-knxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxmk",
+      "configurePreset": "x86_64-netbsd-cpu-krxmk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxnk",
+      "configurePreset": "x86_64-netbsd-cpu-klxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxnk",
+      "configurePreset": "x86_64-netbsd-cpu-knxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxnk",
+      "configurePreset": "x86_64-netbsd-cpu-krxnk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxok",
+      "configurePreset": "x86_64-netbsd-cpu-klxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxok",
+      "configurePreset": "x86_64-netbsd-cpu-knxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxok",
+      "configurePreset": "x86_64-netbsd-cpu-krxok",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxpk",
+      "configurePreset": "x86_64-netbsd-cpu-klxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxpk",
+      "configurePreset": "x86_64-netbsd-cpu-knxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxpk",
+      "configurePreset": "x86_64-netbsd-cpu-krxpk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxqk",
+      "configurePreset": "x86_64-netbsd-cpu-klxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxqk",
+      "configurePreset": "x86_64-netbsd-cpu-knxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxqk",
+      "configurePreset": "x86_64-netbsd-cpu-krxqk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxrk",
+      "configurePreset": "x86_64-netbsd-cpu-klxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrk",
+      "configurePreset": "x86_64-netbsd-cpu-knxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrk",
+      "configurePreset": "x86_64-netbsd-cpu-krxrk",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrn",
+      "configurePreset": "x86_64-netbsd-cpu-knxrn",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrn",
+      "configurePreset": "x86_64-netbsd-cpu-krxrn",
       "jobs": 0,
       "targets": [
         "installama"
@@ -6142,656 +8142,6 @@
   ],
   "workflowPresets": [
     {
-      "name": "aarch64-freebsd-cpu-kk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-kk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-kk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-lk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-lk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-lk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-mk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-mk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-mk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-nk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-nk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-nk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-qk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-qk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-rk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-rk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-rk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-sk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-sk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-sk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-uk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-uk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-uk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-yk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-yk"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-yk"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ml",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ml"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ml"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ql",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ql"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ql"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qm",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-qm"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-qm"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-ym",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-ym"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-ym"
-        }
-      ]
-    },
-    {
-      "name": "aarch64-freebsd-cpu-qn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "aarch64-freebsd-cpu-qn"
-        },
-        {
-          "type": "build",
-          "name": "aarch64-freebsd-cpu-qn"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-kkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-kkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-kkkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-lkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-lkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-lkkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-mkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-mkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-mkkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qkkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-qkkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-qkkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-ylkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-ylkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-ylkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qnkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-qnkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-qnkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-qrkkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-qrkkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-qrkkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klokk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klokk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klokk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knokk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knokk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knokk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krokk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krokk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krokk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzkk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krzkk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krzkk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krzlk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krzlk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krzlk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxmk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxmk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxmk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxmk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxmk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxmk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxmk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxmk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxmk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxnk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxnk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxnk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxnk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxnk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxnk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxnk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxnk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxnk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxok",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxok"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxok",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxok"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxok",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxok"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxok"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxpk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxpk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxpk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxqk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxqk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxqk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxqk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxqk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxqk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxqk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxqk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxqk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-klxrk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-klxrk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-klxrk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxrk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxrk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrk",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxrk"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxrk"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-knxrn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-knxrn"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-knxrn"
-        }
-      ]
-    },
-    {
-      "name": "x86_64-freebsd-cpu-krxrn",
-      "steps": [
-        {
-          "type": "configure",
-          "name": "x86_64-freebsd-cpu-krxrn"
-        },
-        {
-          "type": "build",
-          "name": "x86_64-freebsd-cpu-krxrn"
-        }
-      ]
-    },
-    {
       "name": "aarch64-linux-cpu-kk",
       "steps": [
         {
@@ -8088,6 +9438,1956 @@
         {
           "type": "build",
           "name": "x86_64-windows-cpu-krxrn"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-freebsd-cpu-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-freebsd-cpu-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-freebsd-cpu-qn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-freebsd-cpu-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-freebsd-cpu-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-freebsd-cpu-krxrn"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-openbsd-cpu-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-openbsd-cpu-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-openbsd-cpu-qn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-openbsd-cpu-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-openbsd-cpu-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-openbsd-cpu-krxrn"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-kk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-kk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-kk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-lk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-lk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-lk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-mk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-mk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-mk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-nk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-nk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-nk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-qk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-qk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-rk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-rk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-rk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-sk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-sk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-sk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-uk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-uk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-uk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-yk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-yk"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-yk"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ml",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-ml"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-ml"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ql",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-ql"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-ql"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qm",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-qm"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-qm"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-ym",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-ym"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-ym"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-netbsd-cpu-qn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-netbsd-cpu-qn"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-netbsd-cpu-qn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-kkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-kkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-kkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-lkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-lkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-lkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-mkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-mkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-mkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qkkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-qkkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-qkkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-ylkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-ylkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-ylkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qnkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-qnkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-qnkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-qrkkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-qrkkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-qrkkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krokk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krokk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krokk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzkk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krzkk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krzkk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krzlk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krzlk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krzlk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxmk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxmk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxmk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxnk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxnk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxnk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxok",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxok"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxok"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxpk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxpk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxpk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxqk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxqk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxqk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-klxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-klxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-klxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrk",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxrk"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxrk"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-knxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-knxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-knxrn"
+        }
+      ]
+    },
+    {
+      "name": "x86_64-netbsd-cpu-krxrn",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "x86_64-netbsd-cpu-krxrn"
+        },
+        {
+          "type": "build",
+          "name": "x86_64-netbsd-cpu-krxrn"
         }
       ]
     },

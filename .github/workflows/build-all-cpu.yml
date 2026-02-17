@@ -10,56 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         filter:
-          - aarch64-freebsd-cpu-kk
-          - aarch64-freebsd-cpu-lk
-          - aarch64-freebsd-cpu-mk
-          - aarch64-freebsd-cpu-nk
-          - aarch64-freebsd-cpu-qk
-          - aarch64-freebsd-cpu-rk
-          - aarch64-freebsd-cpu-sk
-          - aarch64-freebsd-cpu-uk
-          - aarch64-freebsd-cpu-yk
-          - aarch64-freebsd-cpu-ml
-          - aarch64-freebsd-cpu-ql
-          - aarch64-freebsd-cpu-qm
-          - aarch64-freebsd-cpu-ym
-          - aarch64-freebsd-cpu-qn
-          - x86_64-freebsd-cpu-kkkkk
-          - x86_64-freebsd-cpu-lkkkk
-          - x86_64-freebsd-cpu-mkkkk
-          - x86_64-freebsd-cpu-qkkkk
-          - x86_64-freebsd-cpu-ylkkk
-          - x86_64-freebsd-cpu-qnkkk
-          - x86_64-freebsd-cpu-qrkkk
-          - x86_64-freebsd-cpu-klokk
-          - x86_64-freebsd-cpu-knokk
-          - x86_64-freebsd-cpu-krokk
-          - x86_64-freebsd-cpu-klzkk
-          - x86_64-freebsd-cpu-knzkk
-          - x86_64-freebsd-cpu-krzkk
-          - x86_64-freebsd-cpu-klzlk
-          - x86_64-freebsd-cpu-knzlk
-          - x86_64-freebsd-cpu-krzlk
-          - x86_64-freebsd-cpu-klxmk
-          - x86_64-freebsd-cpu-knxmk
-          - x86_64-freebsd-cpu-krxmk
-          - x86_64-freebsd-cpu-klxnk
-          - x86_64-freebsd-cpu-knxnk
-          - x86_64-freebsd-cpu-krxnk
-          - x86_64-freebsd-cpu-klxok
-          - x86_64-freebsd-cpu-knxok
-          - x86_64-freebsd-cpu-krxok
-          - x86_64-freebsd-cpu-klxpk
-          - x86_64-freebsd-cpu-knxpk
-          - x86_64-freebsd-cpu-krxpk
-          - x86_64-freebsd-cpu-klxqk
-          - x86_64-freebsd-cpu-knxqk
-          - x86_64-freebsd-cpu-krxqk
-          - x86_64-freebsd-cpu-klxrk
-          - x86_64-freebsd-cpu-knxrk
-          - x86_64-freebsd-cpu-krxrk
-          - x86_64-freebsd-cpu-knxrn
-          - x86_64-freebsd-cpu-krxrn
           - aarch64-linux-cpu-kk
           - aarch64-linux-cpu-lk
           - aarch64-linux-cpu-mk
@@ -160,6 +110,56 @@ jobs:
           - x86_64-windows-cpu-krxrk
           - x86_64-windows-cpu-knxrn
           - x86_64-windows-cpu-krxrn
+          - aarch64-freebsd-cpu-kk
+          - aarch64-freebsd-cpu-lk
+          - aarch64-freebsd-cpu-mk
+          - aarch64-freebsd-cpu-nk
+          - aarch64-freebsd-cpu-qk
+          - aarch64-freebsd-cpu-rk
+          - aarch64-freebsd-cpu-sk
+          - aarch64-freebsd-cpu-uk
+          - aarch64-freebsd-cpu-yk
+          - aarch64-freebsd-cpu-ml
+          - aarch64-freebsd-cpu-ql
+          - aarch64-freebsd-cpu-qm
+          - aarch64-freebsd-cpu-ym
+          - aarch64-freebsd-cpu-qn
+          - x86_64-freebsd-cpu-kkkkk
+          - x86_64-freebsd-cpu-lkkkk
+          - x86_64-freebsd-cpu-mkkkk
+          - x86_64-freebsd-cpu-qkkkk
+          - x86_64-freebsd-cpu-ylkkk
+          - x86_64-freebsd-cpu-qnkkk
+          - x86_64-freebsd-cpu-qrkkk
+          - x86_64-freebsd-cpu-klokk
+          - x86_64-freebsd-cpu-knokk
+          - x86_64-freebsd-cpu-krokk
+          - x86_64-freebsd-cpu-klzkk
+          - x86_64-freebsd-cpu-knzkk
+          - x86_64-freebsd-cpu-krzkk
+          - x86_64-freebsd-cpu-klzlk
+          - x86_64-freebsd-cpu-knzlk
+          - x86_64-freebsd-cpu-krzlk
+          - x86_64-freebsd-cpu-klxmk
+          - x86_64-freebsd-cpu-knxmk
+          - x86_64-freebsd-cpu-krxmk
+          - x86_64-freebsd-cpu-klxnk
+          - x86_64-freebsd-cpu-knxnk
+          - x86_64-freebsd-cpu-krxnk
+          - x86_64-freebsd-cpu-klxok
+          - x86_64-freebsd-cpu-knxok
+          - x86_64-freebsd-cpu-krxok
+          - x86_64-freebsd-cpu-klxpk
+          - x86_64-freebsd-cpu-knxpk
+          - x86_64-freebsd-cpu-krxpk
+          - x86_64-freebsd-cpu-klxqk
+          - x86_64-freebsd-cpu-knxqk
+          - x86_64-freebsd-cpu-krxqk
+          - x86_64-freebsd-cpu-klxrk
+          - x86_64-freebsd-cpu-knxrk
+          - x86_64-freebsd-cpu-krxrk
+          - x86_64-freebsd-cpu-knxrn
+          - x86_64-freebsd-cpu-krxrn
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
