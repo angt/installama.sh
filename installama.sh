@@ -87,24 +87,26 @@ main() {
 
 	[ "$HOME" ] || die "No HOME, please check your OS"
 
-	rm -rf ~/.installama
-	mkdir -p ~/.installama
-	cd ~/.installama || exit 1
+	(
+		rm -rf ~/.installama
+		mkdir -p ~/.installama
+		cd ~/.installama || exit 1
 
-	case "$OS" in
-	(macos)   [ -x server ] || probe_metal ;;
-	(linux)   [ -x server ] || probe_cuda
-	          [ -x server ] || probe_rocm
-	          [ -x server ] || probe_vulkan
-	          [ -x server ] || probe_cpu ;;
-	(freebsd) [ -x server ] || probe_cpu ;;
-	esac
+		case "$OS" in
+		(macos)   [ -x server ] || probe_metal ;;
+		(linux)   [ -x server ] || probe_cuda
+		          [ -x server ] || probe_rocm
+		          [ -x server ] || probe_vulkan
+		          [ -x server ] || probe_cpu ;;
+		(freebsd) [ -x server ] || probe_cpu ;;
+		esac
 
-	[ -x server ] || die \
-		"No prebuilt server binary is available for your system." \
-		"Please compile llama.cpp from source instead."
+		[ -x server ] || die \
+			"No prebuilt server binary is available for your system." \
+			"Please compile llama.cpp from source instead."
+	) || exit
 
-	[ $# -gt 0 ] && exec ./server "$@"
+	[ $# -gt 0 ] && exec ~/.installama/server "$@"
 
 	printf "Run ~/.installama/server to launch the llama.cpp server\n"
 }
