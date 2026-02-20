@@ -58,16 +58,19 @@ function Main {
 
     rm $DIR -Recurse -Force 2>$null
     md $DIR -Force | Out-Null
-    cd $DIR
+    Push-Location $DIR
 
     if (!(Test-Path "server.exe")) { ProbeVulkan }
     if (!(Test-Path "server.exe")) { ProbeCPU    }
     if (!(Test-Path "server.exe")) {
+        Pop-Location
         Die "No prebuilt server binary is available for your system." `
             "Please compile llama.cpp from source instead."
     }
+
+    Pop-Location
     if ($args.Length -gt 0) {
-        .\server.exe @args
+        $DIR\server.exe @args
         exit $LASTEXITCODE
     }
     "Run $DIR\server.exe to launch the llama.cpp server"
