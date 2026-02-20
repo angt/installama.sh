@@ -67,15 +67,15 @@ function Main {
             Die "No prebuilt server binary is available for your system." `
                 "Please compile llama.cpp from source instead."
         }
-        if ($args.Length -gt 0) {
-            .\server.exe @args
-            exit $LASTEXITCODE
-        }
-        "Run $DIR\server.exe to launch the llama.cpp server"
     }
     finally {
         Pop-Location
     }
+    if ($args.Length -gt 0) {
+        $DIR\server.exe @args
+        exit $LASTEXITCODE
+    }
+    "Run $DIR\server.exe to launch the llama.cpp server"
 }
 
 Main @args
