@@ -17,11 +17,11 @@ function Download {
     try {
         if ($URL -like "*.zst") {
             Download "unzstd.exe" "$UNZSTD/$ARCH-windows-unzstd.exe"
-            irm $URL -OutFile "tmp.zst"
+            Invoke-RestMethod $URL -OutFile "tmp.zst"
             Start-Process -FilePath ".\unzstd.exe" -RedirectStandardInput "tmp.zst" -RedirectStandardOutput $FILE -NoNewWindow -Wait
-            rm "tmp.zst"
+            Remove-Item "tmp.zst"
         } else {
-            irm $URL -OutFile $FILE
+            Invoke-RestMethod $URL -OutFile $FILE
         }
     } catch {
         Die "Failed to download"
@@ -56,8 +56,8 @@ function Main {
     }
     $DIR = Join-Path $env:USERPROFILE "installama"
 
-    rm $DIR -Recurse -Force 2>$null
-    md $DIR -Force | Out-Null
+    Remove-Item $DIR -Recurse -Force 2>$null
+    New-Item -Path $DIR -Force -ItemType "Directory" | Out-Null
     Push-Location $DIR
 
     try {
@@ -72,7 +72,7 @@ function Main {
         Pop-Location
     }
     if ($args.Length -gt 0) {
-        $DIR\server.exe @args
+        ".\$DIR\server.exe @args"
         exit $LASTEXITCODE
     }
     "Run $DIR\server.exe to launch the llama.cpp server"
