@@ -72,7 +72,7 @@ function Main {
         Pop-Location
     }
     if ($args.Length -gt 0) {
-        ".\$DIR\server.exe @args"
+        & "$DIR\server.exe" @args
         exit $LASTEXITCODE
     }
     "Run $DIR\server.exe to launch the llama.cpp server"
