@@ -2,6 +2,10 @@ import os
 import subprocess
 from collections import defaultdict
 import json
+import platform
+import stat
+import urllib.request
+from pathlib import Path
 from ruamel.yaml import YAML
 
 ROCM_ARCHS = [
@@ -138,9 +142,34 @@ def select_min_x86_64_arch(features):
     }
     return next((march[f] for f in march if f in set(features)), 'x86_64')
 
+def download_featcode():
+    os_map = {
+        'darwin': 'macos',
+    }
+    system = platform.system().lower()
+    os_name = os_map.get(system, system)
+
+    arch_map = {
+        'amd64': 'x86_64',
+        'arm64': 'aarch64',
+    }
+    machine = platform.machine().lower()
+    arch = arch_map.get(machine, machine)
+
+    name = f"{arch}-{os_name}-featcode"
+    if os_name == 'windows':
+        name += '.exe'
+
+    version = Path("featcode_version").read_text().strip()
+    url = f"https://github.com/angt/featcode/releases/download/{version}/{name}"
+
+    path = Path("featcode")
+    urllib.request.urlretrieve(url, path)
+    path.chmod(path.stat().st_mode | stat.S_IEXEC)
+
 def featcode(arch, features):
     result = subprocess.run(
-        ['featcode', '+'] + ['+' + feat for feat in features],
+        [Path("featcode"), '+'] + ['+' + feat for feat in features],
         env={**os.environ, 'FEATCODE_ARCH': arch},
         capture_output=True,
         text=True,
@@ -465,6 +494,7 @@ def generate_workflow(template, variants):
     }
 
 def main():
+    download_featcode()
     generate_cpu_archs()
 
     presets = [
