@@ -2,6 +2,19 @@ import os
 from huggingface_hub import HfApi
 from huggingface_hub.hf_api import RepoFile
 
+def get_lfs_blob_ids(revision):
+    repo_tree = api.list_repo_tree(
+        repo_id=repo_id,
+        repo_type="dataset",
+        recursive=True,
+        revision=revision
+    )
+    return {
+        item.blob_id for item in repo_tree
+        if isinstance(item, RepoFile) and item.lfs is not None
+    }
+
+
 api = HfApi()
 repo_id = os.environ.get("HF_REPO")
 
@@ -13,16 +26,11 @@ lfs = api.list_lfs_files(
     repo_type="dataset"
 )
 
-repo = api.list_repo_tree(
-    repo_id=repo_id,
-    repo_type="dataset",
-    recursive=True
-)
-
-repo_lfs_blob = {
-    item.blob_id for item in repo
-    if isinstance(item, RepoFile) and item.lfs is not None
-}
+repo_lfs_blob = get_lfs_blob_ids("main")
+try:
+    repo_lfs_blob |= get_lfs_blob_ids("latest")
+except Exception:
+    print("Branch 'latest' not found, using 'main' only")
 
 lfs_not_in_repo = [
     item for item in lfs
