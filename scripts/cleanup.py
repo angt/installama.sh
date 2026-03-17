@@ -2,6 +2,12 @@ import os
 from huggingface_hub import HfApi
 from huggingface_hub.hf_api import RepoFile
 
+api = HfApi()
+repo_id = os.environ.get("HF_REPO")
+
+if not repo_id:
+    raise ValueError("HF_REPO environment variable is not set")
+
 def get_lfs_blob_ids(revision):
     repo_tree = api.list_repo_tree(
         repo_id=repo_id,
@@ -13,13 +19,6 @@ def get_lfs_blob_ids(revision):
         item.blob_id for item in repo_tree
         if isinstance(item, RepoFile) and item.lfs is not None
     }
-
-
-api = HfApi()
-repo_id = os.environ.get("HF_REPO")
-
-if not repo_id:
-    raise ValueError("HF_REPO environment variable is not set")
 
 lfs = api.list_lfs_files(
     repo_id=repo_id,
