@@ -29,7 +29,7 @@ jobs:
       ZIG_VERSION: "0.16.0-dev.2653+784e89fd4"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Setup Zig
         run: |
