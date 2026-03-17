@@ -3,13 +3,13 @@ name: Download artefacts
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 2 * * 1
+    - cron: 0 1 * * 1
 
 jobs:
   download:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Download artefacts
         run: python scripts/download-artefact.py
