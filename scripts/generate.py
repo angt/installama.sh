@@ -406,7 +406,7 @@ def generate_metal_presets():
             "GGML_METAL_USE_BF16": "ON" if metal_use_bf16(cpu) else "OFF",
             "CMAKE_OSX_ARCHITECTURES": "arm64",
             "CMAKE_OSX_DEPLOYMENT_TARGET": osx,
-            "INSTALLAMA_FLAGS": f"-mcpu=apple-m{cpu}"
+            "INSTALLAMA_FLAGS": f"-mcpu=apple-m{min(4, cpu)}" # TODO m5
         }
         configs.append((name, cache))
 

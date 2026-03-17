@@ -4973,7 +4973,7 @@
         "GGML_METAL_USE_BF16": "ON",
         "CMAKE_OSX_ARCHITECTURES": "arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "16.0",
-        "INSTALLAMA_FLAGS": "-mcpu=apple-m5"
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m4"
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
