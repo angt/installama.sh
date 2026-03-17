@@ -4960,6 +4960,23 @@
       },
       "toolchainFile": "toolchains/base.cmake",
       "generator": "Ninja"
+    },
+    {
+      "name": "aarch64-macos-metal-m5",
+      "binaryDir": "build/${presetName}",
+      "cacheVariables": {
+        "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/macos/metal/m5",
+        "INSTALLAMA_OS": "macos",
+        "INSTALLAMA_ARCH": "aarch64",
+        "GGML_METAL": "ON",
+        "GGML_METAL_EMBED_LIBRARY": "ON",
+        "GGML_METAL_USE_BF16": "ON",
+        "CMAKE_OSX_ARCHITECTURES": "arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "16.0",
+        "INSTALLAMA_FLAGS": "-mcpu=apple-m5"
+      },
+      "toolchainFile": "toolchains/base.cmake",
+      "generator": "Ninja"
     }
   ],
   "buildPresets": [
@@ -8134,6 +8151,14 @@
     {
       "name": "aarch64-macos-metal-m4",
       "configurePreset": "aarch64-macos-metal-m4",
+      "jobs": 0,
+      "targets": [
+        "installama"
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m5",
+      "configurePreset": "aarch64-macos-metal-m5",
       "jobs": 0,
       "targets": [
         "installama"
@@ -13299,6 +13324,19 @@
         {
           "type": "build",
           "name": "aarch64-macos-metal-m4"
+        }
+      ]
+    },
+    {
+      "name": "aarch64-macos-metal-m5",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "aarch64-macos-metal-m5"
+        },
+        {
+          "type": "build",
+          "name": "aarch64-macos-metal-m5"
         }
       ]
     }
