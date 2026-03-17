@@ -13,6 +13,7 @@
 | linux   | `x86_64`  | `vulkan`   | GLIBC 2.27 | `libvulkan.so.1`                                       |
 | macos   | `aarch64` | `metal/m3` | macOS 14.0 | -                                                      |
 | macos   | `aarch64` | `metal/m4` | macOS 15.0 | -                                                      |
+| macos   | `aarch64` | `metal/m5` | macOS 16.0 | -                                                      |
 | macos   | `aarch64` | `metal`    | macOS 13.3 | -                                                      |
 | windows | `aarch64` | `cpu`      | Windows 8  | -                                                      |
 | windows | `aarch64` | `vulkan`   | Windows 8  | `vulkan-1.dll`                                         |

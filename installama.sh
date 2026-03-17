@@ -63,7 +63,7 @@ probe_cpu() {
 
 probe_metal() {
 	printf "Probing Metal...\n" &&
-	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-4]") 2>/dev/null &&
+	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-5]") 2>/dev/null &&
 	CONFIG=m${CONFIG##*M} &&
 	printf "Found: %s\n" "$CONFIG" &&
 	dl_bin server "$REPO/$ARCH/$OS/metal/$CONFIG/llama-server.zst"

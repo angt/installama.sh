@@ -108,3 +108,4 @@
 | `m2`   | Apple M2     | -        |
 | `m3`   | Apple M3     | BF16     |
 | `m4`   | Apple M4     | BF16     |
+| `m5`   | Apple M5     | BF16     |

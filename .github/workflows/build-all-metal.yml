@@ -14,6 +14,7 @@ jobs:
           - aarch64-macos-metal-m2
           - aarch64-macos-metal-m3
           - aarch64-macos-metal-m4
+          - aarch64-macos-metal-m5
     uses: ./.github/workflows/build-any-metal.yml
     with:
       filter: ${{ matrix.filter }}
