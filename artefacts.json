@@ -1,0 +1,52 @@
+[
+  {
+    "name": "featcode-linux-aarch64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/aarch64-linux-featcode",
+    "dest": "output/aarch64/linux/featcode"
+  },
+  {
+    "name": "featcode-linux-x86_64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-linux-featcode",
+    "dest": "output/x86_64/linux/featcode"
+  },
+  {
+    "name": "featcode-windows-aarch64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/aarch64-windows-featcode.exe",
+    "dest": "output/aarch64/windows/featcode.exe"
+  },
+  {
+    "name": "featcode-windows-x86_64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-windows-featcode.exe",
+    "dest": "output/x86_64/windows/featcode.exe"
+  },
+  {
+    "name": "featcode-freebsd-aarch64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/aarch64-freebsd-featcode",
+    "dest": "output/aarch64/freebsd/featcode"
+  },
+  {
+    "name": "featcode-freebsd-x86_64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-freebsd-featcode",
+    "dest": "output/x86_64/freebsd/featcode"
+  },
+  {
+    "name": "featcode-openbsd-aarch64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/aarch64-openbsd-featcode",
+    "dest": "output/aarch64/openbsd/featcode"
+  },
+  {
+    "name": "featcode-openbsd-x86_64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-openbsd-featcode",
+    "dest": "output/x86_64/openbsd/featcode"
+  },
+  {
+    "name": "featcode-netbsd-aarch64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/aarch64-netbsd-featcode",
+    "dest": "output/aarch64/netbsd/featcode"
+  },
+  {
+    "name": "featcode-netbsd-x86_64",
+    "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-netbsd-featcode",
+    "dest": "output/x86_64/netbsd/featcode"
+  }
+]

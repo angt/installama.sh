@@ -8,6 +8,26 @@ import urllib.request
 from pathlib import Path
 from ruamel.yaml import YAML
 
+def get_featcode(os_name=None, arch=None):
+    if not os_name:
+        os_map = {
+            'darwin': 'macos',
+        }
+        system = platform.system().lower()
+        os_name = os_map.get(system, system)
+
+    if not arch:
+        arch_map = {
+            'amd64': 'x86_64',
+            'arm64': 'aarch64',
+        }
+        machine = platform.machine().lower()
+        arch = arch_map.get(machine, machine)
+
+    ext = ".exe" if os_name == "windows" else ""
+    url = f"https://github.com/angt/featcode/releases/download/v8/{arch}-{os_name}-featcode{ext}"
+    return url, f"featcode{ext}"
+
 ROCM_ARCHS = [
     "803",  "900",  "906",  "908",  "90a",  "942",
     "1010", "1011", "1030", "1032", "1100", "1101",
@@ -143,33 +163,15 @@ def select_min_x86_64_arch(features):
     return next((march[f] for f in march if f in set(features)), 'x86_64')
 
 def download_featcode():
-    os_map = {
-        'darwin': 'macos',
-    }
-    system = platform.system().lower()
-    os_name = os_map.get(system, system)
-
-    arch_map = {
-        'amd64': 'x86_64',
-        'arm64': 'aarch64',
-    }
-    machine = platform.machine().lower()
-    arch = arch_map.get(machine, machine)
-
-    name = f"{arch}-{os_name}-featcode"
-    if os_name == 'windows':
-        name += '.exe'
-
-    version = Path("featcode_version").read_text().strip()
-    url = f"https://github.com/angt/featcode/releases/download/{version}/{name}"
-
-    path = Path("featcode")
+    url, filename = get_featcode()
+    path = Path(filename)
     urllib.request.urlretrieve(url, path)
     path.chmod(path.stat().st_mode | stat.S_IEXEC)
 
 def featcode(arch, features):
+    _, filename = get_featcode()
     result = subprocess.run(
-        [Path("featcode"), '+'] + ['+' + feat for feat in features],
+        [Path(filename), '+'] + ['+' + feat for feat in features],
         env={**os.environ, 'FEATCODE_ARCH': arch},
         capture_output=True,
         text=True,
@@ -493,15 +495,29 @@ def generate_workflow(template, variants):
         }
     }
 
+def generate_artefacts(cpu_os_archs):
+    artefacts = []
+    for os_name, arch in cpu_os_archs:
+        url, filename = get_featcode(os_name, arch)
+        artefacts.append({
+            "name": f"featcode-{os_name}-{arch}",
+            "url": url,
+            "dest": f"output/{arch}/{os_name}/{filename}"
+        })
+    return artefacts
+
 def main():
     download_featcode()
     generate_cpu_archs()
 
+    cpu_os_archs = [
+        (os_name, arch)
+        for os_name in ['linux', 'windows', 'freebsd', 'openbsd', 'netbsd']
+        for arch in ['aarch64', 'x86_64']
+    ]
+
     presets = [
-        *[generate_cpu_presets(os_name, arch)
-          for os_name in ['linux', 'windows', 'freebsd', 'openbsd', 'netbsd']
-          for arch in ['aarch64', 'x86_64']
-        ],
+        *[generate_cpu_presets(os_name, arch) for os_name, arch in cpu_os_archs],
         *[preset
           for os_name in ['linux', 'windows']
           for arch in ['aarch64', 'x86_64']
@@ -530,6 +546,11 @@ def main():
 
     with open("CMakePresets.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
+    artefacts = generate_artefacts(cpu_os_archs)
+
+    with open("artefacts.json", "w", encoding="utf-8") as f:
+        json.dump(artefacts, f, indent=2)
 
     report = generate_report()
 

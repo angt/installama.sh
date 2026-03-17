@@ -19,7 +19,6 @@ def upload_folder():
                 repo_id=os.environ.get("HF_REPO"),
                 folder_path="output",
                 repo_type="dataset",
-                allow_patterns="*.zst",
                 commit_message="Update"
             )
             return
