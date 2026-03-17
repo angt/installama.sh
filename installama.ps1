@@ -1,6 +1,4 @@
-$FEATCODE = "https://github.com/angt/featcode/releases/latest/download"
-$UNZSTD   = "https://github.com/angt/unzstd/releases/latest/download"
-$REPO     = "https://huggingface.co/datasets/angt/installama.sh/resolve/main"
+$REPO = "https://huggingface.co/datasets/angt/installama.sh/resolve/main"
 
 function Die {
     param([string[]]$Messages)
@@ -16,7 +14,7 @@ function Download {
     "Downloading $FILE..."
     try {
         if ($URL -like "*.zst") {
-            Download "unzstd.exe" "$UNZSTD/$ARCH-windows-unzstd.exe"
+            Download "unzstd.exe" "$REPO/$ARCH/windows/unzstd.exe"
             Invoke-RestMethod $URL -OutFile "tmp.zst"
             Start-Process -FilePath ".\unzstd.exe" -RedirectStandardInput "tmp.zst" -RedirectStandardOutput $FILE -NoNewWindow -Wait
             Remove-Item "tmp.zst"
@@ -32,7 +30,7 @@ function ProbeVulkan {
     if ($env:SKIP_VULKAN) { return }
     "Probing Vulkan..."
     Download "vulkan-probe.exe" "$REPO/$ARCH/windows/vulkan/probe/probe.zst"
-    Download "featcode.exe" "$FEATCODE/$ARCH-windows-featcode.exe"
+    Download "featcode.exe" "$REPO/$ARCH/windows/featcode.exe"
     .\vulkan-probe.exe 2>$null
     if ($LASTEXITCODE) { return }
     $CONFIG = .\featcode.exe 2>$null
@@ -42,7 +40,7 @@ function ProbeVulkan {
 
 function ProbeCPU {
     "Probing CPU..."
-    Download "featcode.exe" "$FEATCODE/$ARCH-windows-featcode.exe"
+    Download "featcode.exe" "$REPO/$ARCH/windows/featcode.exe"
     $CONFIG = .\featcode.exe 2>$null
     .\featcode.exe $CONFIG 2>$null | % { "Found: $_" }
     Download "server.exe" "$REPO/$ARCH/windows/cpu/$CONFIG/llama-server.zst"

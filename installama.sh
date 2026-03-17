@@ -1,5 +1,3 @@
-FEATCODE="https://github.com/angt/featcode/releases/latest/download"
-UNZSTD="https://github.com/angt/unzstd/releases/latest/download"
 REPO="https://huggingface.co/datasets/angt/installama.sh/resolve/main"
 
 die() {
@@ -26,7 +24,7 @@ dl_bin() {
 
 unzstd() (
 	command -v zstd >/dev/null 2>/dev/null && exec zstd -d
-	dl_bin unzstd "$UNZSTD/$ARCH-$OS-unzstd"
+	dl_bin unzstd "$REPO/$ARCH/$OS/unzstd"
 	exec ./unzstd
 )
 
@@ -49,7 +47,7 @@ probe_rocm() {
 probe_vulkan() {
 	[ -z "$SKIP_VULKAN" ] && printf "Probing Vulkan...\n" &&
 	dl_bin vulkan-probe "$REPO/$ARCH/$OS/vulkan/probe/probe.zst" &&
-	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
+	dl_bin featcode "$REPO/$ARCH/$OS/featcode" &&
 	CONFIG=$(./vulkan-probe && ./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
 	dl_bin server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
@@ -57,7 +55,7 @@ probe_vulkan() {
 
 probe_cpu() {
 	printf "Probing CPU...\n" &&
-	dl_bin featcode "$FEATCODE/$ARCH-$OS-featcode" &&
+	dl_bin featcode "$REPO/$ARCH/$OS/featcode" &&
 	CONFIG=$(./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
 	dl_bin server "$REPO/$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
