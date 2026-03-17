@@ -48,5 +48,55 @@
     "name": "featcode-netbsd-x86_64",
     "url": "https://github.com/angt/featcode/releases/download/v8/x86_64-netbsd-featcode",
     "dest": "output/x86_64/netbsd/featcode"
+  },
+  {
+    "name": "unzstd-linux-aarch64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/aarch64-linux-unzstd",
+    "dest": "output/aarch64/linux/unzstd"
+  },
+  {
+    "name": "unzstd-linux-x86_64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/x86_64-linux-unzstd",
+    "dest": "output/x86_64/linux/unzstd"
+  },
+  {
+    "name": "unzstd-windows-aarch64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/aarch64-windows-unzstd.exe",
+    "dest": "output/aarch64/windows/unzstd.exe"
+  },
+  {
+    "name": "unzstd-windows-x86_64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/x86_64-windows-unzstd.exe",
+    "dest": "output/x86_64/windows/unzstd.exe"
+  },
+  {
+    "name": "unzstd-freebsd-aarch64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/aarch64-freebsd-unzstd",
+    "dest": "output/aarch64/freebsd/unzstd"
+  },
+  {
+    "name": "unzstd-freebsd-x86_64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/x86_64-freebsd-unzstd",
+    "dest": "output/x86_64/freebsd/unzstd"
+  },
+  {
+    "name": "unzstd-openbsd-aarch64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/aarch64-openbsd-unzstd",
+    "dest": "output/aarch64/openbsd/unzstd"
+  },
+  {
+    "name": "unzstd-openbsd-x86_64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/x86_64-openbsd-unzstd",
+    "dest": "output/x86_64/openbsd/unzstd"
+  },
+  {
+    "name": "unzstd-netbsd-aarch64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/aarch64-netbsd-unzstd",
+    "dest": "output/aarch64/netbsd/unzstd"
+  },
+  {
+    "name": "unzstd-netbsd-x86_64",
+    "url": "https://github.com/angt/unzstd/releases/latest/download/x86_64-netbsd-unzstd",
+    "dest": "output/x86_64/netbsd/unzstd"
   }
 ]

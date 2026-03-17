@@ -8,6 +8,27 @@ import urllib.request
 from pathlib import Path
 from ruamel.yaml import YAML
 
+def get_unzstd(os_name=None, arch=None):
+    if not os_name:
+        os_map = {
+            'darwin': 'macos',
+        }
+        system = platform.system().lower()
+        os_name = os_map.get(system, system)
+
+    if not arch:
+        arch_map = {
+            'amd64': 'x86_64',
+            'arm64': 'aarch64',
+        }
+        machine = platform.machine().lower()
+        arch = arch_map.get(machine, machine)
+
+    ext = ".exe" if os_name == "windows" else ""
+    filename = f"unzstd{ext}"
+    url = f"https://github.com/angt/unzstd/releases/latest/download/{arch}-{os_name}-{filename}"
+    return url, filename
+
 def get_featcode(os_name=None, arch=None):
     if not os_name:
         os_map = {
@@ -25,8 +46,9 @@ def get_featcode(os_name=None, arch=None):
         arch = arch_map.get(machine, machine)
 
     ext = ".exe" if os_name == "windows" else ""
-    url = f"https://github.com/angt/featcode/releases/download/v8/{arch}-{os_name}-featcode{ext}"
-    return url, f"featcode{ext}"
+    filename = f"featcode{ext}"
+    url = f"https://github.com/angt/featcode/releases/download/v8/{arch}-{os_name}-{filename}"
+    return url, filename
 
 ROCM_ARCHS = [
     "803",  "900",  "906",  "908",  "90a",  "942",
@@ -501,6 +523,13 @@ def generate_artefacts(cpu_os_archs):
         url, filename = get_featcode(os_name, arch)
         artefacts.append({
             "name": f"featcode-{os_name}-{arch}",
+            "url": url,
+            "dest": f"output/{arch}/{os_name}/{filename}"
+        })
+    for os_name, arch in cpu_os_archs:
+        url, filename = get_unzstd(os_name, arch)
+        artefacts.append({
+            "name": f"unzstd-{os_name}-{arch}",
             "url": url,
             "dest": f"output/{arch}/{os_name}/{filename}"
         })
