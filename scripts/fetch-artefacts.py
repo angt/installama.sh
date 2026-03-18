@@ -7,7 +7,6 @@ with open("artefacts.json", "r", encoding="utf-8") as f:
     artefacts = json.load(f)
 
 for item in artefacts:
-    name = item["name"]
     src = item["src"]
     dst = Path(item["dst"])
     dst.parent.mkdir(parents=True, exist_ok=True)
@@ -17,4 +16,4 @@ for item in artefacts:
         else:
             shutil.copy2(src, dst)
     except Exception as e:
-        print(f"Failed to process {name}: {e}")
+        print(f"Failed to process {dst}: {e}")
