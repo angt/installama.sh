@@ -1,4 +1,4 @@
-name: Download artefacts
+name: Fetch artefacts
 
 on:
   workflow_dispatch:
@@ -6,13 +6,13 @@ on:
     - cron: 0 1 * * 1
 
 jobs:
-  download:
+  fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
-      - name: Download artefacts
-        run: python scripts/download-artefact.py
+      - name: Fetch artefacts
+        run: python scripts/fetch-artefacts.py
 
       - name: Deploy
         if: ${{ vars.HF_REPO != '' }}

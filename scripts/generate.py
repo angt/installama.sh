@@ -519,19 +519,25 @@ def generate_workflow(template, variants):
 
 def generate_artefacts(cpu_os_archs):
     artefacts = []
+    for name in ["installama.sh", "installama.ps1"]:
+        artefacts.append({
+            "name": name,
+            "src": name,
+            "dst": f"output/{name}"
+        })
     for os_name, arch in cpu_os_archs:
         url, filename = get_featcode(os_name, arch)
         artefacts.append({
             "name": f"featcode-{os_name}-{arch}",
-            "url": url,
-            "dest": f"output/{arch}/{os_name}/{filename}"
+            "src": url,
+            "dst": f"output/{arch}/{os_name}/{filename}"
         })
     for os_name, arch in cpu_os_archs:
         url, filename = get_unzstd(os_name, arch)
         artefacts.append({
             "name": f"unzstd-{os_name}-{arch}",
-            "url": url,
-            "dest": f"output/{arch}/{os_name}/{filename}"
+            "src": url,
+            "dst": f"output/{arch}/{os_name}/{filename}"
         })
     return artefacts
 
