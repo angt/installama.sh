@@ -27,7 +27,8 @@ def upload_folder():
         repo_id=repo_id,
         folder_path="output",
         repo_type="dataset",
-        commit_message="Update"
+        commit_message="Update",
+        revision="latest"
     )
 
 utils.disable_progress_bars()
