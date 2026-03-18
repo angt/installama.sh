@@ -32,4 +32,14 @@ def upload_folder():
     )
 
 utils.disable_progress_bars()
+
+try:
+    api.create_branch(
+        repo_id=repo_id,
+        repo_type="dataset",
+        branch="latest"
+    )
+except Exception:
+    pass
+
 upload_folder()
