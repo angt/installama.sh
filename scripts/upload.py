@@ -12,13 +12,14 @@ if not repo_id:
 def retry(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        for i in reversed(range(5)):
+        for i in reversed(range(10)):
             try:
                 return func(*args, **kwargs)
-            except Exception:
+            except Exception as e:
                 if not i:
                     raise
-                time.sleep(10)
+                print(f"\n[RETRY] {type(e).__name__}: {e}\n")
+                time.sleep(30)
     return wrapper
 
 @retry
