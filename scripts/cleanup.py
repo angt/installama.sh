@@ -26,10 +26,12 @@ lfs = api.list_lfs_files(
 )
 
 repo_lfs_blob = get_lfs_blob_ids("main")
+
 try:
     repo_lfs_blob |= get_lfs_blob_ids("latest")
+    repo_lfs_blob |= get_lfs_blob_ids("previous")
 except Exception:
-    print("Branch 'latest' not found, using 'main' only")
+    pass
 
 lfs_not_in_repo = [
     item for item in lfs
