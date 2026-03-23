@@ -1,0 +1,473 @@
+name: Release
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 1 * * 1
+jobs:
+  aarch64-linux-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-linux-cpu-kk
+          - aarch64-linux-cpu-lk
+          - aarch64-linux-cpu-mk
+          - aarch64-linux-cpu-nk
+          - aarch64-linux-cpu-qk
+          - aarch64-linux-cpu-rk
+          - aarch64-linux-cpu-sk
+          - aarch64-linux-cpu-uk
+          - aarch64-linux-cpu-yk
+          - aarch64-linux-cpu-ml
+          - aarch64-linux-cpu-ql
+          - aarch64-linux-cpu-qm
+          - aarch64-linux-cpu-ym
+          - aarch64-linux-cpu-qn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-linux-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-cpu-kkkkk
+          - x86_64-linux-cpu-lkkkk
+          - x86_64-linux-cpu-mkkkk
+          - x86_64-linux-cpu-qkkkk
+          - x86_64-linux-cpu-ylkkk
+          - x86_64-linux-cpu-qnkkk
+          - x86_64-linux-cpu-qrkkk
+          - x86_64-linux-cpu-klokk
+          - x86_64-linux-cpu-knokk
+          - x86_64-linux-cpu-krokk
+          - x86_64-linux-cpu-klzkk
+          - x86_64-linux-cpu-knzkk
+          - x86_64-linux-cpu-krzkk
+          - x86_64-linux-cpu-klzlk
+          - x86_64-linux-cpu-knzlk
+          - x86_64-linux-cpu-krzlk
+          - x86_64-linux-cpu-klxmk
+          - x86_64-linux-cpu-knxmk
+          - x86_64-linux-cpu-krxmk
+          - x86_64-linux-cpu-klxnk
+          - x86_64-linux-cpu-knxnk
+          - x86_64-linux-cpu-krxnk
+          - x86_64-linux-cpu-klxok
+          - x86_64-linux-cpu-knxok
+          - x86_64-linux-cpu-krxok
+          - x86_64-linux-cpu-klxpk
+          - x86_64-linux-cpu-knxpk
+          - x86_64-linux-cpu-krxpk
+          - x86_64-linux-cpu-klxqk
+          - x86_64-linux-cpu-knxqk
+          - x86_64-linux-cpu-krxqk
+          - x86_64-linux-cpu-klxrk
+          - x86_64-linux-cpu-knxrk
+          - x86_64-linux-cpu-krxrk
+          - x86_64-linux-cpu-knxrn
+          - x86_64-linux-cpu-krxrn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-windows-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-windows-cpu-kk
+          - aarch64-windows-cpu-lk
+          - aarch64-windows-cpu-mk
+          - aarch64-windows-cpu-nk
+          - aarch64-windows-cpu-qk
+          - aarch64-windows-cpu-rk
+          - aarch64-windows-cpu-sk
+          - aarch64-windows-cpu-uk
+          - aarch64-windows-cpu-yk
+          - aarch64-windows-cpu-ml
+          - aarch64-windows-cpu-ql
+          - aarch64-windows-cpu-qm
+          - aarch64-windows-cpu-ym
+          - aarch64-windows-cpu-qn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-windows-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-windows-cpu-kkkkk
+          - x86_64-windows-cpu-lkkkk
+          - x86_64-windows-cpu-mkkkk
+          - x86_64-windows-cpu-qkkkk
+          - x86_64-windows-cpu-ylkkk
+          - x86_64-windows-cpu-qnkkk
+          - x86_64-windows-cpu-qrkkk
+          - x86_64-windows-cpu-klokk
+          - x86_64-windows-cpu-knokk
+          - x86_64-windows-cpu-krokk
+          - x86_64-windows-cpu-klzkk
+          - x86_64-windows-cpu-knzkk
+          - x86_64-windows-cpu-krzkk
+          - x86_64-windows-cpu-klzlk
+          - x86_64-windows-cpu-knzlk
+          - x86_64-windows-cpu-krzlk
+          - x86_64-windows-cpu-klxmk
+          - x86_64-windows-cpu-knxmk
+          - x86_64-windows-cpu-krxmk
+          - x86_64-windows-cpu-klxnk
+          - x86_64-windows-cpu-knxnk
+          - x86_64-windows-cpu-krxnk
+          - x86_64-windows-cpu-klxok
+          - x86_64-windows-cpu-knxok
+          - x86_64-windows-cpu-krxok
+          - x86_64-windows-cpu-klxpk
+          - x86_64-windows-cpu-knxpk
+          - x86_64-windows-cpu-krxpk
+          - x86_64-windows-cpu-klxqk
+          - x86_64-windows-cpu-knxqk
+          - x86_64-windows-cpu-krxqk
+          - x86_64-windows-cpu-klxrk
+          - x86_64-windows-cpu-knxrk
+          - x86_64-windows-cpu-krxrk
+          - x86_64-windows-cpu-knxrn
+          - x86_64-windows-cpu-krxrn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-freebsd-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-freebsd-cpu-kk
+          - aarch64-freebsd-cpu-lk
+          - aarch64-freebsd-cpu-mk
+          - aarch64-freebsd-cpu-nk
+          - aarch64-freebsd-cpu-qk
+          - aarch64-freebsd-cpu-rk
+          - aarch64-freebsd-cpu-sk
+          - aarch64-freebsd-cpu-uk
+          - aarch64-freebsd-cpu-yk
+          - aarch64-freebsd-cpu-ml
+          - aarch64-freebsd-cpu-ql
+          - aarch64-freebsd-cpu-qm
+          - aarch64-freebsd-cpu-ym
+          - aarch64-freebsd-cpu-qn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-freebsd-cpu:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-freebsd-cpu-kkkkk
+          - x86_64-freebsd-cpu-lkkkk
+          - x86_64-freebsd-cpu-mkkkk
+          - x86_64-freebsd-cpu-qkkkk
+          - x86_64-freebsd-cpu-ylkkk
+          - x86_64-freebsd-cpu-qnkkk
+          - x86_64-freebsd-cpu-qrkkk
+          - x86_64-freebsd-cpu-klokk
+          - x86_64-freebsd-cpu-knokk
+          - x86_64-freebsd-cpu-krokk
+          - x86_64-freebsd-cpu-klzkk
+          - x86_64-freebsd-cpu-knzkk
+          - x86_64-freebsd-cpu-krzkk
+          - x86_64-freebsd-cpu-klzlk
+          - x86_64-freebsd-cpu-knzlk
+          - x86_64-freebsd-cpu-krzlk
+          - x86_64-freebsd-cpu-klxmk
+          - x86_64-freebsd-cpu-knxmk
+          - x86_64-freebsd-cpu-krxmk
+          - x86_64-freebsd-cpu-klxnk
+          - x86_64-freebsd-cpu-knxnk
+          - x86_64-freebsd-cpu-krxnk
+          - x86_64-freebsd-cpu-klxok
+          - x86_64-freebsd-cpu-knxok
+          - x86_64-freebsd-cpu-krxok
+          - x86_64-freebsd-cpu-klxpk
+          - x86_64-freebsd-cpu-knxpk
+          - x86_64-freebsd-cpu-krxpk
+          - x86_64-freebsd-cpu-klxqk
+          - x86_64-freebsd-cpu-knxqk
+          - x86_64-freebsd-cpu-krxqk
+          - x86_64-freebsd-cpu-klxrk
+          - x86_64-freebsd-cpu-knxrk
+          - x86_64-freebsd-cpu-krxrk
+          - x86_64-freebsd-cpu-knxrn
+          - x86_64-freebsd-cpu-krxrn
+    uses: ./.github/workflows/build-any-cpu.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-linux-vulkan:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-linux-vulkan-kk
+          - aarch64-linux-vulkan-lk
+          - aarch64-linux-vulkan-mk
+          - aarch64-linux-vulkan-nk
+          - aarch64-linux-vulkan-qk
+          - aarch64-linux-vulkan-rk
+          - aarch64-linux-vulkan-sk
+          - aarch64-linux-vulkan-uk
+          - aarch64-linux-vulkan-yk
+          - aarch64-linux-vulkan-ml
+          - aarch64-linux-vulkan-ql
+          - aarch64-linux-vulkan-qm
+          - aarch64-linux-vulkan-ym
+          - aarch64-linux-vulkan-qn
+          - aarch64-linux-vulkan-probe
+    uses: ./.github/workflows/build-any-vulkan.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-linux-vulkan:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-vulkan-kkkkk
+          - x86_64-linux-vulkan-lkkkk
+          - x86_64-linux-vulkan-mkkkk
+          - x86_64-linux-vulkan-qkkkk
+          - x86_64-linux-vulkan-ylkkk
+          - x86_64-linux-vulkan-qnkkk
+          - x86_64-linux-vulkan-qrkkk
+          - x86_64-linux-vulkan-klokk
+          - x86_64-linux-vulkan-knokk
+          - x86_64-linux-vulkan-krokk
+          - x86_64-linux-vulkan-klzkk
+          - x86_64-linux-vulkan-knzkk
+          - x86_64-linux-vulkan-krzkk
+          - x86_64-linux-vulkan-klzlk
+          - x86_64-linux-vulkan-knzlk
+          - x86_64-linux-vulkan-krzlk
+          - x86_64-linux-vulkan-klxmk
+          - x86_64-linux-vulkan-knxmk
+          - x86_64-linux-vulkan-krxmk
+          - x86_64-linux-vulkan-klxnk
+          - x86_64-linux-vulkan-knxnk
+          - x86_64-linux-vulkan-krxnk
+          - x86_64-linux-vulkan-klxok
+          - x86_64-linux-vulkan-knxok
+          - x86_64-linux-vulkan-krxok
+          - x86_64-linux-vulkan-klxpk
+          - x86_64-linux-vulkan-knxpk
+          - x86_64-linux-vulkan-krxpk
+          - x86_64-linux-vulkan-klxqk
+          - x86_64-linux-vulkan-knxqk
+          - x86_64-linux-vulkan-krxqk
+          - x86_64-linux-vulkan-klxrk
+          - x86_64-linux-vulkan-knxrk
+          - x86_64-linux-vulkan-krxrk
+          - x86_64-linux-vulkan-knxrn
+          - x86_64-linux-vulkan-krxrn
+          - x86_64-linux-vulkan-probe
+    uses: ./.github/workflows/build-any-vulkan.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-windows-vulkan:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-windows-vulkan-kk
+          - aarch64-windows-vulkan-lk
+          - aarch64-windows-vulkan-mk
+          - aarch64-windows-vulkan-nk
+          - aarch64-windows-vulkan-qk
+          - aarch64-windows-vulkan-rk
+          - aarch64-windows-vulkan-sk
+          - aarch64-windows-vulkan-uk
+          - aarch64-windows-vulkan-yk
+          - aarch64-windows-vulkan-ml
+          - aarch64-windows-vulkan-ql
+          - aarch64-windows-vulkan-qm
+          - aarch64-windows-vulkan-ym
+          - aarch64-windows-vulkan-qn
+          - aarch64-windows-vulkan-probe
+    uses: ./.github/workflows/build-any-vulkan.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-windows-vulkan:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-windows-vulkan-kkkkk
+          - x86_64-windows-vulkan-lkkkk
+          - x86_64-windows-vulkan-mkkkk
+          - x86_64-windows-vulkan-qkkkk
+          - x86_64-windows-vulkan-ylkkk
+          - x86_64-windows-vulkan-qnkkk
+          - x86_64-windows-vulkan-qrkkk
+          - x86_64-windows-vulkan-klokk
+          - x86_64-windows-vulkan-knokk
+          - x86_64-windows-vulkan-krokk
+          - x86_64-windows-vulkan-klzkk
+          - x86_64-windows-vulkan-knzkk
+          - x86_64-windows-vulkan-krzkk
+          - x86_64-windows-vulkan-klzlk
+          - x86_64-windows-vulkan-knzlk
+          - x86_64-windows-vulkan-krzlk
+          - x86_64-windows-vulkan-klxmk
+          - x86_64-windows-vulkan-knxmk
+          - x86_64-windows-vulkan-krxmk
+          - x86_64-windows-vulkan-klxnk
+          - x86_64-windows-vulkan-knxnk
+          - x86_64-windows-vulkan-krxnk
+          - x86_64-windows-vulkan-klxok
+          - x86_64-windows-vulkan-knxok
+          - x86_64-windows-vulkan-krxok
+          - x86_64-windows-vulkan-klxpk
+          - x86_64-windows-vulkan-knxpk
+          - x86_64-windows-vulkan-krxpk
+          - x86_64-windows-vulkan-klxqk
+          - x86_64-windows-vulkan-knxqk
+          - x86_64-windows-vulkan-krxqk
+          - x86_64-windows-vulkan-klxrk
+          - x86_64-windows-vulkan-knxrk
+          - x86_64-windows-vulkan-krxrk
+          - x86_64-windows-vulkan-knxrn
+          - x86_64-windows-vulkan-krxrn
+          - x86_64-windows-vulkan-probe
+    uses: ./.github/workflows/build-any-vulkan.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-linux-cuda:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-linux-cuda-50
+          - aarch64-linux-cuda-61
+          - aarch64-linux-cuda-70
+          - aarch64-linux-cuda-75
+          - aarch64-linux-cuda-80
+          - aarch64-linux-cuda-86
+          - aarch64-linux-cuda-89
+          - aarch64-linux-cuda-90
+          - aarch64-linux-cuda-100
+          - aarch64-linux-cuda-120
+          - aarch64-linux-cuda-probe
+    uses: ./.github/workflows/build-any-cuda.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-linux-cuda:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-cuda-50
+          - x86_64-linux-cuda-61
+          - x86_64-linux-cuda-70
+          - x86_64-linux-cuda-75
+          - x86_64-linux-cuda-80
+          - x86_64-linux-cuda-86
+          - x86_64-linux-cuda-89
+          - x86_64-linux-cuda-90
+          - x86_64-linux-cuda-100
+          - x86_64-linux-cuda-120
+          - x86_64-linux-cuda-probe
+    uses: ./.github/workflows/build-any-cuda.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  x86_64-linux-rocm:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - x86_64-linux-rocm-gfx803
+          - x86_64-linux-rocm-gfx900
+          - x86_64-linux-rocm-gfx906
+          - x86_64-linux-rocm-gfx908
+          - x86_64-linux-rocm-gfx90a
+          - x86_64-linux-rocm-gfx942
+          - x86_64-linux-rocm-gfx1010
+          - x86_64-linux-rocm-gfx1011
+          - x86_64-linux-rocm-gfx1030
+          - x86_64-linux-rocm-gfx1032
+          - x86_64-linux-rocm-gfx1100
+          - x86_64-linux-rocm-gfx1101
+          - x86_64-linux-rocm-gfx1102
+          - x86_64-linux-rocm-gfx1151
+          - x86_64-linux-rocm-gfx1200
+          - x86_64-linux-rocm-gfx1201
+          - x86_64-linux-rocm-probe
+    uses: ./.github/workflows/build-any-rocm.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  aarch64-macos-metal:
+    name: ${{ matrix.filter }}
+    strategy:
+      fail-fast: false
+      matrix:
+        filter:
+          - aarch64-macos-metal-m1
+          - aarch64-macos-metal-m2
+          - aarch64-macos-metal-m3
+          - aarch64-macos-metal-m4
+          - aarch64-macos-metal-m5
+    uses: ./.github/workflows/build-any-metal.yml
+    with:
+      filter: ${{ matrix.filter }}
+    secrets: inherit
+  release:
+    runs-on: ubuntu-latest
+    needs:
+      - aarch64-linux-cpu
+      - x86_64-linux-cpu
+      - aarch64-windows-cpu
+      - x86_64-windows-cpu
+      - aarch64-freebsd-cpu
+      - x86_64-freebsd-cpu
+      - aarch64-linux-vulkan
+      - x86_64-linux-vulkan
+      - aarch64-windows-vulkan
+      - x86_64-windows-vulkan
+      - aarch64-linux-cuda
+      - x86_64-linux-cuda
+      - x86_64-linux-rocm
+      - aarch64-macos-metal
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install dependencies
+        run: pip install -U "huggingface_hub[cli,hf_xet]"
+
+      - name: Sync main to previous
+        env:
+          HF_XET_HIGH_PERFORMANCE: 1
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_REPO: ${{ vars.HF_REPO }}
+        run: python scripts/sync.py main previous

@@ -492,31 +492,6 @@ def generate_report():
         ]),
     ])
 
-def generate_workflow(template, variants):
-    return {
-        "name": f"Build all {template}",
-        "on": {
-            "workflow_dispatch": None,
-            "schedule": [ {"cron": "0 1 * * 1"} ],
-        },
-        "jobs": {
-            "dispatch": {
-                "name": "${{ matrix.filter }}",
-                "strategy": {
-                    "fail-fast": False,
-                    "matrix": {
-                        "filter": variants
-                    }
-                },
-                "uses": f"./.github/workflows/build-any-{template}.yml",
-                "with": {
-                    "filter": "${{ matrix.filter }}",
-                },
-                "secrets": "inherit"
-            }
-        }
-    }
-
 def generate_artefacts(cpu_os_archs):
     artefacts = []
     for name in ["installama.sh", "installama.ps1"]:
@@ -537,6 +512,31 @@ def generate_artefacts(cpu_os_archs):
             "dst": f"output/{arch}/{os_name}/{filename}"
         })
     return artefacts
+
+def generate_jobs(workflow_presets):
+    jobs = {}
+    for preset in workflow_presets:
+        if any(f"-{os}-" in preset["name"] for os in ["netbsd", "openbsd"]):  # TODO
+            continue
+        parts = preset["name"].split("-")
+        group = f"{parts[0]}-{parts[1]}-{parts[2]}"
+        job = {
+            "name": "${{ matrix.filter }}",
+            "strategy": {
+                "fail-fast": False,
+                "matrix": {
+                    "filter": []
+                }
+            },
+            "uses": f"./.github/workflows/build-any-{parts[2]}.yml",
+            "with": {
+                "filter": "${{ matrix.filter }}"
+            },
+            "secrets": "inherit",
+        }
+        jobs.setdefault(group, job)["strategy"]["matrix"]["filter"].append(preset["name"])
+
+    return jobs
 
 def main():
     download_featcode()
@@ -589,28 +589,25 @@ def main():
     with open("PRESETS.md", "w", encoding="utf-8") as f:
         f.write(report)
 
-    workflows = defaultdict(list)
-    for workflow in data.get("workflowPresets", []):
-        if any(f"-{os}-" in workflow["name"] for os in ["netbsd", "openbsd"]):
-            continue
-        parts = workflow["name"].split("-")
-        template = parts[2] # for now template = backend
-        if template == "cuda":
-            item = parts[3]
-        else:
-            item = workflow["name"]
-        if item not in workflows[template]:
-            workflows[template].append(item)
-
     yaml = YAML()
     yaml.preserve_quotes = True
     yaml.default_flow_style = False
     yaml.width = 4096
     yaml.indent(mapping=2, sequence=4, offset=2)
 
-    for template, variants in sorted(workflows.items()):
-        with open(f".github/workflows/build-all-{template}.yml", "w", encoding="utf-8") as f:
-            yaml.dump(generate_workflow(template, variants), f)
+    release_path = ".github/workflows/release.yml"
+
+    with open(release_path, "r", encoding="utf-8") as f:
+        release = yaml.load(f)
+
+    release_job = release["jobs"]["release"]
+    jobs = generate_jobs(data.get("workflowPresets", []))
+    release_job["needs"] = list(jobs.keys())
+    jobs["release"] = release_job
+    release["jobs"] = jobs
+
+    with open(release_path, "w", encoding="utf-8") as f:
+        yaml.dump(release, f)
 
 if __name__ == "__main__":
     main()
