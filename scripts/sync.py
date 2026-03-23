@@ -1,6 +1,7 @@
 import os
 import sys
 from huggingface_hub import HfApi, CommitOperationCopy, CommitOperationDelete, RepoFile
+from huggingface_hub.errors import HfHubHTTPError
 
 api = HfApi()
 repo_id = os.environ.get("HF_REPO")
@@ -9,19 +10,16 @@ if not repo_id:
     raise ValueError("HF_REPO environment variable is not set")
 
 def get_tree(revision):
-    try:
-        repo_tree = api.list_repo_tree(
-            repo_id=repo_id,
-            repo_type="dataset",
-            revision=revision,
-            recursive=True
-        )
-        return {
-            f.path: f.blob_id for f in repo_tree
-            if isinstance(f, RepoFile)
-        }
-    except Exception:
-        return {}
+    repo_tree = api.list_repo_tree(
+        repo_id=repo_id,
+        repo_type="dataset",
+        revision=revision,
+        recursive=True
+    )
+    return {
+        f.path: f.blob_id for f in repo_tree
+        if isinstance(f, RepoFile)
+    }
 
 def update_branch(src, dst):
     try:
@@ -32,8 +30,9 @@ def update_branch(src, dst):
             revision=src
         )
         return
-    except Exception:
-        pass
+    except HfHubHTTPError as e:
+        if e.response.status_code != 409:
+            raise  # not "branch already exists"
 
     dst_tree = get_tree(dst)
     src_tree = get_tree(src)
