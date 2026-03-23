@@ -17,5 +17,5 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_REPO: ${{ vars.HF_REPO }}
         run: |
-          pip install -U "huggingface_hub[cli]"
+          pip install -U huggingface_hub
           python scripts/cleanup.py

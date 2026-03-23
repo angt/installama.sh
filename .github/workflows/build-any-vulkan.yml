@@ -26,7 +26,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ZIG_VERSION: "0.16.0-dev.2653+784e89fd4"
+      ZIG_VERSION: "0.16.0-dev.2973+06b85a4fd"
       VULKAN_VERSION: "1.4.341.1"
 
     steps:
@@ -54,5 +54,5 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_REPO: ${{ vars.HF_REPO }}
         run: |
-          pip install -U "huggingface_hub[cli,hf_xet]"
+          pip install -U "huggingface_hub[hf_xet]"
           python scripts/upload.py

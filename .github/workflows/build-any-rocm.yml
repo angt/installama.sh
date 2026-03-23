@@ -69,5 +69,5 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_REPO: ${{ vars.HF_REPO }}
         run: |
-          pip install -U "huggingface_hub[cli,hf_xet]"
+          pip install -U "huggingface_hub[hf_xet]"
           python scripts/upload.py
