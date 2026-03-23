@@ -53,13 +53,23 @@ def update_branch(src, dst):
                 src_revision=src
             ))
 
+    try:
+        commits = api.list_repo_commits(
+            repo_id=repo_id,
+            repo_type="dataset",
+            revision=src
+        )
+        commit = commits[0].commit_id
+    except Exception:
+        commit = "unknown"
+
     if ops:
         api.create_commit(
             repo_id=repo_id,
             repo_type="dataset",
             revision=dst,
             operations=ops,
-            commit_message="New release!"
+            commit_message=f"Sync from {src} ({commit})"
         )
 
 
