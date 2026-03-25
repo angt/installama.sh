@@ -476,3 +476,4 @@ jobs:
           python scripts/upload.py
           python scripts/sync.py main previous
           python scripts/sync.py latest main
+          python scripts/cleanup.py
