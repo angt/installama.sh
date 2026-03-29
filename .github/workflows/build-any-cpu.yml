@@ -49,4 +49,4 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           pip install -U "hf[hf_xet]"
-          hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}/${{ inputs.llamacpp_version }}
+          hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}/${{ inputs.llamacpp_version || 'test' }}
