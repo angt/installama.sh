@@ -8,7 +8,6 @@ on:
         default: 'vulkan'
       deploy:
         type: boolean
-        default: true
       llamacpp_repo:
         type: string
       llamacpp_version:
@@ -21,34 +20,23 @@ on:
   workflow_dispatch:
     inputs:
       filter:
-        required: false
         type: string
         default: 'vulkan'
       deploy:
         description: 'Deploy?'
-        required: false
         type: boolean
-        default: true
       llamacpp_repo:
         description: 'llama.cpp repository'
-        required: false
         type: string
-        default: 'https://github.com/ggml-org/llama.cpp'
       llamacpp_version:
         description: 'llama.cpp version'
-        required: false
         type: string
-        default: 'master'
       boringssl_repo:
         description: 'boringssl repository'
-        required: false
         type: string
-        default: 'https://boringssl.googlesource.com/boringssl'
       boringssl_version:
         description: 'boringssl version'
-        required: false
         type: string
-        default: 'main'
 
 jobs:
   build:

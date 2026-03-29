@@ -25,9 +25,9 @@ macro(FetchDep NAME DEFAULT_REPO DEFAULT_VERSION)
         )
     else()
         FetchContent_Declare(${NAME}
-            GIT_REPO   "${${NAME_UPPER}_REPO}"
-            GIT_TAG    "${${NAME_UPPER}_VERSION}"
-            SOURCE_DIR "${CMAKE_SOURCE_DIR}/deps/${NAME}"
+            GIT_REPOSITORY "${${NAME_UPPER}_REPO}"
+            GIT_TAG        "${${NAME_UPPER}_VERSION}"
+            SOURCE_DIR     "${CMAKE_SOURCE_DIR}/deps/${NAME}"
             ${ARGN}
         )
     endif()
