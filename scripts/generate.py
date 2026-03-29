@@ -494,11 +494,6 @@ def generate_report():
 
 def generate_artefacts(cpu_os_archs):
     artefacts = []
-    for name in ["installama.sh", "installama.ps1"]:
-        artefacts.append({
-            "src": name,
-            "dst": f"output/{name}"
-        })
     for os_name, arch in cpu_os_archs:
         url, filename = get_featcode(os_name, arch)
         artefacts.append({

@@ -1,13 +1,5 @@
 [
   {
-    "src": "installama.sh",
-    "dst": "output/installama.sh"
-  },
-  {
-    "src": "installama.ps1",
-    "dst": "output/installama.ps1"
-  },
-  {
     "src": "https://github.com/angt/featcode/releases/download/v8/aarch64-linux-featcode",
     "dst": "output/aarch64/linux/featcode"
   },
