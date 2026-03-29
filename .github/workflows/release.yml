@@ -555,5 +555,5 @@ jobs:
         run: |
           pip install -U "hf[hf_xet]"
           python scripts/fetch-artefacts.py
-          hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}/${{ needs.init.outputs.llamacpp_version }}
-          printf "${{ needs.init.outputs.llamacpp_version }}" | hf buckets cp - hf://buckets/${{ vars.HF_REPO_BUILD }}/latest
+          hf buckets sync output hf://buckets/${{ vars.HF_REPO }}/${{ needs.init.outputs.llamacpp_version }}
+          printf "${{ needs.init.outputs.llamacpp_version }}" | hf buckets cp - hf://buckets/${{ vars.HF_REPO }}/latest
