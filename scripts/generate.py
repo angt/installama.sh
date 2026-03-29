@@ -514,27 +514,35 @@ def generate_artefacts(cpu_os_archs):
     return artefacts
 
 def generate_jobs(workflow_presets):
-    jobs = {}
+    groups = defaultdict(list)
     for preset in workflow_presets:
         if any(f"-{os}-" in preset["name"] for os in ["netbsd", "openbsd"]):  # TODO
             continue
         parts = preset["name"].split("-")
         group = f"{parts[0]}-{parts[1]}-{parts[2]}"
-        job = {
+        groups[group].append(preset["name"])
+
+    jobs = {}
+    for group, filters in groups.items():
+        backend = group.split("-")[2]
+        jobs[group] = {
             "name": "${{ matrix.filter }}",
+            "needs": ["init"],
             "strategy": {
                 "fail-fast": False,
                 "matrix": {
-                    "filter": []
+                    "filter": filters
                 }
             },
-            "uses": f"./.github/workflows/build-any-{parts[2]}.yml",
+            "uses": f"./.github/workflows/build-any-{backend}.yml",
             "with": {
-                "filter": "${{ matrix.filter }}"
+                "filter": "${{ matrix.filter }}",
+                "deploy": True,
+                "llamacpp_version": "${{ needs.init.outputs.llamacpp_version }}",
+                "boringssl_version": "${{ needs.init.outputs.boringssl_version }}",
             },
             "secrets": "inherit",
         }
-        jobs.setdefault(group, job)["strategy"]["matrix"]["filter"].append(preset["name"])
 
     return jobs
 
@@ -600,12 +608,17 @@ def main():
     with open(release_path, "r", encoding="utf-8") as f:
         release = yaml.load(f)
 
+    init_job = release["jobs"]["init"]
     release_job = release["jobs"]["release"]
-    jobs = generate_jobs(data.get("workflowPresets", []))
-    release_job["needs"] = list(jobs.keys())
-    jobs["release"] = release_job
-    release["jobs"] = jobs
 
+    build_jobs = generate_jobs(data.get("workflowPresets", []))
+    release_job["needs"] = ["init"] + list(build_jobs.keys())
+
+    release["jobs"] = {
+        "init": init_job,
+        **build_jobs,
+        "release": release_job
+    }
     with open(release_path, "w", encoding="utf-8") as f:
         yaml.dump(release, f)
 

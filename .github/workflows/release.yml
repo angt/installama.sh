@@ -4,8 +4,24 @@ on:
   schedule:
     - cron: 0 1 * * 1
 jobs:
+  init:
+    runs-on: ubuntu-latest
+    outputs:
+      llamacpp_version: ${{ steps.tags.outputs.llamacpp_version }}
+      boringssl_version: ${{ steps.tags.outputs.boringssl_version }}
+    steps:
+      - name: Get tags
+        id: tags
+        run: |
+          cat <<EOF >> "$GITHUB_OUTPUT"
+          llamacpp_version=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | awk -F/ '/\/tags\/b[0-9]+$/ {if($3>v)v=$3} END{print v}')
+          boringssl_version=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | awk -F/ '/\/tags\/0\.[0-9]+\.0$/ {if($3>v)v=$3} END{print v}')
+          EOF
+
   aarch64-linux-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -27,9 +43,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-linux-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -73,9 +94,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-windows-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -97,9 +123,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-windows-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -143,9 +174,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-freebsd-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -167,9 +203,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-freebsd-cpu:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -213,9 +254,14 @@ jobs:
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-linux-vulkan:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -238,9 +284,14 @@ jobs:
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-linux-vulkan:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -285,9 +336,14 @@ jobs:
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-windows-vulkan:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -310,9 +366,14 @@ jobs:
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-windows-vulkan:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -357,9 +418,14 @@ jobs:
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-linux-cuda:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -378,9 +444,14 @@ jobs:
     uses: ./.github/workflows/build-any-cuda.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-linux-cuda:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -399,9 +470,14 @@ jobs:
     uses: ./.github/workflows/build-any-cuda.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   x86_64-linux-rocm:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -426,9 +502,14 @@ jobs:
     uses: ./.github/workflows/build-any-rocm.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   aarch64-macos-metal:
     name: ${{ matrix.filter }}
+    needs:
+      - init
     strategy:
       fail-fast: false
       matrix:
@@ -441,10 +522,14 @@ jobs:
     uses: ./.github/workflows/build-any-metal.yml
     with:
       filter: ${{ matrix.filter }}
+      deploy: true
+      llamacpp_version: ${{ needs.init.outputs.llamacpp_version }}
+      boringssl_version: ${{ needs.init.outputs.boringssl_version }}
     secrets: inherit
   release:
     runs-on: ubuntu-latest
     needs:
+      - init
       - aarch64-linux-cpu
       - x86_64-linux-cpu
       - aarch64-windows-cpu
@@ -462,13 +547,13 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install dependencies
-        run: pip install -U "hf[hf_xet]"
-
       - name: Upload artefacts
         if: ${{ vars.HF_REPO != '' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_HUB_DISABLE_PROGRESS_BARS: 1
         run: |
+          pip install -U "hf[hf_xet]"
           python scripts/fetch-artefacts.py
-          hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}
+          hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}/${{ needs.init.outputs.llamacpp_version }}
+          printf "${{ needs.init.outputs.llamacpp_version }}" | hf buckets cp - hf://buckets/${{ vars.HF_REPO_BUILD }}/latest
