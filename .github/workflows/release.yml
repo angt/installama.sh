@@ -551,9 +551,11 @@ jobs:
         if: ${{ vars.HF_REPO != '' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          HF_HUB_DISABLE_PROGRESS_BARS: 1
         run: |
           pip install -U "hf[hf_xet]"
+
           python scripts/fetch-artefacts.py
-          hf buckets sync output hf://buckets/${{ vars.HF_REPO }}/${{ needs.init.outputs.llamacpp_version }}
-          printf "${{ needs.init.outputs.llamacpp_version }}" | hf buckets cp - hf://buckets/${{ vars.HF_REPO }}/latest
+          python scripts/upload.py ${{ vars.HF_REPO }}/${{ inputs.llamacpp_version }}
+
+          printf "${{ needs.init.outputs.llamacpp_version }}" > output/latest
+          python scripts/upload.py ${{ vars.HF_REPO }}/${{ inputs.llamacpp_version }}
