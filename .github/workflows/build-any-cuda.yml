@@ -2,7 +2,7 @@ name: Build any cuda
 
 on:
   workflow_call:
-    inputs:
+    inputs: &common_inputs
       filter:
         type: string
         default: 'cuda'
@@ -18,25 +18,7 @@ on:
         type: string
 
   workflow_dispatch:
-    inputs:
-      filter:
-        type: string
-        default: 'cuda'
-      deploy:
-        description: 'Deploy?'
-        type: boolean
-      llamacpp_repo:
-        description: 'llama.cpp repository'
-        type: string
-      llamacpp_version:
-        description: 'llama.cpp version'
-        type: string
-      boringssl_repo:
-        description: 'boringssl repository'
-        type: string
-      boringssl_version:
-        description: 'boringssl version'
-        type: string
+    inputs: *common_inputs
 
 jobs:
   build:
