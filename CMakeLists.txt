@@ -4,35 +4,44 @@ project(installama LANGUAGES C CXX)
 find_program(ZSTD zstd REQUIRED)
 
 include(FetchContent)
-macro(Fetch NAME GIT_REPOSITORY GIT_TAG)
-    if (EXISTS "${CMAKE_SOURCE_DIR}/deps/${NAME}/CMakeLists.txt")
+
+macro(FetchDep NAME DEFAULT_REPO DEFAULT_VERSION)
+    string(TOUPPER ${NAME} NAME_UPPER)
+
+    set(${NAME_UPPER}_REPO "${DEFAULT_REPO}" CACHE STRING "${NAME} repository")
+    if(DEFINED ENV{${NAME_UPPER}_REPO})
+        set(${NAME_UPPER}_REPO "$ENV{${NAME_UPPER}_REPO}")
+    endif()
+
+    set(${NAME_UPPER}_VERSION "${DEFAULT_VERSION}" CACHE STRING "${NAME} version")
+    if(DEFINED ENV{${NAME_UPPER}_VERSION})
+        set(${NAME_UPPER}_VERSION "$ENV{${NAME_UPPER}_VERSION}")
+    endif()
+
+    if(EXISTS "${CMAKE_SOURCE_DIR}/deps/${NAME}/CMakeLists.txt")
         FetchContent_Declare(${NAME}
             SOURCE_DIR "${CMAKE_SOURCE_DIR}/deps/${NAME}"
+            ${ARGN}
         )
     else()
         FetchContent_Declare(${NAME}
-            GIT_REPOSITORY "${GIT_REPOSITORY}"
-            GIT_TAG        "${GIT_TAG}"
-            SOURCE_DIR     "${CMAKE_SOURCE_DIR}/deps/${NAME}"
+            GIT_REPO   "${${NAME_UPPER}_REPO}"
+            GIT_TAG    "${${NAME_UPPER}_VERSION}"
+            SOURCE_DIR "${CMAKE_SOURCE_DIR}/deps/${NAME}"
+            ${ARGN}
         )
     endif()
 endmacro()
 
-set(BORINGSSL_GIT "https://boringssl.googlesource.com/boringssl")
-set(BORINGSSL_VERSION "0.20260211.0")
-Fetch(boringssl
-    ${BORINGSSL_GIT}
-    ${BORINGSSL_VERSION}
+FetchDep(boringssl
+    "https://boringssl.googlesource.com/boringssl"
+    "main"
     EXCLUDE_FROM_ALL
 )
 
-set(LLAMACPP_GIT "https://github.com/ggml-org/llama.cpp"
-    CACHE STRING "llama.cpp repository")
-set(LLAMACPP_VERSION "master"
-    CACHE STRING "llama.cpp version")
-Fetch(llamacpp
-    ${LLAMACPP_GIT}
-    ${LLAMACPP_VERSION}
+FetchDep(llamacpp
+    "https://github.com/ggml-org/llama.cpp"
+    "master"
 )
 
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "" FORCE)

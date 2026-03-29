@@ -10,11 +10,26 @@ on:
         required: false
         type: boolean
         default: true
+      llamacpp_repo:
+        description: 'llama.cpp repository'
+        required: false
+        type: string
+        default: 'https://github.com/ggml-org/llama.cpp'
       llamacpp_version:
         description: 'llama.cpp version'
         required: false
         type: string
         default: 'master'
+      boringssl_repo:
+        description: 'boringssl repository'
+        required: false
+        type: string
+        default: 'https://boringssl.googlesource.com/boringssl'
+      boringssl_version:
+        description: 'boringssl version'
+        required: false
+        type: string
+        default: 'main'
 
   workflow_dispatch:
     inputs:
@@ -26,11 +41,26 @@ on:
         required: false
         type: boolean
         default: true
+      llamacpp_repo:
+        description: 'llama.cpp repository'
+        required: false
+        type: string
+        default: 'https://github.com/ggml-org/llama.cpp'
       llamacpp_version:
         description: 'llama.cpp version'
         required: false
         type: string
         default: 'master'
+      boringssl_repo:
+        description: 'boringssl repository'
+        required: false
+        type: string
+        default: 'https://boringssl.googlesource.com/boringssl'
+      boringssl_version:
+        description: 'boringssl version'
+        required: false
+        type: string
+        default: 'main'
 
 jobs:
   build:
@@ -40,7 +70,10 @@ jobs:
 
       - name: Build ${{ inputs.filter }}
         env:
+          LLAMACPP_REPO: ${{ inputs.llamacpp_repo }}
           LLAMACPP_VERSION: ${{ inputs.llamacpp_version }}
+          BORINGSSL_REPO: ${{ inputs.boringssl_repo }}
+          BORINGSSL_VERSION: ${{ inputs.boringssl_version }}
         run: cmake -DFILTER=${{ inputs.filter }} -P build.cmake
 
       - name: Deploy
