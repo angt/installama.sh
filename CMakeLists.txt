@@ -8,15 +8,15 @@ include(FetchContent)
 macro(FetchDep NAME DEFAULT_REPO DEFAULT_VERSION)
     string(TOUPPER ${NAME} NAME_UPPER)
 
+    if(NOT "$ENV{${NAME_UPPER}_REPO}" STREQUAL "")
+        set(DEFAULT_REPO "$ENV{${NAME_UPPER}_REPO}")
+    endif()
     set(${NAME_UPPER}_REPO "${DEFAULT_REPO}" CACHE STRING "${NAME} repository")
-    if(DEFINED ENV{${NAME_UPPER}_REPO})
-        set(${NAME_UPPER}_REPO "$ENV{${NAME_UPPER}_REPO}")
-    endif()
 
-    set(${NAME_UPPER}_VERSION "${DEFAULT_VERSION}" CACHE STRING "${NAME} version")
-    if(DEFINED ENV{${NAME_UPPER}_VERSION})
-        set(${NAME_UPPER}_VERSION "$ENV{${NAME_UPPER}_VERSION}")
+    if(NOT "$ENV{${NAME_UPPER}_VERSION}" STREQUAL "")
+        set(DEFAULT_VERSION "$ENV{${NAME_UPPER}_VERSION}")
     endif()
+    set(${NAME_UPPER}_VERSION "${DEFAULT_VERSION}" CACHE STRING "${NAME} version")
 
     if(EXISTS "${CMAKE_SOURCE_DIR}/deps/${NAME}/CMakeLists.txt")
         FetchContent_Declare(${NAME}
