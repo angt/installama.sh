@@ -54,6 +54,7 @@ jobs:
         if: ${{ inputs.deploy && vars.HF_REPO != '' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_HUB_DISABLE_PROGRESS_BARS: 1
         run: |
           pip install -U "hf[hf_xet]"
           hf buckets sync output hf://buckets/${{ vars.HF_REPO_BUILD }}/${{ inputs.llamacpp_version || 'test' }}
