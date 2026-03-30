@@ -1,4 +1,4 @@
-REPO="https://huggingface.co/datasets/angt/installama.sh/resolve/main"
+REPO="https://huggingface.co/buckets/angt/installama/resolve"
 
 die() {
 	printf "%s\n" "$@" >&2
@@ -14,8 +14,8 @@ dl_bin() {
 	check_bin curl || die "Please install curl"
 	printf "Downloading %s...\n" "$1"
 	case "$2" in
-	(*.zst) curl -fsSL "$2" | unzstd ;;
-	(*)     curl -fsSL "$2" ;;
+	(*.zst) curl -fsSL "$REPO/$VERSION/$2" | unzstd ;;
+	(*)     curl -fsSL "$REPO/$VERSION/$2" ;;
 	esac > "$1.tmp" 2>/dev/null &&
 	chmod +x "$1.tmp" && mv "$1.tmp" "$1" && return
 	printf "Failed to download\n" >&2
@@ -24,41 +24,41 @@ dl_bin() {
 
 unzstd() (
 	command -v zstd >/dev/null 2>/dev/null && exec zstd -d
-	dl_bin unzstd "$REPO/$ARCH/$OS/unzstd"
+	dl_bin unzstd "$ARCH/$OS/unzstd"
 	exec ./unzstd
 )
 
 probe_cuda() {
 	[ -z "$SKIP_CUDA" ] && printf "Probing CUDA...\n" &&
-	dl_bin cuda-probe "$REPO/$ARCH/$OS/cuda/probe/probe.zst" &&
+	dl_bin cuda-probe "$ARCH/$OS/cuda/probe/probe.zst" &&
 	CONFIG=$(./cuda-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$REPO/$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
+	dl_bin server "$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
 }
 
 probe_rocm() {
 	[ -z "$SKIP_ROCM" ] && printf "Probing ROCm...\n" &&
-	dl_bin rocm-probe "$REPO/$ARCH/$OS/rocm/probe/probe.zst" &&
+	dl_bin rocm-probe "$ARCH/$OS/rocm/probe/probe.zst" &&
 	CONFIG=$(./rocm-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$REPO/$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
+	dl_bin server "$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
 }
 
 probe_vulkan() {
 	[ -z "$SKIP_VULKAN" ] && printf "Probing Vulkan...\n" &&
-	dl_bin vulkan-probe "$REPO/$ARCH/$OS/vulkan/probe/probe.zst" &&
-	dl_bin featcode "$REPO/$ARCH/$OS/featcode" &&
+	dl_bin vulkan-probe "$ARCH/$OS/vulkan/probe/probe.zst" &&
+	dl_bin featcode "$ARCH/$OS/featcode" &&
 	CONFIG=$(./vulkan-probe && ./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin server "$REPO/$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
+	dl_bin server "$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
 }
 
 probe_cpu() {
 	printf "Probing CPU...\n" &&
-	dl_bin featcode "$REPO/$ARCH/$OS/featcode" &&
+	dl_bin featcode "$ARCH/$OS/featcode" &&
 	CONFIG=$(./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin server "$REPO/$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
+	dl_bin server "$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
 }
 
 probe_metal() {
@@ -66,7 +66,7 @@ probe_metal() {
 	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-5]") 2>/dev/null &&
 	CONFIG=m${CONFIG##*M} &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$REPO/$ARCH/$OS/metal/$CONFIG/llama-server.zst"
+	dl_bin server "$ARCH/$OS/metal/$CONFIG/llama-server.zst"
 }
 
 main() {
@@ -84,6 +84,10 @@ main() {
 	esac
 
 	[ "$HOME" ] || die "No HOME, please check your OS"
+
+	VERSION=$(curl -fsSL "$REPO/latest")
+	[ "$VERSION" ] || die "No version found"
+	printf "Version: %s\n" "$VERSION"
 
 	(
 		rm -rf ~/.installama
