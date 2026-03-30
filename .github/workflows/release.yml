@@ -14,8 +14,8 @@ jobs:
         id: tags
         run: |
           cat <<EOF >> "$GITHUB_OUTPUT"
-          llamacpp_version=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | awk -F/ '/\/tags\/b[0-9]+$/ {if($3>v)v=$3} END{print v}')
-          boringssl_version=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | awk -F/ '/\/tags\/0\.[0-9]+\.0$/ {if($3>v)v=$3} END{print v}')
+          llamacpp_version=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | sed -nE 's,.*/tags/(b[0-9]+)$,\1,p' | sort -V | tail -n 1)
+          boringssl_version=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | sed -nE 's,.*/tags/0\.([0-9]+)\.0$,\1,p' | sort | tail -n 1)
           EOF
 
   aarch64-linux-cpu:
