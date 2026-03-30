@@ -555,7 +555,9 @@ jobs:
           pip install -U "hf[hf_xet]"
 
           python scripts/fetch-artefacts.py
-          python scripts/upload.py ${{ vars.HF_REPO }}/${{ inputs.llamacpp_version }}
+          python scripts/upload.py ${{ vars.HF_REPO }}/${{ needs.init.outputs.llamacpp_version }}
 
+          rm -rf output
+          mkdir output
           printf "${{ needs.init.outputs.llamacpp_version }}" > output/latest
-          python scripts/upload.py ${{ vars.HF_REPO }}/${{ inputs.llamacpp_version }}
+          python scripts/upload.py ${{ vars.HF_REPO }}
