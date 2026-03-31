@@ -47,7 +47,7 @@ def get_featcode(os_name=None, arch=None):
 
     ext = ".exe" if os_name == "windows" else ""
     filename = f"featcode{ext}"
-    url = f"https://github.com/angt/featcode/releases/download/v8/{arch}-{os_name}-{filename}"
+    url = f"https://github.com/angt/featcode/releases/download/v9/{arch}-{os_name}-{filename}"
     return url, filename
 
 ROCM_ARCHS = [
@@ -79,13 +79,11 @@ def generate_aarch64_features():
     implications = [
         # strict
         ('sve',  'fp16'   ),
-        ('sme',  'fp16'   ),
         ('sve2', 'sve'    ),
-        # observed so far
         ('sme',  'fp16'   ),
+        # observed so far
         ('i8mm', 'dotprod'),
         ('sve2', 'dotprod'),
-        ('sme',  'dotprod'),
         ('sme',  'i8mm'   ),
     ]
     return generate_features(features, implications)
@@ -107,6 +105,7 @@ def generate_x86_64_features():
         'avx512vnni',
         'avx512vbmi',
         'avx512bf16',
+        'avx512fp16',
         'amx-tile',
         'amx-int8',
         'amx-bf16',
@@ -118,9 +117,9 @@ def generate_x86_64_features():
         ('avx2',        'avx'       ),
         ('avxvnni',     'avx2'      ),
         ('avxvnniint8', 'avx2'      ),
-        ('avx512f',     'avx2'      ),
         ('avx512f',     'f16c'      ),
         ('avx512f',     'fma'       ),
+        ('avx512f',     'avx2'      ),
         ('avx512vl',    'avx512f'   ),
         ('avx512bw',    'avx512f'   ),
         ('avx512dq',    'avx512f'   ),
@@ -128,25 +127,29 @@ def generate_x86_64_features():
         ('avx512vnni',  'avx512f'   ),
         ('avx512vbmi',  'avx512bw'  ),
         ('avx512bf16',  'avx512bw'  ),
+        ('avx512fp16',  'avx512bw'  ),
         ('amx-int8',    'amx-tile'  ),
         ('amx-bf16',    'amx-tile'  ),
         # observed so far
         ('fma',         'f16c'      ),
         ('avx2',        'bmi2'      ),
-        ('avx2',        'fma'       ),
+        ('bmi2',        'fma'       ),
         ('bmi2',        'avx2'      ),
         ('avxvnniint8', 'avxvnni'   ),
         ('avx512f',     'avx512cd'  ),
+        ('avx512vl',    'avx512dq'  ),
         ('avx512bw',    'avx512dq'  ),
         ('avx512dq',    'avx512vl'  ),
-        ('avx512vl',    'avx512bw'  ),
-        ('avx512vnni',  'avx512bw'  ),
-        ('amx-tile',    'avxvnni'   ),
-        ('amx-tile',    'avx512vnni'),
-        ('amx-tile',    'avx512vbmi'),
-        ('amx-tile',    'avx512bf16'),
-        ('amx-tile',    'amx-int8'  ),
+        ('avx512dq',    'avx512bw'  ),
+        ('avx512vnni',  'avx512dq'  ),
+        ('avx512bf16',  'avx512vnni'),
+        ('avx512fp16',  'amx-bf16'  ),
         ('amx-tile',    'amx-bf16'  ),
+        ('amx-bf16',    'avxvnni'   ),
+        ('amx-bf16',    'avx512vbmi'),
+        ('amx-bf16',    'avx512bf16'),
+        ('amx-bf16',    'avx512fp16'),
+        ('amx-bf16',    'amx-int8'  ),
     ]
     return generate_features(features, implications)
 
