@@ -438,6 +438,7 @@ def format_aarch64_features(flags):
     parts = flags.replace("-mcpu=", "").split("+")
     arch_map = {
         "v8_2a":   "ARMv8.2-a",
+        "v8_4a":   "ARMv8.4-a",
         "v8_7a":   "ARMv8.7-a",
         "v9a":     "ARMv9-a",
         "generic": "ARMv8.0-a"
