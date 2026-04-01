@@ -56,7 +56,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/qk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -68,7 +68,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/rk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -104,7 +104,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/cpu/yk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -584,7 +584,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/qk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -596,7 +596,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/rk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -632,7 +632,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/cpu/yk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1112,7 +1112,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/qk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1124,7 +1124,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/rk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1160,7 +1160,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/freebsd/cpu/yk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1640,7 +1640,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/qk",
         "INSTALLAMA_OS": "openbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1652,7 +1652,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/rk",
         "INSTALLAMA_OS": "openbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1688,7 +1688,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/openbsd/cpu/yk",
         "INSTALLAMA_OS": "openbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -2168,7 +2168,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/qk",
         "INSTALLAMA_OS": "netbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -2180,7 +2180,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/rk",
         "INSTALLAMA_OS": "netbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -2216,7 +2216,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/netbsd/cpu/yk",
         "INSTALLAMA_OS": "netbsd",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve"
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -2700,7 +2700,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/qk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2713,7 +2713,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/rk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2752,7 +2752,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/linux/vulkan/yk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -3296,7 +3296,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/qk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+dotprod+i8mm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+dotprod+i8mm",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -3309,7 +3309,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/rk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -3348,7 +3348,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/aarch64/windows/vulkan/yk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "aarch64",
-        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_2a+fullfp16+dotprod+i8mm+sve",
+        "INSTALLAMA_FLAGS": "-mcpu=generic+v8_4a+fullfp16+dotprod+i8mm+sve",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",

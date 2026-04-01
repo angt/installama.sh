@@ -10,11 +10,11 @@
 | `lk`   | **ARMv8.2-a** | `fullfp16`                                     |
 | `mk`   | **ARMv8.2-a** | `dotprod`                                      |
 | `nk`   | **ARMv8.2-a** | `fullfp16` `dotprod`                           |
-| `qk`   | **ARMv8.2-a** | `dotprod` `i8mm`                               |
-| `rk`   | **ARMv8.2-a** | `fullfp16` `dotprod` `i8mm`                    |
+| `qk`   | **ARMv8.0-a** | `v8_4a` `dotprod` `i8mm`                       |
+| `rk`   | **ARMv8.0-a** | `v8_4a` `fullfp16` `dotprod` `i8mm`            |
 | `sk`   | **ARMv8.2-a** | `fullfp16` `sve`                               |
 | `uk`   | **ARMv8.2-a** | `fullfp16` `dotprod` `sve`                     |
-| `yk`   | **ARMv8.2-a** | `fullfp16` `dotprod` `i8mm` `sve`              |
+| `yk`   | **ARMv8.0-a** | `v8_4a` `fullfp16` `dotprod` `i8mm` `sve`      |
 | `ml`   | **ARMv9-a**   | `fullfp16` `dotprod` `sve` `sve2`              |
 | `ql`   | **ARMv9-a**   | `fullfp16` `dotprod` `i8mm` `sve` `sve2`       |
 | `qm`   | **ARMv8.7-a** | `fullfp16` `dotprod` `i8mm` `sme`              |
