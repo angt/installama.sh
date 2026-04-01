@@ -157,7 +157,7 @@ def select_min_aarch64_arch(features):
     march = {
         'sve2':    'generic+v9a',
         'sme':     'generic+v8_7a', # only because of apple-m4
-        'i8mm':    'generic+v8_2a',
+        'i8mm':    'generic+v8_4a',
         'sve':     'generic+v8_2a',
         'dotprod': 'generic+v8_2a',
         'fp16':    'generic+v8_2a',
