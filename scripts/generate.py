@@ -196,7 +196,7 @@ def download_featcode():
 def featcode(arch, features):
     _, filename = get_featcode()
     result = subprocess.run(
-        [Path(filename), '+'] + ['+' + feat for feat in features],
+        [Path.cwd() / filename, '+'] + ['+' + feat for feat in features],
         env={**os.environ, 'FEATCODE_ARCH': arch},
         capture_output=True,
         text=True,

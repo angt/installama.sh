@@ -84,8 +84,8 @@ jobs:
           - x86_64-linux-cpu-klxrk
           - x86_64-linux-cpu-knxrk
           - x86_64-linux-cpu-krxrk
-          - x86_64-linux-cpu-knxrn
-          - x86_64-linux-cpu-krxrn
+          - x86_64-linux-cpu-knxzq
+          - x86_64-linux-cpu-krxzq
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
@@ -158,8 +158,8 @@ jobs:
           - x86_64-windows-cpu-klxrk
           - x86_64-windows-cpu-knxrk
           - x86_64-windows-cpu-krxrk
-          - x86_64-windows-cpu-knxrn
-          - x86_64-windows-cpu-krxrn
+          - x86_64-windows-cpu-knxzq
+          - x86_64-windows-cpu-krxzq
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
@@ -232,8 +232,8 @@ jobs:
           - x86_64-freebsd-cpu-klxrk
           - x86_64-freebsd-cpu-knxrk
           - x86_64-freebsd-cpu-krxrk
-          - x86_64-freebsd-cpu-knxrn
-          - x86_64-freebsd-cpu-krxrn
+          - x86_64-freebsd-cpu-knxzq
+          - x86_64-freebsd-cpu-krxzq
     uses: ./.github/workflows/build-any-cpu.yml
     with:
       filter: ${{ matrix.filter }}
@@ -307,8 +307,8 @@ jobs:
           - x86_64-linux-vulkan-klxrk
           - x86_64-linux-vulkan-knxrk
           - x86_64-linux-vulkan-krxrk
-          - x86_64-linux-vulkan-knxrn
-          - x86_64-linux-vulkan-krxrn
+          - x86_64-linux-vulkan-knxzq
+          - x86_64-linux-vulkan-krxzq
           - x86_64-linux-vulkan-probe
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
@@ -383,8 +383,8 @@ jobs:
           - x86_64-windows-vulkan-klxrk
           - x86_64-windows-vulkan-knxrk
           - x86_64-windows-vulkan-krxrk
-          - x86_64-windows-vulkan-knxrn
-          - x86_64-windows-vulkan-krxrn
+          - x86_64-windows-vulkan-knxzq
+          - x86_64-windows-vulkan-krxzq
           - x86_64-windows-vulkan-probe
     uses: ./.github/workflows/build-any-vulkan.yml
     with:
