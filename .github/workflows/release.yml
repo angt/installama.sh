@@ -1,6 +1,11 @@
 name: Release
 on:
   workflow_dispatch:
+    inputs:
+      llamacpp_ref:
+        required: false
+        default: ''
+        type: string
   schedule:
     - cron: 0 1 * * 1
 jobs:
@@ -13,9 +18,14 @@ jobs:
       - name: Get tags
         id: tags
         run: |
+          if [ "${{ inputs.llamacpp_ref }}" ]
+          then LLAMACPP_VERSION="${{ inputs.llamacpp_ref }}"
+          else LLAMACPP_VERSION=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | sed -nE 's,.*/tags/(b[0-9]+)$,\1,p' | sort -V | tail -n 1)
+          fi
+          BORINGSSL_VERSION=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | sed -nE 's,.*/tags/(0\.[0-9]+\.0)$,\1,p' | sort | tail -n 1)
           cat <<EOF >> "$GITHUB_OUTPUT"
-          llamacpp_version=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | sed -nE 's,.*/tags/(b[0-9]+)$,\1,p' | sort -V | tail -n 1)
-          boringssl_version=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | sed -nE 's,.*/tags/(0\.[0-9]+\.0)$,\1,p' | sort | tail -n 1)
+          llamacpp_version=$LLAMACPP_VERSION
+          boringssl_version=$BORINGSSL_VERSION
           EOF
           grep _version= "$GITHUB_OUTPUT"
 
