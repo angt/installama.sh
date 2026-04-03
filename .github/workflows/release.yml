@@ -2,10 +2,14 @@ name: Release
 on:
   workflow_dispatch:
     inputs:
-      llamacpp_ref:
+      llamacpp_version:
         required: false
         default: ''
         type: string
+      write_latest:
+        required: false
+        default: true
+        type: boolean
   schedule:
     - cron: 0 1 * * 1
 jobs:
@@ -18,8 +22,8 @@ jobs:
       - name: Get tags
         id: tags
         run: |
-          if [ "${{ inputs.llamacpp_ref }}" ]
-          then LLAMACPP_VERSION="${{ inputs.llamacpp_ref }}"
+          if [ "${{ inputs.llamacpp_version }}" ]
+          then LLAMACPP_VERSION="${{ inputs.llamacpp_version }}"
           else LLAMACPP_VERSION=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | sed -nE 's,.*/tags/(b[0-9]+)$,\1,p' | sort -V | tail -n 1)
           fi
           BORINGSSL_VERSION=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | sed -nE 's,.*/tags/(0\.[0-9]+\.0)$,\1,p' | sort | tail -n 1)
@@ -534,11 +538,15 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           pip install -U "hf[hf_xet]"
-
           python scripts/fetch-artefacts.py
           python scripts/upload.py ${{ vars.HF_REPO }}/${{ needs.init.outputs.llamacpp_version }}
-
           rm -rf output
+
+      - name: Write latest file
+        if: ${{ vars.HF_REPO != '' && inputs.write_latest }}
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
           mkdir output
           printf "${{ needs.init.outputs.llamacpp_version }}" > output/latest
           python scripts/upload.py ${{ vars.HF_REPO }}
