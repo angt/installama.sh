@@ -1,7 +1,8 @@
 import os
 import re
+import sys
 
-from huggingface_hub import snapshot_download
+from huggingface_hub import sync_bucket
 import zstandard as zstd
 
 from elftools.elf.elffile import ELFFile
@@ -155,17 +156,17 @@ def analyze(path):
     )
 
 def main():
-    if not os.path.exists("reqs"):
-        os.makedirs("reqs")
+    if len(sys.argv) == 2:
+        if sys.argv[1].startswith('hf://'):
+            local_dir = "reqs"
+            sync_bucket(sys.argv[1], local_dir)
+        else:
+            local_dir = sys.argv[1]
+    else:
+        local_dir = "output"
 
-    snapshot_download(
-        repo_id        = "angt/installama.sh",
-        repo_type      = "dataset",
-        local_dir      = "reqs",
-        allow_patterns = ["*/llama-server.zst"],
-    )
     groups = defaultdict(list)
-    for src in Path("reqs").rglob('*.zst'):
+    for src in Path(local_dir).rglob('*.zst'):
         dst = src.with_suffix('')
         with src.open('rb') as fsrc, dst.open('wb') as fdst:
             zstd.ZstdDecompressor().copy_stream(fsrc, fdst)
