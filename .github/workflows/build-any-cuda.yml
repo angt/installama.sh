@@ -5,7 +5,7 @@ on:
     inputs: &common_inputs
       filter:
         type: string
-        default: 'cuda'
+        default: 'x86_64-linux-cuda'
       deploy:
         type: boolean
       llamacpp_repo:
