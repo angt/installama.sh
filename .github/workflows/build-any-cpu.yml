@@ -24,7 +24,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ZIG_VERSION: "0.16.0-dev.3066+da78940dd"
+      ZIG_VERSION: "0.16.0-dev.3121+d34b868bc"
 
     steps:
       - uses: actions/checkout@v5
