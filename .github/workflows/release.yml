@@ -18,6 +18,7 @@ jobs:
     outputs:
       llamacpp_version: ${{ steps.tags.outputs.llamacpp_version }}
       boringssl_version: ${{ steps.tags.outputs.boringssl_version }}
+      write_latest: ${{ steps.tags.outputs.write_latest }}
     steps:
       - name: Get tags
         id: tags
@@ -27,9 +28,14 @@ jobs:
           else LLAMACPP_VERSION=$(git ls-remote --tags https://github.com/ggml-org/llama.cpp | sed -nE 's,.*/tags/(b[0-9]+)$,\1,p' | sort -V | tail -n 1)
           fi
           BORINGSSL_VERSION=$(git ls-remote --tags https://boringssl.googlesource.com/boringssl | sed -nE 's,.*/tags/(0\.[0-9]+\.0)$,\1,p' | sort | tail -n 1)
+          if [ "${{ github.event_name }}" = "schedule" ]
+          then WRITE_LATEST="true"
+          else WRITE_LATEST="${{ inputs.write_latest }}"
+          fi
           cat <<EOF >> "$GITHUB_OUTPUT"
           llamacpp_version=$LLAMACPP_VERSION
           boringssl_version=$BORINGSSL_VERSION
+          write_latest=$WRITE_LATEST
           EOF
           grep _version= "$GITHUB_OUTPUT"
 
@@ -543,7 +549,7 @@ jobs:
           rm -rf output
 
       - name: Write latest file
-        if: ${{ vars.HF_REPO != '' && inputs.write_latest }}
+        if: ${{ vars.HF_REPO != '' && needs.init.outputs.write_latest == 'true' }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
