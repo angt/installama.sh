@@ -421,9 +421,6 @@ jobs:
       fail-fast: false
       matrix:
         filter:
-          - aarch64-linux-cuda-50
-          - aarch64-linux-cuda-61
-          - aarch64-linux-cuda-70
           - aarch64-linux-cuda-75
           - aarch64-linux-cuda-80
           - aarch64-linux-cuda-86
@@ -447,9 +444,6 @@ jobs:
       fail-fast: false
       matrix:
         filter:
-          - x86_64-linux-cuda-50
-          - x86_64-linux-cuda-61
-          - x86_64-linux-cuda-70
           - x86_64-linux-cuda-75
           - x86_64-linux-cuda-80
           - x86_64-linux-cuda-86
