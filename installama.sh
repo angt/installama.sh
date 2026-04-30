@@ -9,6 +9,16 @@ check_bin() {
 	command -v "$1" >/dev/null 2>/dev/null
 }
 
+install_server() {
+	SERVER_PATH='~/.installama/server'
+	case ":$PATH:" in
+	(*":$HOME/.local/bin:"*)
+		mkdir -p "$HOME/.local/bin" &&
+		ln -sf "$HOME/.installama/server" "$HOME/.local/bin/llama-server" &&
+		SERVER_PATH="llama-server" ;;
+	esac
+}
+
 dl_bin() {
 	[ -x "$1" ] && return
 	check_bin curl || die "Please install curl"
@@ -108,9 +118,11 @@ main() {
 			"Please compile llama.cpp from source instead."
 	) || exit
 
+	install_server
+
 	[ $# -gt 0 ] && exec ~/.installama/server "$@"
 
-	printf "Run ~/.installama/server to launch the llama.cpp server\n"
+	printf "Run %s to launch the llama.cpp server\n" "$SERVER_PATH"
 }
 
 main "$@"
