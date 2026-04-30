@@ -76,7 +76,12 @@ function Main {
         & llama-server.exe @args
         exit $LASTEXITCODE
     }
-    "Run llama-server.exe to launch the llama.cpp server"
+    "Installation completed successfully"
+    ""
+    "Please run the following command to start it:"
+    ""
+    "  llama-server.exe"
+    ""
 }
 
 Main @args

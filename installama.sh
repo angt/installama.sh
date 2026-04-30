@@ -9,14 +9,21 @@ check_bin() {
 	command -v "$1" >/dev/null 2>/dev/null
 }
 
-install_server() {
-	SERVER_PATH='~/.installama/server'
-	case ":$PATH:" in
-	(*":$HOME/.local/bin:"*)
-		mkdir -p "$HOME/.local/bin" &&
-		ln -sf "$HOME/.installama/server" "$HOME/.local/bin/llama-server" &&
-		SERVER_PATH="llama-server" ;;
+check_path() {
+	case ":$1:" in
+	(*":$HOME/.local/bin:"*) return 0 ;;
 	esac
+	return 1
+}
+
+setup_path() {
+	for arg; do
+		printf "Configuring ~/%s\n" "$arg"
+		cat >> "$HOME/$arg" <<-'EOF'
+		# Added by installama.sh
+		export PATH="$HOME/.local/bin:$PATH"
+		EOF
+	done
 }
 
 dl_bin() {
@@ -118,11 +125,54 @@ main() {
 			"Please compile llama.cpp from source instead."
 	) || exit
 
-	install_server
-
 	[ $# -gt 0 ] && exec ~/.installama/server "$@"
 
-	printf "Run %s to launch the llama.cpp server\n" "$SERVER_PATH"
+	mkdir -p "$HOME/.local/bin" &&
+	ln -sf "$HOME/.installama/server" "$HOME/.local/bin/llama-server" || die \
+		"Couldn't install llama-server to ~/.local/bin"
+
+	printf "Installation completed successfully\n\n"
+
+	if check_path "$PATH"; then
+		cat <<-'EOF'
+		Please run the following command to start it:
+
+		  llama-server
+
+		EOF
+		return
+	fi
+
+	LOGIN_SHELL="${SHELL:-/bin/sh}"
+	LOGIN_PATH=$("$LOGIN_SHELL" -l -c 'echo $PATH' 2>/dev/null)
+
+	if [ -z "$SKIP_PATH_UPDATE" ] && ! check_path "$LOGIN_PATH"; then
+		case "$LOGIN_SHELL" in
+		(*zsh*)  setup_path .zshrc  .zprofile     ;;
+		(*bash*) setup_path .bashrc .bash_profile ;;
+		esac
+		LOGIN_PATH=$("$LOGIN_SHELL" -l -c 'echo $PATH' 2>/dev/null)
+	fi
+
+	if check_path "$LOGIN_PATH"; then
+		cat <<-'EOF'
+		Please open a new terminal window or restart your shell.
+		Or ensure ~/.local/bin is in PATH:
+
+		  export PATH="$HOME/.local/bin:$PATH"
+
+		Then, run the following command to start it:
+
+		  llama-server
+
+		EOF
+	fi
+	cat <<-EOF
+	To start it now without modifying your PATH, run:
+
+	  ~/.installama/server
+
+	EOF
 }
 
 main "$@"
