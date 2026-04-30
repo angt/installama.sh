@@ -8,18 +8,18 @@ function Die {
 
 function Download {
     param($FILE, $URL)
-    if (Test-Path $FILE) {
+    if (Test-Path "$DIR\$FILE") {
         return
     }
     "Downloading $FILE..."
     try {
         if ($URL -like "*.zst") {
             Download "unzstd.exe" "$ARCH/windows/unzstd.exe"
-            Invoke-RestMethod "$REPO/$VERSION/$URL" -OutFile "tmp.zst"
-            Start-Process -FilePath ".\unzstd.exe" -RedirectStandardInput "tmp.zst" -RedirectStandardOutput $FILE -NoNewWindow -Wait
-            Remove-Item "tmp.zst"
+            Invoke-RestMethod "$REPO/$VERSION/$URL" -OutFile "$DIR\tmp.zst"
+            Start-Process -FilePath "$DIR\unzstd.exe" -RedirectStandardInput "$DIR\tmp.zst" -RedirectStandardOutput "$DIR\$FILE" -NoNewWindow -Wait
+            Remove-Item "$DIR\tmp.zst"
         } else {
-            Invoke-RestMethod "$REPO/$VERSION/$URL" -OutFile $FILE
+            Invoke-RestMethod "$REPO/$VERSION/$URL" -OutFile "$DIR\$FILE"
         }
     } catch {
         Die "Failed to download"
@@ -31,18 +31,18 @@ function ProbeVulkan {
     "Probing Vulkan..."
     Download "vulkan-probe.exe" "$ARCH/windows/vulkan/probe/probe.zst"
     Download "featcode.exe" "$ARCH/windows/featcode.exe"
-    .\vulkan-probe.exe 2>$null
+    & "$DIR\vulkan-probe.exe" 2>$null
     if ($LASTEXITCODE) { return }
-    $CONFIG = .\featcode.exe 2>$null
-    .\featcode.exe $CONFIG 2>$null | % { "Found: $_" }
+    $CONFIG = & "$DIR\featcode.exe" 2>$null
+    & "$DIR\featcode.exe" $CONFIG 2>$null | % { "Found: $_" }
     Download "server.exe" "$ARCH/windows/vulkan/$CONFIG/llama-server.zst"
 }
 
 function ProbeCPU {
     "Probing CPU..."
     Download "featcode.exe" "$ARCH/windows/featcode.exe"
-    $CONFIG = .\featcode.exe 2>$null
-    .\featcode.exe $CONFIG 2>$null | % { "Found: $_" }
+    $CONFIG = & "$DIR\featcode.exe" 2>$null
+    & "$DIR\featcode.exe" $CONFIG 2>$null | % { "Found: $_" }
     Download "server.exe" "$ARCH/windows/cpu/$CONFIG/llama-server.zst"
 }
 
@@ -57,28 +57,26 @@ function Main {
     if (!$VERSION) { Die "No version found" }
     "Version: $VERSION"
 
-    $DIR = Join-Path $env:USERPROFILE "installama"
-
+    $INSTALL_DIR = Join-Path $env:LOCALAPPDATA "Microsoft\WindowsApps"
+    $DIR = Join-Path $env:TEMP "installama"
     Remove-Item $DIR -Recurse -Force 2>$null
     New-Item -Path $DIR -Force -ItemType "Directory" | Out-Null
-    Push-Location $DIR
 
-    try {
-        if (!(Test-Path "server.exe")) { ProbeVulkan }
-        if (!(Test-Path "server.exe")) { ProbeCPU    }
-        if (!(Test-Path "server.exe")) {
-            Die "No prebuilt server binary is available for your system." `
-                "Please compile llama.cpp from source instead."
-        }
+    if (!(Test-Path "$DIR\server.exe")) { ProbeVulkan }
+    if (!(Test-Path "$DIR\server.exe")) { ProbeCPU    }
+    if (!(Test-Path "$DIR\server.exe")) {
+        Die "No prebuilt server binary is available for your system." `
+            "Please compile llama.cpp from source instead."
     }
-    finally {
-        Pop-Location
-    }
+
+    Move-Item "$DIR\server.exe" "$INSTALL_DIR\llama-server.exe" -Force
+    Remove-Item $DIR -Recurse -Force 2>$null
+
     if ($args.Length -gt 0) {
-        & "$DIR\server.exe" @args
+        & llama-server.exe @args
         exit $LASTEXITCODE
     }
-    "Run $DIR\server.exe to launch the llama.cpp server"
+    "Run llama-server.exe to launch the llama.cpp server"
 }
 
 Main @args
