@@ -1,11 +1,23 @@
 [
   {
+    "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-freebsd-featcode",
+    "dst": "output/aarch64/freebsd/featcode"
+  },
+  {
+    "src": "https://github.com/angt/featcode/releases/download/v9/x86_64-freebsd-featcode",
+    "dst": "output/x86_64/freebsd/featcode"
+  },
+  {
     "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-linux-featcode",
     "dst": "output/aarch64/linux/featcode"
   },
   {
     "src": "https://github.com/angt/featcode/releases/download/v9/x86_64-linux-featcode",
     "dst": "output/x86_64/linux/featcode"
+  },
+  {
+    "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-macos-featcode",
+    "dst": "output/aarch64/macos/featcode"
   },
   {
     "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-windows-featcode.exe",
@@ -16,28 +28,12 @@
     "dst": "output/x86_64/windows/featcode.exe"
   },
   {
-    "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-freebsd-featcode",
-    "dst": "output/aarch64/freebsd/featcode"
+    "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-freebsd-unzstd",
+    "dst": "output/aarch64/freebsd/unzstd"
   },
   {
-    "src": "https://github.com/angt/featcode/releases/download/v9/x86_64-freebsd-featcode",
-    "dst": "output/x86_64/freebsd/featcode"
-  },
-  {
-    "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-openbsd-featcode",
-    "dst": "output/aarch64/openbsd/featcode"
-  },
-  {
-    "src": "https://github.com/angt/featcode/releases/download/v9/x86_64-openbsd-featcode",
-    "dst": "output/x86_64/openbsd/featcode"
-  },
-  {
-    "src": "https://github.com/angt/featcode/releases/download/v9/aarch64-netbsd-featcode",
-    "dst": "output/aarch64/netbsd/featcode"
-  },
-  {
-    "src": "https://github.com/angt/featcode/releases/download/v9/x86_64-netbsd-featcode",
-    "dst": "output/x86_64/netbsd/featcode"
+    "src": "https://github.com/angt/unzstd/releases/latest/download/x86_64-freebsd-unzstd",
+    "dst": "output/x86_64/freebsd/unzstd"
   },
   {
     "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-linux-unzstd",
@@ -48,35 +44,15 @@
     "dst": "output/x86_64/linux/unzstd"
   },
   {
+    "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-macos-unzstd",
+    "dst": "output/aarch64/macos/unzstd"
+  },
+  {
     "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-windows-unzstd.exe",
     "dst": "output/aarch64/windows/unzstd.exe"
   },
   {
     "src": "https://github.com/angt/unzstd/releases/latest/download/x86_64-windows-unzstd.exe",
     "dst": "output/x86_64/windows/unzstd.exe"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-freebsd-unzstd",
-    "dst": "output/aarch64/freebsd/unzstd"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/x86_64-freebsd-unzstd",
-    "dst": "output/x86_64/freebsd/unzstd"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-openbsd-unzstd",
-    "dst": "output/aarch64/openbsd/unzstd"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/x86_64-openbsd-unzstd",
-    "dst": "output/x86_64/openbsd/unzstd"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/aarch64-netbsd-unzstd",
-    "dst": "output/aarch64/netbsd/unzstd"
-  },
-  {
-    "src": "https://github.com/angt/unzstd/releases/latest/download/x86_64-netbsd-unzstd",
-    "dst": "output/x86_64/netbsd/unzstd"
   }
 ]

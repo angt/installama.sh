@@ -515,8 +515,6 @@ def generate_artefacts(cpu_os_archs):
 def generate_jobs(workflow_presets):
     groups = defaultdict(list)
     for preset in workflow_presets:
-        if any(f"-{os}-" in preset["name"] for os in ["netbsd", "openbsd"]):  # TODO
-            continue
         parts = preset["name"].split("-")
         group = f"{parts[0]}-{parts[1]}-{parts[2]}"
         groups[group].append(preset["name"])
@@ -551,7 +549,7 @@ def main():
 
     cpu_os_archs = [
         (os_name, arch)
-        for os_name in ['linux', 'windows', 'freebsd', 'openbsd', 'netbsd']
+        for os_name in ['linux', 'windows', 'freebsd']
         for arch in ['aarch64', 'x86_64']
     ]
 
@@ -586,7 +584,10 @@ def main():
     with open("CMakePresets.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
-    artefacts = generate_artefacts(cpu_os_archs)
+    artefacts = generate_artefacts(sorted({
+        (p["cacheVariables"]["INSTALLAMA_OS"], p["cacheVariables"]["INSTALLAMA_ARCH"])
+        for p in data["configurePresets"]
+    }))
 
     with open("artefacts.json", "w", encoding="utf-8") as f:
         json.dump(artefacts, f, indent=2)
