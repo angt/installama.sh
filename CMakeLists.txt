@@ -83,6 +83,7 @@ else()
 endif()
 
 include("${CMAKE_CURRENT_LIST_DIR}/vulkan/stub.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/win32/shim.cmake")
 
 if(INSTALLAMA_PROBE)
     add_subdirectory(${INSTALLAMA_PROBE})
@@ -91,6 +92,8 @@ else()
     FetchContent_MakeAvailable(llamacpp)
     set(INSTALLAMA_TARGET "llama-server")
 endif()
+
+installama_add_win32_shim(${INSTALLAMA_TARGET})
 
 include("${CMAKE_CURRENT_LIST_DIR}/cuda/prune.cmake")
 installama_prune_cuda(${INSTALLAMA_TARGET})

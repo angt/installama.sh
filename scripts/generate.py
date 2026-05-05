@@ -212,10 +212,6 @@ def generate_aarch64_flags(features):
 
 def generate_x86_64_flags(features):
     arch = select_min_x86_64_arch(features)
-
-    if 'avx512f' in features:
-        features += ['evex512']
-
     flags = ' '.join([
         f"-march={arch}",
         *(f"-m{feat}" for feat in features),

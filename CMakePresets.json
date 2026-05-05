@@ -260,7 +260,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -272,7 +272,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -284,7 +284,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -296,7 +296,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -308,7 +308,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -320,7 +320,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -332,7 +332,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -344,7 +344,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -356,7 +356,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -368,7 +368,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -380,7 +380,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -392,7 +392,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -404,7 +404,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -416,7 +416,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -428,7 +428,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -440,7 +440,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -452,7 +452,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -464,7 +464,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -476,7 +476,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/klxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -488,7 +488,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -500,7 +500,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -512,7 +512,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/knxzq",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -524,7 +524,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/cpu/krxzq",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -788,7 +788,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -800,7 +800,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -812,7 +812,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -824,7 +824,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -836,7 +836,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -848,7 +848,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -860,7 +860,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -872,7 +872,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -884,7 +884,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -896,7 +896,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -908,7 +908,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -920,7 +920,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -932,7 +932,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -944,7 +944,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -956,7 +956,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -968,7 +968,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -980,7 +980,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -992,7 +992,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1004,7 +1004,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/klxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1016,7 +1016,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1028,7 +1028,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1040,7 +1040,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/knxzq",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1052,7 +1052,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/cpu/krxzq",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1316,7 +1316,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klokk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1328,7 +1328,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knokk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1340,7 +1340,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krokk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1352,7 +1352,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzkk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1364,7 +1364,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzkk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1376,7 +1376,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzkk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1388,7 +1388,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klzlk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1400,7 +1400,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knzlk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1412,7 +1412,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krzlk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1424,7 +1424,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxmk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1436,7 +1436,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxmk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1448,7 +1448,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxmk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1460,7 +1460,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxnk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1472,7 +1472,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxnk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1484,7 +1484,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxnk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1496,7 +1496,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxpk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1508,7 +1508,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxpk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1520,7 +1520,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxpk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1532,7 +1532,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/klxrk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1544,7 +1544,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxrk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1556,7 +1556,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxrk",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1568,7 +1568,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/knxzq",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1580,7 +1580,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/freebsd/cpu/krxzq",
         "INSTALLAMA_OS": "freebsd",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512"
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16"
       },
       "toolchainFile": "toolchains/cross.cmake",
       "generator": "Ninja"
@@ -1877,7 +1877,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1890,7 +1890,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1903,7 +1903,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krokk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1916,7 +1916,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1929,7 +1929,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1942,7 +1942,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzkk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1955,7 +1955,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1968,7 +1968,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1981,7 +1981,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krzlk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -1994,7 +1994,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2007,7 +2007,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2020,7 +2020,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxmk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2033,7 +2033,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2046,7 +2046,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2059,7 +2059,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxnk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2072,7 +2072,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2085,7 +2085,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2098,7 +2098,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxpk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2111,7 +2111,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/klxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2124,7 +2124,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2137,7 +2137,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxrk",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2150,7 +2150,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/knxzq",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2163,7 +2163,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/linux/vulkan/krxzq",
         "INSTALLAMA_OS": "linux",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2473,7 +2473,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2486,7 +2486,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2499,7 +2499,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krokk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v3 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2512,7 +2512,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2525,7 +2525,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2538,7 +2538,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krzkk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2551,7 +2551,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2564,7 +2564,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2577,7 +2577,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krzlk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2590,7 +2590,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2603,7 +2603,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2616,7 +2616,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxmk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2629,7 +2629,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2642,7 +2642,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2655,7 +2655,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxnk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2668,7 +2668,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2681,7 +2681,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2694,7 +2694,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxpk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2707,7 +2707,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/klxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2720,7 +2720,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2733,7 +2733,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxrk",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2746,7 +2746,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/knxzq",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
@@ -2759,7 +2759,7 @@
         "INSTALLAMA_DIR": "${sourceDir}/output/x86_64/windows/vulkan/krxzq",
         "INSTALLAMA_OS": "windows",
         "INSTALLAMA_ARCH": "x86_64",
-        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16 -mevex512",
+        "INSTALLAMA_FLAGS": "-march=x86_64_v4 -mavx -mf16c -mfma -mavx2 -mbmi2 -mavxvnni -mavxvnniint8 -mavx512f -mavx512vl -mavx512bw -mavx512dq -mavx512cd -mavx512vnni -mavx512vbmi -mavx512bf16 -mavx512fp16 -mamx-tile -mamx-int8 -mamx-bf16",
         "GGML_VULKAN": "ON"
       },
       "toolchainFile": "toolchains/vulkan.cmake",
