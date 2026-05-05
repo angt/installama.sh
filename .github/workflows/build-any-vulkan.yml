@@ -33,7 +33,7 @@ jobs:
       - name: Setup Zig
         run: |
           ZIG="zig-$(uname -m)-linux-$ZIG_VERSION"
-          curl -sSf "https://zigmirror.hryx.net/zig/$ZIG.tar.xz" | tar -Jxf- -C ~
+          curl -sSf "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~
           sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
       - name: Setup Vulkan
