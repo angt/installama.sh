@@ -24,7 +24,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      ZIG_VERSION: "0.17.0-dev.251+0db721ec2"
+      ZIG_VERSION: "0.17.0-dev.256+04481c76c"
       VULKAN_VERSION: "1.4.341.1"
 
     steps:
@@ -33,7 +33,7 @@ jobs:
       - name: Setup Zig
         run: |
           ZIG="zig-$(uname -m)-linux-$ZIG_VERSION"
-          curl -sSf "https://ziglang.org/builds/$ZIG.tar.xz" | tar -Jxf- -C ~
+          curl -LsSf "https://zigmirror.com/$ZIG.tar.xz" | tar -Jxf- -C ~
           sudo ln -sf ~/"$ZIG"/zig /usr/bin/zig
 
       - name: Setup Vulkan
