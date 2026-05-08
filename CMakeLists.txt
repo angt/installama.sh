@@ -91,6 +91,11 @@ if(INSTALLAMA_PROBE)
 else()
     FetchContent_MakeAvailable(llamacpp)
     set(INSTALLAMA_TARGET "llama-server")
+    # TODO: llvm issue ?
+    set_property(SOURCE "${llamacpp_SOURCE_DIR}/ggml/src/ggml-cpu/amx/mmq.cpp"
+        TARGET_DIRECTORY ggml-cpu
+        APPEND PROPERTY COMPILE_OPTIONS "-fno-unroll-loops"
+    )
 endif()
 
 installama_link_win32_shim(${INSTALLAMA_TARGET})
