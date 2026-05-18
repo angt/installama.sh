@@ -1,0 +1,4 @@
+add_library(SPIRV-Headers::SPIRV-Headers INTERFACE IMPORTED)
+set_target_properties(SPIRV-Headers::SPIRV-Headers PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${VULKAN_HEADERS}"
+)
