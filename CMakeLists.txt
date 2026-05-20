@@ -59,6 +59,7 @@ set(LLAMA_BUILD_BORINGSSL ON  CACHE BOOL "" FORCE)
 set(LLAMA_BUILD_COMMON    ON  CACHE BOOL "" FORCE)
 set(LLAMA_BUILD_TOOLS     ON  CACHE BOOL "" FORCE)
 set(LLAMA_BUILD_SERVER    ON  CACHE BOOL "" FORCE)
+set(LLAMA_BUILD_APP       ON  CACHE BOOL "" FORCE)
 
 #add_compile_options(
 #    -ffp-model=fast
@@ -90,7 +91,7 @@ if(INSTALLAMA_PROBE)
     set(INSTALLAMA_TARGET "probe")
 else()
     FetchContent_MakeAvailable(llamacpp)
-    set(INSTALLAMA_TARGET "llama-server")
+    set(INSTALLAMA_TARGET "llama-app")
     # TODO: llvm issue ?
     set_property(SOURCE "${llamacpp_SOURCE_DIR}/ggml/src/ggml-cpu/amx/mmq.cpp"
         TARGET_DIRECTORY ggml-cpu
