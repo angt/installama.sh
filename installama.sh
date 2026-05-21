@@ -1,4 +1,4 @@
-REPO="https://huggingface.co/buckets/angt/installama/resolve"
+REPO="https://huggingface.co/buckets/ggml-org/install.sh/resolve"
 
 die() {
 	printf "%s\n" "$@" >&2
@@ -50,7 +50,7 @@ probe_cuda() {
 	dl_bin cuda-probe "$ARCH/$OS/cuda/probe/probe.zst" &&
 	CONFIG=$(./cuda-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$ARCH/$OS/cuda/$CONFIG/llama-server.zst"
+	dl_bin llama "$ARCH/$OS/cuda/$CONFIG/llama-app.zst"
 }
 
 probe_rocm() {
@@ -58,7 +58,7 @@ probe_rocm() {
 	dl_bin rocm-probe "$ARCH/$OS/rocm/probe/probe.zst" &&
 	CONFIG=$(./rocm-probe) 2>/dev/null &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$ARCH/$OS/rocm/$CONFIG/llama-server.zst"
+	dl_bin llama "$ARCH/$OS/rocm/$CONFIG/llama-app.zst"
 }
 
 probe_vulkan() {
@@ -67,7 +67,7 @@ probe_vulkan() {
 	dl_bin featcode "$ARCH/$OS/featcode" &&
 	CONFIG=$(./vulkan-probe && ./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin server "$ARCH/$OS/vulkan/$CONFIG/llama-server.zst"
+	dl_bin llama "$ARCH/$OS/vulkan/$CONFIG/llama-app.zst"
 }
 
 probe_cpu() {
@@ -75,7 +75,7 @@ probe_cpu() {
 	dl_bin featcode "$ARCH/$OS/featcode" &&
 	CONFIG=$(./featcode) 2>/dev/null &&
 	for F in $(./featcode "$CONFIG"); do printf "Found: %s\n" "$F"; done &&
-	dl_bin server "$ARCH/$OS/cpu/$CONFIG/llama-server.zst"
+	dl_bin llama "$ARCH/$OS/cpu/$CONFIG/llama-app.zst"
 }
 
 probe_metal() {
@@ -83,7 +83,7 @@ probe_metal() {
 	CONFIG=$(sysctl -n machdep.cpu.brand_string | grep -o "Apple M[1-5]") 2>/dev/null &&
 	CONFIG=m${CONFIG##*M} &&
 	printf "Found: %s\n" "$CONFIG" &&
-	dl_bin server "$ARCH/$OS/metal/$CONFIG/llama-server.zst"
+	dl_bin llama "$ARCH/$OS/metal/$CONFIG/llama-app.zst"
 }
 
 main() {
@@ -112,24 +112,24 @@ main() {
 		cd ~/.installama || exit 1
 
 		case "$OS" in
-		(macos)   [ -x server ] || probe_metal ;;
-		(linux)   [ -x server ] || probe_cuda
-		          [ -x server ] || probe_rocm
-		          [ -x server ] || probe_vulkan
-		          [ -x server ] || probe_cpu ;;
-		(freebsd) [ -x server ] || probe_cpu ;;
+		(macos)   [ -x llama ] || probe_metal ;;
+		(linux)   [ -x llama ] || probe_cuda
+		          [ -x llama ] || probe_rocm
+		          [ -x llama ] || probe_vulkan
+		          [ -x llama ] || probe_cpu ;;
+		(freebsd) [ -x llama ] || probe_cpu ;;
 		esac
 
-		[ -x server ] || die \
-			"No prebuilt server binary is available for your system." \
+		[ -x llama ] || die \
+			"No prebuilt llama binary is available for your system." \
 			"Please compile llama.cpp from source instead."
 	) || exit
 
-	[ $# -gt 0 ] && exec ~/.installama/server "$@"
+	[ $# -gt 0 ] && exec ~/.installama/llama "$@"
 
 	mkdir -p "$HOME/.local/bin" &&
-	ln -sf "$HOME/.installama/server" "$HOME/.local/bin/llama-server" || die \
-		"Couldn't install llama-server to ~/.local/bin"
+	ln -sf "$HOME/.installama/llama" "$HOME/.local/bin/llama" || die \
+		"Couldn't install llama to ~/.local/bin"
 
 	printf "Installation completed successfully\n\n"
 
@@ -137,7 +137,7 @@ main() {
 		cat <<-'EOF'
 		Please run the following command to start it:
 
-		  llama-server
+		  llama serve
 
 		EOF
 		return
@@ -163,14 +163,14 @@ main() {
 
 		Then, run the following command to start it:
 
-		  llama-server
+		  llama serve
 
 		EOF
 	fi
 	cat <<-EOF
 	To start it now without modifying your PATH, run:
 
-	  ~/.installama/server
+	  ~/.installama/llama serve
 
 	EOF
 }

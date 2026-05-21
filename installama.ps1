@@ -1,4 +1,4 @@
-$REPO = "https://huggingface.co/buckets/angt/installama/resolve"
+$REPO = "https://huggingface.co/buckets/ggml-org/install.sh/resolve"
 
 function Die {
     param([string[]]$Messages)
@@ -35,7 +35,7 @@ function ProbeVulkan {
     if ($LASTEXITCODE) { return }
     $CONFIG = & "$DIR\featcode.exe" 2>$null
     & "$DIR\featcode.exe" $CONFIG 2>$null | % { "Found: $_" }
-    Download "server.exe" "$ARCH/windows/vulkan/$CONFIG/llama-server.zst"
+    Download "llama.exe" "$ARCH/windows/vulkan/$CONFIG/llama-app.zst"
 }
 
 function ProbeCPU {
@@ -43,7 +43,7 @@ function ProbeCPU {
     Download "featcode.exe" "$ARCH/windows/featcode.exe"
     $CONFIG = & "$DIR\featcode.exe" 2>$null
     & "$DIR\featcode.exe" $CONFIG 2>$null | % { "Found: $_" }
-    Download "server.exe" "$ARCH/windows/cpu/$CONFIG/llama-server.zst"
+    Download "llama.exe" "$ARCH/windows/cpu/$CONFIG/llama-app.zst"
 }
 
 function Main {
@@ -62,25 +62,25 @@ function Main {
     Remove-Item $DIR -Recurse -Force 2>$null
     New-Item -Path $DIR -Force -ItemType "Directory" | Out-Null
 
-    if (!(Test-Path "$DIR\server.exe")) { ProbeVulkan }
-    if (!(Test-Path "$DIR\server.exe")) { ProbeCPU    }
-    if (!(Test-Path "$DIR\server.exe")) {
-        Die "No prebuilt server binary is available for your system." `
+    if (!(Test-Path "$DIR\llama.exe")) { ProbeVulkan }
+    if (!(Test-Path "$DIR\llama.exe")) { ProbeCPU    }
+    if (!(Test-Path "$DIR\llama.exe")) {
+        Die "No prebuilt llama binary is available for your system." `
             "Please compile llama.cpp from source instead."
     }
 
-    Move-Item "$DIR\server.exe" "$INSTALL_DIR\llama-server.exe" -Force
+    Move-Item "$DIR\llama.exe" "$INSTALL_DIR\llama.exe" -Force
     Remove-Item $DIR -Recurse -Force 2>$null
 
     if ($args.Length -gt 0) {
-        & llama-server.exe @args
+        & llama.exe @args
         exit $LASTEXITCODE
     }
     "Installation completed successfully"
     ""
     "Please run the following command to start it:"
     ""
-    "  llama-server.exe"
+    "  llama.exe serve"
     ""
 }
 

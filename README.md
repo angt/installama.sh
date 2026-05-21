@@ -26,7 +26,7 @@ Run the following command in your terminal:
 
 Launch the server:
 
-    ~/.installama/server -hf unsloth/Qwen3-4B-GGUF:Q4_0
+    ~/.installama/llama serve -hf unsloth/Qwen3-4B-GGUF:Q4_0
 
 In some scenarios, you may want to skip detection for specific backends.
 You can do this by setting environment variables before piping to `sh`:
@@ -43,7 +43,7 @@ Run the following command in `PowerShell`:
 
 Launch the server:
 
-    & $env:USERPROFILE\installama\server.exe -hf unsloth/Qwen3-4B-GGUF:Q4_0
+    llama.exe serve -hf unsloth/Qwen3-4B-GGUF:Q4_0
 
 ## Enjoy!
 
