@@ -2,7 +2,7 @@
 
 _Instantly install llama.cpp._
 
-`installama.sh` is a simple script that downloads and sets up a prebuilt `llama-server` binary for your system.
+`installama.sh` is a simple script that downloads and sets up a prebuilt `llama` binary for your system.
 It automatically detects your OS, architecture, and GPU capabilities, so you can start using `llama.cpp` in seconds.
 
 ## Features

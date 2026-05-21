@@ -46,7 +46,7 @@ jobs:
       - name: Install deps
         run: |
           sudo wget -qO /etc/apt/trusted.gpg.d/rocm.asc "https://repo.radeon.com/rocm/rocm.gpg.key"
-          sudo tee /etc/apt/sources.list.d/installama.list <<EOF
+          sudo tee /etc/apt/sources.list.d/rocm.list <<EOF
           deb https://repo.radeon.com/rocm/apt/7.0.3 jammy main
           EOF
           sudo tee /etc/apt/preferences.d/rocm-pin <<EOF
