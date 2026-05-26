@@ -5,6 +5,12 @@ _Instantly install llama.cpp._
 `installama.sh` is a simple script that downloads and sets up a prebuilt `llama` binary for your system.
 It automatically detects your OS, architecture, and GPU capabilities, so you can start using `llama.cpp` in seconds.
 
+> [!IMPORTANT]
+> **`installama.sh` is now an official `llama.cpp` package!** 🎉
+>
+> The project has officially migrated to the `ggml-org` ecosystem.
+> Check out the new repository at [github.com/ggml-org/llama-install.sh](https://github.com/ggml-org/llama-install.sh) or visit [llama.app](https://llama.app).
+
 ## Features
 
 - Supported architectures: `x86_64`, `aarch64`.
