@@ -6,6 +6,7 @@ find_path(VULKAN_HEADERS
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_CURRENT_LIST_DIR}")
 
 if (VULKAN_HEADERS)
+    set(SPIRV-Headers_DIR "${CMAKE_CURRENT_LIST_DIR}" CACHE PATH "SPIRV-Headers config directory")
     add_library(vulkan_stub SHARED ${CMAKE_CURRENT_LIST_DIR}/stub.c)
 
     target_include_directories(vulkan_stub PUBLIC ${VULKAN_HEADERS})
