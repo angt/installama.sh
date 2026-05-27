@@ -136,14 +136,16 @@ def analyze_macho(path, arch):
 
     raise Exception(f"Bad arch, expected: {arch}")
 
-def get_backend(files):
-    dirs = [os.path.dirname(file) for file in files]
-    return os.path.join(*os.path.commonpath(dirs).split(os.sep)[3:])
+def get_backend(files, base):
+    dirs = [os.path.dirname(os.path.relpath(f, base)) for f in files]
+    parts = os.path.commonpath(dirs).split(os.sep)
+    # parts = [arch, os, backend...]
+    return os.path.join(*parts[2:]) if len(parts) > 2 else ""
 
-def analyze(path):
-    parts = path.split(os.sep)
-    arch = parts[1]
-    name = parts[2]
+def analyze(path, base):
+    parts = os.path.relpath(path, base).split(os.sep)
+    arch = parts[0]
+    name = parts[1]
 
     match name:
         case "windows": reqs, libs = analyze_pe(path, arch)
@@ -160,6 +162,8 @@ def main():
         if sys.argv[1].startswith('hf://'):
             local_dir = "reqs"
             sync_bucket(sys.argv[1], local_dir)
+            with open(os.path.join(local_dir, "latest")) as f:
+                local_dir = os.path.join(local_dir, f.read().strip())
         else:
             local_dir = sys.argv[1]
     else:
@@ -170,7 +174,7 @@ def main():
         dst = src.with_suffix('')
         with src.open('rb') as fsrc, dst.open('wb') as fdst:
             zstd.ZstdDecompressor().copy_stream(fsrc, fdst)
-        if (entry := analyze(str(dst))):
+        if (entry := analyze(str(dst), local_dir)):
             groups[entry].append(str(dst))
 
     cols = ["Name", "Arch", "Backend", "Version", "Libraries"]
@@ -178,7 +182,7 @@ def main():
         [
             name,
             f"`{arch}`",
-            f"`{get_backend(files)}`",
+            f"`{get_backend(files, local_dir)}`",
             version,
             " ".join(f"`{lib}`" for lib in libs) or "-"
         ]
