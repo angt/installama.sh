@@ -8,6 +8,10 @@
 #include <string.h>
 #include <wchar.h>
 
+// winpthreads convention
+#define SPIN_UNLOCKED ((intptr_t)-1)
+#define SPIN_LOCKED   ((intptr_t) 0)
+
 void *
 mempcpy(void *dst, const void *src, size_t n)
 {
@@ -43,7 +47,7 @@ int
 pthread_spin_init(pthread_spinlock_t *l, int pshared)
 {
     (void)pshared;
-    *l = 0;
+    *(intptr_t *)l = SPIN_UNLOCKED;
     return 0;
 }
 
@@ -54,13 +58,28 @@ pthread_spin_destroy(pthread_spinlock_t *l)
     return 0;
 }
 
+static inline void
+relax(void)
+{
+#if defined(__x86_64__) || defined(__i386__)
+    __builtin_ia32_pause();
+#elif defined(__arm__) || defined(__aarch64__)
+    __asm__ __volatile__("yield" ::: "memory");
+#else
+    __asm__ __volatile__("" ::: "memory");
+#endif
+}
+
 int
 pthread_spin_lock(pthread_spinlock_t *l)
 {
-    while (__atomic_test_and_set(l, __ATOMIC_ACQUIRE)) {
-        #if defined(__x86_64__) || defined(__i386__)
-        __builtin_ia32_pause();
-        #endif
+    intptr_t *lock = (intptr_t *)l;
+    intptr_t expected = SPIN_UNLOCKED;
+
+    while (!__atomic_compare_exchange_n(lock, &expected, SPIN_LOCKED, 1, __ATOMIC_ACQUIRE, __ATOMIC_RELAXED)) {
+        expected = SPIN_UNLOCKED;
+        while (__atomic_load_n(lock, __ATOMIC_RELAXED) != SPIN_UNLOCKED)
+            relax();
     }
     return 0;
 }
@@ -68,13 +87,20 @@ pthread_spin_lock(pthread_spinlock_t *l)
 int
 pthread_spin_trylock(pthread_spinlock_t *l)
 {
-    return __atomic_test_and_set(l, __ATOMIC_ACQUIRE) ? EBUSY : 0;
+    intptr_t *lock = (intptr_t *)l;
+    intptr_t expected = SPIN_UNLOCKED;
+
+    if (__atomic_compare_exchange_n(lock, &expected, SPIN_LOCKED, 0, __ATOMIC_ACQUIRE, __ATOMIC_RELAXED))
+        return 0;
+
+    return EBUSY;
 }
 
 int
 pthread_spin_unlock(pthread_spinlock_t *l)
 {
-    __atomic_clear(l, __ATOMIC_RELEASE);
+    intptr_t *lock = (intptr_t *)l;
+    __atomic_store_n(lock, SPIN_UNLOCKED, __ATOMIC_RELEASE);
     return 0;
 }
 
