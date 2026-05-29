@@ -70,6 +70,9 @@ function Main {
             "Please compile llama.cpp from source instead."
     }
 
+    if (Test-Path "$INSTALL_DIR\llama.exe") {
+        Move-Item "$INSTALL_DIR\llama.exe" "$DIR\llama.exe.old" -Force
+    }
     Move-Item "$DIR\llama.exe" "$INSTALL_DIR\llama.exe" -Force
     Remove-Item $DIR -Recurse -Force 2>$null
 
