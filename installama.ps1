@@ -53,7 +53,8 @@ function Main {
         default { Die "Arch not supported" }
     }
 
-    $VERSION = Invoke-RestMethod "$REPO/latest"
+    if (!$VERSION) { $VERSION = $env:VERSION }
+    if (!$VERSION) { $VERSION = Invoke-RestMethod "$REPO/latest" }
     if (!$VERSION) { Die "No version found" }
     "Version: $VERSION"
 
