@@ -97,9 +97,9 @@ main() {
 	printf "Version: %s\n" "$VERSION"
 
 	(
-		rm -rf ~/.installama
-		mkdir -p ~/.installama
-		cd ~/.installama || exit 1
+		rm -rf ~/.llama-app
+		mkdir -p ~/.llama-app
+		cd ~/.llama-app || exit 1
 
 		case "$OS" in
 		(macos)   [ -x llama ] || probe_metal ;;
@@ -115,10 +115,10 @@ main() {
 			"Please compile llama.cpp from source instead."
 	) || exit
 
-	[ $# -gt 0 ] && exec ~/.installama/llama "$@"
+	[ $# -gt 0 ] && exec ~/.llama-app/llama "$@"
 
 	mkdir -p "$HOME/.local/bin" &&
-	ln -sf "$HOME/.installama/llama" "$HOME/.local/bin/llama" || die \
+	ln -sf "$HOME/.llama-app/llama" "$HOME/.local/bin/llama" || die \
 		"Couldn't install llama to ~/.local/bin"
 
 	printf "Installation completed successfully\n\n"
@@ -174,7 +174,7 @@ main() {
 	cat <<-EOF
 	To start it now without modifying your PATH, run:
 
-	  ~/.installama/llama serve
+	  ~/.llama-app/llama serve
 
 	EOF
 }
